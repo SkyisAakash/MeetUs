@@ -1,5 +1,4 @@
-class Api::SessionController < ApplicationController
-  class SessionsController < ApplicationController
+class Api::SessionsController < ApplicationController
   def new
     render :new
   end
@@ -17,13 +16,12 @@ class Api::SessionController < ApplicationController
 
   def destroy
   @user = current_user
-  if @user
-    logout
-    render {}
-  else
-    render json: ["Nobody signed in"], status: 404
+    if @user
+      logout
+      render json:{}
+    else
+      render json: ["Nobody signed in"], status: 404
+    end
   end
-end
-end
 
 end
