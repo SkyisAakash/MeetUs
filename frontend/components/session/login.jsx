@@ -18,6 +18,19 @@ class Login extends React.Component {
     };
   }
 
+  renderErrors() {
+  return(
+    <ul>
+      {this.props.errors.map((error, i) => (
+        <li key={`error-${i}`}>
+          {error}
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+
   handleDemo(e) {
     e.preventDefault();
     this.setState({username:'user17', password:'user123'}, () => this.props.login(this.state)
@@ -35,6 +48,7 @@ class Login extends React.Component {
     // console.log(this.props);
     return (
       <div className="session-form">
+        {this.renderErrors()}
         <h2>Log In!</h2>
         <form onSubmit={this.handleSubmit}>
           <label>Username:

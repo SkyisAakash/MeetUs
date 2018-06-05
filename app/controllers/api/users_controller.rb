@@ -7,7 +7,7 @@ class Api::UsersController < ApplicationController
       render "api/users/show"
     else
       # Tell the user that something went wrong. Let them try again.
-      flash.now[:errors] = @user.errors.full_messages
+ render json: @user.errors.full_messages, status: 422
     end
   end
 

@@ -18,6 +18,19 @@ class Signup extends React.Component {
     };
   }
 
+
+  renderErrors() {
+    return(
+      <ul>
+        {this.props.errors.map((error, i) => (
+          <li key={`error-${i}`}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
+  }
+
   handleSubmit(e) {
     e.preventDefault();
     this.props.createNewUser(this.state)
@@ -28,6 +41,7 @@ class Signup extends React.Component {
     // console.log(this.props);
     return (
       <div className="session-form">
+          {this.renderErrors()}
         <h2>Sign Up!</h2>
         <form onSubmit={this.handleSubmit}>
           <label>Username:
