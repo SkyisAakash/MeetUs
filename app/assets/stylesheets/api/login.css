@@ -62,21 +62,33 @@ input {
   margin: 0px;
   display: inline;
 }
-
-/* hr {
-  width: 430px;
-  size: 1px;
-  border-top-color: #3b5998;
-  height: 0px;
-} */
+.formHeader h2 {
+  padding-top: 50px;
+}
 hr {
 width:211px;
 /* left: 20px; */
 /* position: absolute; */
 }
+.hrsign hr {
+  width:198px;
 
+}
+.orsign {
+  padding-left: 2px;
+  padding-right: 2px;
+  font-size: 13px;
+  font-weight: 800;
+  padding-bottom: 0px;
+  vertical-align: middle;
+  text-align: center;
+  background-color: white !important;
+}
 table {
-  position: absolute;
+  padding-top: 20px;
+  padding-bottom: 0px;
+  position: fixed;
+  /* position: absolute; */
 }
 
 .or {
@@ -91,8 +103,12 @@ table {
   /* position:absolute; */
 }
 
+#signupdemo {
+  width: 435px;
+  margin-top: 49px;
+}
 .demobutton {
-    width: 430px;
+    width: 460px;
       height: 36px;
       background-color: #3b5998;
       border: 1px solid #3b5998;
@@ -100,12 +116,15 @@ table {
       color: white;
       font-weight: 900;
       text-align: center;
+      align-self: center;
 }
 .demobutton:hover {
   cursor: pointer;
   background-color: #24355C;
 }
 .loginb {
+  padding-top: 10px;
+  padding-bottom: 10px;
   margin-top: 13px;
   background-color: rgb(237, 28, 64);
   color:white;
@@ -115,7 +134,7 @@ table {
   text-align: center;
   padding-top: 10px;
   height: 36px;
-  width: 82px;
+  width: 460px;
   line-height: 1.45;
   font-size:16px;
   text-align: center;
@@ -158,18 +177,19 @@ table {
 }
 
 .demosection {
+  margin-top: 33px;
   background-color: #D8DFEA;
 
-  width: 445px;
+  width: 458px;
   border: 1px solid rgba(0,0,0,.12);
   align-items: center;
-  padding-left: 15px;
+  /* padding-left: 15px; */
   display: run-in;
   align-items: center;
   /* position: relative; */
   height: 70px;
   /* position: relative; */
-  margin-top: 13px;
+  /* margin-top: 13px; */
 }
 .mainpage {
   display: flex;
@@ -215,6 +235,7 @@ html {
   flex-direction: column;
 }
 .continuebar {
+  padding-bottom: 20px;
   width: 435px !important;
   /* display: absolute; */
 }
@@ -233,6 +254,7 @@ html {
   /* position: relative; */
   width: 430px;
 }
+
 
 .logintext {
   padding-top: 7px;

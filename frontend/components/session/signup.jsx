@@ -3,7 +3,7 @@ import   { Link } from 'react-router-dom';
 
 
 class Signup extends React.Component {
-  
+
   constructor(props) {
     super(props);
     this.state = {
@@ -81,7 +81,13 @@ class Signup extends React.Component {
             <br/>
             <span className="errors">    {this.renderErrors()}</span>
           <input type="submit" value="Continue" className="loginb signup continuebar"/>
-          <hr className="hrsignup"/>
+        
+            <table><tr>
+              <td className="hrsign"><hr/></td>
+              <td className="orsign">OR</td>
+              <td className="hrsign"><hr/></td>
+            </tr></table>
+                    <button onClick={this.handleDemo} className="demobutton" id="signupdemo">Login as Demo User</button>
           <div className="gotologin">
           <div className="logintext">Already a member? </div>
           <Link to="/login" className="loginlink"><span className="loginlinktext">Log in</span></Link>

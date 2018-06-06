@@ -76,9 +76,9 @@ componentDidMount() {
             />
             <input type="checkbox" className="checkbox"/><p className="checkboxtext">Keep me signed in</p>
             <span className="errors">{this.renderErrors()}</span>
-          <input type="submit" value="Login" className="loginb"/>
           </label>
         </form>
+        <input type="submit" value="Login" className="loginb"/>
         <table><tr>
           <td className="hr"><hr/></td>
           <td className="or">OR</td>
