@@ -20,6 +20,10 @@ class Signup extends React.Component {
     };
   }
 
+  componentDidMount() {
+    this.props.removeErrors();
+  }
+
 
   renderErrors() {
     return(
@@ -44,7 +48,7 @@ class Signup extends React.Component {
     return (
       <div className="loginpage">
       <div className="session-form signup">
-          {this.renderErrors()}
+
           <div className="formHeader signup">
         <h2 className="signupheader">Sign up</h2>
         </div>
@@ -74,9 +78,8 @@ class Signup extends React.Component {
             />
         </label>
             <br/>
-          <input type="submit" value="Continue" className="loginb signup"/>
-          <br />
-          <br />
+            <span className="errors">    {this.renderErrors()}</span>
+          <input type="submit" value="Continue" className="loginb signup continuebar"/>
           <hr className="hrsignup"/>
           <div className="gotologin">
           <div className="logintext">Already a member? </div>

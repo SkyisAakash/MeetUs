@@ -1,0 +1,27 @@
+.mainfooter {
+  height: 100px;
+  width: 100%;
+  /* position: relative; */
+  bottom: 0px;
+  background-color: black;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  /* align-items: flex-end; */
+  /* top: 90%; */
+}
+.routefooter{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.linkedlogo {
+  width: 200px;
+  height: 100px;
+}
+
+
+.gitlogo {
+  width: 100px;
+  height: 100px;
+}

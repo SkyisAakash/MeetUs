@@ -4,7 +4,10 @@
   background-size: cover;
   top: 3px;
 }
-
+.errors {
+  color: red;
+  font-size: 13px;
+}
 .logininfo {
   font-size: 13px;
   font-weight: 800;
@@ -21,14 +24,25 @@ input {
   background-color: #F8F9F9;
 }
 .loginpage {
+  padding-top: 50px;
   background-color: #F8F9F9;
+  /* min-height: 800px; */
+  /* min-height: 100px; */
+  /* position: relative; */
+  padding-bottom: 355px;
+  /* width: 100% */
+  /* top: 100px; */
   }
 
 .signup {
-  width: 433px !important;
+  width: 460px !important;
+  /* height: 500px; */
 }
 .signupheader {
+  /* position: relative; */
   text-align: center;
+  margin-bottom: 20px;
+  top: -60px;
 }
 
 .checkbox {
@@ -57,7 +71,7 @@ input {
 } */
 hr {
 width:211px;
-left: 20px;
+/* left: 20px; */
 /* position: absolute; */
 }
 
@@ -89,6 +103,7 @@ table {
 }
 .demobutton:hover {
   cursor: pointer;
+  background-color: #24355C;
 }
 .loginb {
   margin-top: 13px;
@@ -156,14 +171,19 @@ table {
   /* position: relative; */
   margin-top: 13px;
 }
+.mainpage {
+  display: flex;
+  flex-direction: column;
+  height:100%;
+}
 .session-form {
-  position: absolute;
-  /* top:10%; */
-  left:50%;
+  /* position: absolute; */
+  /* top:100%; */
+  /* left:50%;
   transform: translate(-50%, -80%);
-  top: 500px;
+  top: 500px; */
   font-family: Arial,sans-serif;
-  height: 400px;
+  height: 380px;
   width: 460px;
   vertical-align: middle;
   margin: 0 auto;
@@ -171,13 +191,49 @@ table {
   border-radius: 3px;
   background-color: white;
 }
+body {
+  margin: 0px;
+}
+html {
+  margin-bottom: -2px;
+}
+/* #root {
+  min-height: 600px;
+} */
+/* html {
+  min-height: 100%;
+} */
+/* .main-body {
+  min-height: 100%;
+}
+.mainpage {
+  height: 100%;
+} */
+.page {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.continuebar {
+  width: 435px !important;
+  /* display: absolute; */
+}
 .signup {
   border: 0px;
-  top:50%;
+  /* top:50%; */
+  /* position: absolute; */
 }
 .hrsignup {
-  width: 433px;
+  /* align-items: center; */
+  margin-left: 0px;
+  top: 10px;
+  /* padding-right: 5px; */
+  align-items: center;
+  /* padding-top: 20px; */
+  /* position: relative; */
+  width: 430px;
 }
+
 .logintext {
   padding-top: 7px;
   height: 10px;

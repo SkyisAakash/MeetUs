@@ -18,11 +18,14 @@
   color: rgba(46,62,72,.6);
   letter-spacing: 1px;
 }
+.btn:hover {
+  color: #00a2c7;
+}
 .buttons {
   border-left: 1px solid lightgrey;
 }
 .startGroup {
-  color: #F64060;
+  color: #00a2c7;
   font-weight: 900;
   font-size: 15px;
   padding: 5px 16px 0px 16px;

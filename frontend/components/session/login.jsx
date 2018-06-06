@@ -31,6 +31,9 @@ class Login extends React.Component {
   );
 }
 
+componentDidMount() {
+  this.props.removeErrors();
+}
 
   handleDemo(e) {
     e.preventDefault();
@@ -50,7 +53,6 @@ class Login extends React.Component {
     return (
       <div className="loginpage">
         <div className="session-form">
-          {this.renderErrors()}
           <div className="formHeader">
               <h2>Log In<img className="lockSymbol" src="https://s26.postimg.cc/tkyx0y9pl/locksymbolonlogin.png"/></h2>
               <p className="shit">Not registered with us yet? </p><Link to="/signup" className="signupLink">Sign Up</Link>
@@ -73,7 +75,8 @@ class Login extends React.Component {
             onChange={this.handleInput('password')}
             />
             <input type="checkbox" className="checkbox"/><p className="checkboxtext">Keep me signed in</p>
-            <input type="submit" value="Login" className="loginb"/>
+            <span className="errors">{this.renderErrors()}</span>
+          <input type="submit" value="Login" className="loginb"/>
           </label>
         </form>
         <table><tr>
