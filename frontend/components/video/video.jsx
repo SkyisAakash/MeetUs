@@ -3,10 +3,14 @@ import { Link } from 'react-router-dom';
 import SessionFormContainer from '../session/signup_container';
 
 
-const Video = () => {
-  return (
+class Video extends React.Component {
+
+  componentDidMount() {
+    document.getElementById('vid').play();
+  }
+  render() {return (
     <div className="videobox">
-    <video className="video" autoPlay loop>
+    <video id="vid" className="video" autoPlay loop muted>
     <source src="https://www.meetup.com/mu_static/en-US/dddafbfe4574fc19c6718950691dcb78.mp4" type="video/mp4"/>
     Your browser does not support the video tag.
     </video>
@@ -17,6 +21,7 @@ const Video = () => {
     <Link to="/signup" className="loginb signup videosignup"><span class="videobuttontext">Sign Up</span></Link>
   </div>
   </div>);
-};
+}
+}
 
 export default Video;
