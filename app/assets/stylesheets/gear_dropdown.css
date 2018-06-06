@@ -3,7 +3,7 @@
 	top: 30px;
 	right: 0;
 	background-color: #fff;
-	border: 1px solid $light-gray;
+	/* border: 1px solid light-gray; */
 	border-radius: 3px;
 	padding: 10px;
 	width: 225px;
@@ -16,7 +16,7 @@
 }
 
 .gear-dropdown .editions  {
-	border-bottom: 1px solid $light-gray;
+	/* border-bottom: 1px solid light-gray; */
 }
 
 .gear-dropdown .editions li,
@@ -46,7 +46,7 @@
 }
 
 .gear-dropdown .editions li:hover {
-	background-color: $light-gray;
+	/* background-color: light-gray; */
 }
 
 .dropdown-subtitle {
@@ -60,5 +60,5 @@
 
 .editions li:first-of-type {
 	color: #000;
-	background-color: $light-gray;
+	/* background-color: light-gray; */
 }
