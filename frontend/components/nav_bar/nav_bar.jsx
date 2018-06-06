@@ -16,7 +16,7 @@ const display = currentUser ? (
   );
   return (
     <header className="nav-bar">
-      <img className="logo" src="https://s26.postimg.cc/eur407edl/meetus_logo.png"/>
+      <Link to="/"><img className="logo" src="https://s26.postimg.cc/eur407edl/meetus_logo.png"/></Link>
       <div className="rightSideNav">
         <a href="#" className="startGroup">Start a new group</a>
         {display}
