@@ -11,6 +11,29 @@
 }
 
 .btn {
-  text-decoration: none
-  padding: 
+  text-decoration: none;
+  padding: 0px 0px 0px 10px;
+  text-decoration: none;
+  font-size: 15px;
+  color: rgba(46,62,72,.6);
+  letter-spacing: 1px;
+}
+.buttons {
+  border-left: 1px solid lightgrey;
+}
+.startGroup {
+  color: #F64060;
+  font-weight: 900;
+  font-size: 15px;
+  padding: 5px 16px 0px 16px;
+  text-decoration: none;
+  text-align: center;
+  letter-spacing: 1px;
+}
+.rightSideNav {
+  display: flex;
+  height:28px;
+  font-family: Arial,sans-serif;
+  padding-top: 5px;
+  padding-bottom: 5px
 }

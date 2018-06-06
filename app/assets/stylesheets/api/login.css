@@ -1,0 +1,170 @@
+.lockSymbol {
+  width:16px;
+  height: 25px;
+  background-size: cover;
+  top: 3px;
+}
+
+.logininfo {
+  font-size: 13px;
+  font-weight: 800;
+  padding-top: 20px;
+  margin: 0px;
+}
+.inputField {
+  height: 30px;
+  width: 430px;
+  border: 1px solid rgba(0,0,0,.12);
+  border-radius: 3px;
+}
+input {
+  background-color: #F8F9F9;
+}
+.loginpage {
+  background-color: #F8F9F9;
+  }
+
+.checkbox {
+  font-size: 13px;
+  font-weight: 900;
+  padding-top: 20px;
+  margin: 0px;
+  margin-left: 1px;
+  margin-right: 3px;
+  margin-top: 13px;
+}
+.checkboxtext {
+  margin-top: 13px;
+  font-size: 13px;
+  font-weight: 900;
+  padding-top: 20px;
+  margin: 0px;
+  display: inline;
+}
+
+/* hr {
+  width: 430px;
+  size: 1px;
+  border-top-color: #3b5998;
+  height: 0px;
+} */
+hr {
+width:211px;
+left: 20px;
+/* position: absolute; */
+}
+
+table {
+  position: absolute;
+}
+
+.or {
+  padding-left: 2px;
+  padding-right: 2px;
+  font-size: 13px;
+  font-weight: 800;
+  padding-bottom: 0px;
+  vertical-align: middle;
+  text-align: center;
+  background-color: white !important;
+  /* position:absolute; */
+}
+
+.demobutton {
+    width: 430px;
+      height: 36px;
+      background-color: #3b5998;
+      border: 1px solid #3b5998;
+      border-radius: 3px;
+      color: white;
+      font-weight: 900;
+      text-align: center;
+}
+.demobutton:hover {
+  cursor: pointer;
+}
+.loginb {
+  margin-top: 13px;
+  background-color: rgb(237, 28, 64);
+  color:white;
+  font-weight: 900;
+  border-radius: 3px;
+  border: 1px solid rgb(237, 28, 64);
+  text-align: center;
+  padding-top: 10px;
+  height: 36px;
+  width: 82px;
+  line-height: 1.45;
+  font-size:16px;
+  text-align: center;
+  padding-top: 5px;
+  display: block;
+  vertical-align: middle;
+}
+
+.loginb:hover {
+  background-color: #bd0f2d;
+  cursor: pointer;
+}
+.shit {
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 1.6;
+    display: inline;
+}
+.signupLink {
+  display: inline;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.6;
+  text-decoration: none;
+  color: blue;
+}
+.signupLink:hover {
+  text-decoration: underline;
+}
+.formHeader {
+  padding-left: 15px;
+  border-bottom: 1px solid rgba(0,0,0,.12);
+  padding-bottom: 10px;
+}
+.formlogin {
+  padding-left: 15px;
+}
+
+.demosection {
+  background-color: #D8DFEA;
+  1px solid rgba(0,0,0,.12)
+  width: 445px;
+  border:
+  align-items: center;
+  padding-left: 15px;
+  display: run-in;
+  align-items: center;
+  /* position: relative; */
+  height: 70px;
+  /* position: relative; */
+  margin-top: 13px;
+}
+.session-form {
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  top: 500px;
+  font-family: Arial,sans-serif;
+  height: 400px;
+  width: 460px;
+  vertical-align: middle;
+  margin: 0 auto;
+  border: 1px solid rgba(0,0,0,.12);
+  border-radius: 3px;
+  background-color: white;
+}
+
+.session-form h2 {
+  padding-top: 10px;
+  font-weight: 500;
+  margin: 0px;
+  font-size: 34px;
+}

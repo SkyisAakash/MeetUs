@@ -16,7 +16,6 @@ import NavBarContainer from './nav_bar/nav_bar_container';
 const App = () => (
   <div>
     <Route path="/" component={NavBarContainer}/>
-    <h1>Meet Us App</h1>
     <AuthRoute path="/signup" component={SignupContainer}/>
     <AuthRoute path="/login" component={LoginContainer} />
     <ProtectedRoute path="/groups" component={GroupIndexContainer}/>

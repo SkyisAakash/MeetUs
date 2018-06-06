@@ -42,16 +42,16 @@ class Signup extends React.Component {
     return (
       <div className="session-form">
           {this.renderErrors()}
-        <h2>Sign Up!</h2>
+        <h2>Sign up</h2>
         <form onSubmit={this.handleSubmit}>
-          <label>Username:
+          <label>Your name:
             <input
               type="text"
               value={this.state.username}
               onChange={this.handleInput('username')}
             />
           </label>
-          <label>Email:
+          <label>Email address:
               <input
                 type="text"
                 value={this.state.email}
