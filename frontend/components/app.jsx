@@ -21,7 +21,7 @@ const App = () => (
    <Route path="/" component={NavBarContainer}/>
    </div>
    <div className="mainpage">
-    <Route exact path="/" component={Video}/>
+    <AuthRoute exact path="/" component={Video}/>
     <AuthRoute exact path="/signup" component={SignupContainer}/>
     <AuthRoute exact path="/login" component={LoginContainer} />
     <ProtectedRoute path="/groups" component={GroupIndexContainer}/>

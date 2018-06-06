@@ -23,6 +23,6 @@ const hideDropdown = () => {
 };
 
 // Add click listener to gear icon which invokes reveal function
-let b = document.getElementById('gear-dropdown-btn');
-b.addEventListener('click', revealDropdown);
-$(() => $('#gear-dropdown-btn').on('click', revealDropdown));
+// b.addEventListener('click', revealDropdown);
+// let b = document.getElementById('gear-dropdown-btn');
+// $(() => $('#gear-dropdown-btn').on('click', revealDropdown));
