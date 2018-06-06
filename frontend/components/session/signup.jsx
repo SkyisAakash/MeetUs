@@ -11,7 +11,7 @@ class Signup extends React.Component {
       email: '',
       password: '',
     };
-
+    this.handleDemo = this.handleDemo.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -23,6 +23,12 @@ class Signup extends React.Component {
 
   componentDidMount() {
     this.props.removeErrors();
+  }
+
+  handleDemo(e) {
+    e.preventDefault();
+    this.props.login({email:'user17', password:'user123'})
+      .then(() => this.props.history.push('/groups'));
   }
 
 
@@ -81,7 +87,7 @@ class Signup extends React.Component {
             <br/>
             <span className="errors">    {this.renderErrors()}</span>
           <input type="submit" value="Continue" className="loginb signup continuebar"/>
-        
+
             <table><tr>
               <td className="hrsign"><hr/></td>
               <td className="orsign">OR</td>

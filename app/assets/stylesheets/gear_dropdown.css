@@ -11,8 +11,8 @@
 	padding: 10px;
 	width: 330px;
 	z-index: 1;
-	color: $dark-gray;
-	font-family: $sans-serif;
+	/* color: dark-gray; */
+	/* font-family: $sans-serif; */
 	text-align: left;
 	box-shadow: 4px 4px 4px 4px rgba(0.2,0.2,0.2,0.2);
 	font-weight: initial;
