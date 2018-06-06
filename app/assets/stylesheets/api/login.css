@@ -24,6 +24,13 @@ input {
   background-color: #F8F9F9;
   }
 
+.signup {
+  width: 433px !important;
+}
+.signupheader {
+  text-align: center;
+}
+
 .checkbox {
   font-size: 13px;
   font-weight: 900;
@@ -128,6 +135,9 @@ table {
   border-bottom: 1px solid rgba(0,0,0,.12);
   padding-bottom: 10px;
 }
+.formHeader .signup {
+  border-bottom: 0px;
+}
 .formlogin {
   padding-left: 15px;
 }
@@ -161,7 +171,32 @@ table {
   border-radius: 3px;
   background-color: white;
 }
-
+.signup {
+  border: 0px;
+  top:50%;
+}
+.hrsignup {
+  width: 433px;
+}
+.logintext {
+  padding-top: 7px;
+  height: 10px;
+  font-size: 13px;
+}
+.loginlink {
+  height: 0px;
+}
+.loginlinktext {
+  font-size: 13px;
+  text-decoration: none;
+  padding-left: 5px;
+  height: 10px;
+  display: inline;
+}
+.gotologin {
+  display: flex;
+  justify-content: center;
+}
 .session-form h2 {
   padding-top: 10px;
   font-weight: 500;

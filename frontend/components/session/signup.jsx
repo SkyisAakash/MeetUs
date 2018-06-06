@@ -1,4 +1,6 @@
 import React from 'react';
+import   { Link } from 'react-router-dom';
+
 
 class Signup extends React.Component {
   constructor(props) {
@@ -40,33 +42,48 @@ class Signup extends React.Component {
   render() {
     // console.log(this.props);
     return (
-      <div className="session-form">
+      <div className="loginpage">
+      <div className="session-form signup">
           {this.renderErrors()}
-        <h2>Sign up</h2>
-        <form onSubmit={this.handleSubmit}>
-          <label>Your name:
+          <div className="formHeader signup">
+        <h2 className="signupheader">Sign up</h2>
+        </div>
+        <form onSubmit={this.handleSubmit} className="formlogin">
+          <label><p className="logininfo">Your name</p>
             <input
               type="text"
+              className="inputField"
               value={this.state.username}
               onChange={this.handleInput('username')}
             />
           </label>
-          <label>Email address:
+          <label><p className="logininfo">Email address</p>
               <input
                 type="text"
+                className="inputField"
                 value={this.state.email}
                 onChange={this.handleInput('email')}
               />
           </label>
-          <label>Password:
+          <label><p className="logininfo">Password</p>
             <input
               type="password"
+              className="inputField"
               value={this.state.password}
               onChange={this.handleInput('password')}
             />
-          <input type="submit" value="signup"/>
-          </label>
+        </label>
+            <br/>
+          <input type="submit" value="Continue" className="loginb signup"/>
+          <br />
+          <br />
+          <hr className="hrsignup"/>
+          <div className="gotologin">
+          <div className="logintext">Already a member? </div>
+          <Link to="/login" className="loginlink"><span className="loginlinktext">Log in</span></Link>
+          </div>
         </form>
+      </div>
       </div>
     );
   }
