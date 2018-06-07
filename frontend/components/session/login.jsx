@@ -43,7 +43,7 @@ componentDidMount() {
 
   handleSubmit(e) {
     e.preventDefault();
-    // debugger
+    debugger
     this.props.login(this.state)
       .then(() => this.props.history.push('/groups'));
   }
@@ -78,7 +78,8 @@ componentDidMount() {
             <span className="errors">{this.renderErrors()}</span>
           </label>
         </form>
-        <input type="submit" value="Login" className="loginb"/>
+        <button className="loginb" onClick={this.handleSubmit}>Login</button>
+        
         <table><tr>
           <td className="hr"><hr/></td>
           <td className="or">OR</td>

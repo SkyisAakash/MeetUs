@@ -18,7 +18,7 @@ class Video extends React.Component {
   <div className="videoText">
     <p className="videotextheader">What do you love?</p>
     <p className="videotextdata">Do more of it with Meetup</p>
-    <Link to="/signup" className="loginb signup videosignup"><span class="videobuttontext">Sign Up</span></Link>
+    <Link to="/signup" className="loginb signup videosignup"><span classname="videobuttontext">Sign Up</span></Link>
   </div>
   </div>);
 }

@@ -4,7 +4,7 @@
   width: 100%;
   overflow: hidden;
   align-items: center;
-  padding-bottom: 185px;
+  margin-bottom: 185px;
 }
 .videotextdata {
 font-size: 20px;
@@ -29,7 +29,7 @@ font-weight: 600;
 }
 .video {
      position: relative;
-  max-height: 600px;
+  /* max-height: 600px; */
   width: 100%;
   object-fit: fill;
   overflow: hidden;

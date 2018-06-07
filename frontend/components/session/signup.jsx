@@ -46,8 +46,8 @@ class Signup extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.createNewUser(this.state)
-      .then(this.props.history.push('/groups'));
+    this.props.createNewUser(this.state);
+      // .then(this.props.history.push('/groups'));
   }
 
   render() {
@@ -85,7 +85,7 @@ class Signup extends React.Component {
             />
         </label>
             <br/>
-            <span className="errors">    {this.renderErrors()}</span>
+            <span className="errors">{this.renderErrors()}</span>
           <input type="submit" value="Continue" className="loginb signup continuebar"/>
 
             <table><tr>
