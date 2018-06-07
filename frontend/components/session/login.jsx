@@ -8,7 +8,7 @@ class Login extends React.Component {
       email: '',
       password: '',
     };
-
+    this.checkinput = this.checkinput.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleDemo = this.handleDemo.bind(this);
   }
@@ -18,6 +18,8 @@ class Login extends React.Component {
       this.setState({ [type]: e.target.value });
     };
   }
+
+
 
   renderErrors() {
   return(
@@ -43,9 +45,14 @@ componentDidMount() {
 
   handleSubmit(e) {
     e.preventDefault();
-    debugger
+    // debugger
     this.props.login(this.state)
       .then(() => this.props.history.push('/groups'));
+  }
+
+  checkinput(e) {
+    // debugger
+    if (e.keyCode === 13 || e.which === 13) this.handleSubmit(e, this.state);
   }
 
   render() {
@@ -54,8 +61,7 @@ componentDidMount() {
       <div className="loginpage">
         <div className="session-form">
           <div className="formHeader">
-              <h2>Log In<img className="lockSymbol" src="https://s26.postimg.cc/tkyx0y9pl/locksymbolonlogin.png"/></h2>
-              <p className="shit">Not registered with us yet? </p><Link to="/signup" className="signupLink">Sign Up</Link>
+              <h2>Log In</h2>
           </div>
           <form onSubmit={this.handleSubmit} className="formlogin">
             <label><p className="logininfo">Email address:</p>
@@ -64,6 +70,7 @@ componentDidMount() {
               className="inputField"
               value={this.state.email}
               onChange={this.handleInput('email')}
+              onKeyPress={this.checkinput}
               />
             </label>
 
@@ -73,13 +80,14 @@ componentDidMount() {
             className="inputField"
             value={this.state.password}
             onChange={this.handleInput('password')}
+            onKeyPress={this.checkinput}
             />
-            <input type="checkbox" className="checkbox"/><p className="checkboxtext">Keep me signed in</p>
+
             <span className="errors">{this.renderErrors()}</span>
           </label>
         </form>
         <button className="loginb" onClick={this.handleSubmit}>Login</button>
-        
+
         <table><tr>
           <td className="hr"><hr/></td>
           <td className="or">OR</td>
@@ -89,7 +97,10 @@ componentDidMount() {
           <br/>
           <button onClick={this.handleDemo} className="demobutton">Login as Demo User</button>
         </div>
-      </div>
+        <div className="gotologin">
+        <div className="logintext">Not registered with us yet?  <Link to="/signup">Sign Up</Link> </div>
+        </div>
+    </div>
 
     </div>
     );

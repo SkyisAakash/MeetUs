@@ -11,6 +11,7 @@ class Signup extends React.Component {
       email: '',
       password: '',
     };
+    this.checkinput = this.checkinput.bind(this);
     this.handleDemo = this.handleDemo.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -50,55 +51,64 @@ class Signup extends React.Component {
       // .then(this.props.history.push('/groups'));
   }
 
+  checkinput(e) {
+    if (e.keyCode === 13 || e.which === 13) this.handleSubmit(e, this.state);
+  }
+
   render() {
     // console.log(this.props);
     return (
       <div className="loginpage">
-      <div className="session-form signup">
+      <div className="session-form" id="signup">
 
-          <div className="formHeader signup">
-        <h2 className="signupheader">Sign up</h2>
+          <div className="formHeader">
+        <h2>Sign up</h2>
         </div>
         <form onSubmit={this.handleSubmit} className="formlogin">
-          <label><p className="logininfo">Your name</p>
+          <label><p className="logininfo">Your name:</p>
             <input
               type="text"
               className="inputField"
               value={this.state.username}
               onChange={this.handleInput('username')}
+              onKeyPress={this.checkinput}
             />
           </label>
-          <label><p className="logininfo">Email address</p>
+          <label><p className="logininfo">Email address:</p>
               <input
                 type="text"
                 className="inputField"
                 value={this.state.email}
                 onChange={this.handleInput('email')}
+                onKeyPress={this.checkinput}
               />
           </label>
-          <label><p className="logininfo">Password</p>
+          <label><p className="logininfo">Password:</p>
             <input
               type="password"
               className="inputField"
               value={this.state.password}
               onChange={this.handleInput('password')}
+              onKeyPress={this.checkinput}
             />
         </label>
             <br/>
             <span className="errors">{this.renderErrors()}</span>
-          <input type="submit" value="Continue" className="loginb signup continuebar"/>
+          </form>
 
+            <button className="loginb" onClick={this.handleSubmit}>Continue</button>
             <table><tr>
-              <td className="hrsign"><hr/></td>
-              <td className="orsign">OR</td>
-              <td className="hrsign"><hr/></td>
+              <td className="hr"><hr/></td>
+              <td className="or">OR</td>
+              <td className="hr"><hr/></td>
             </tr></table>
-                    <button onClick={this.handleDemo} className="demobutton" id="signupdemo">Login as Demo User</button>
-          <div className="gotologin">
-          <div className="logintext">Already a member? </div>
-          <Link to="/login" className="loginlink"><span className="loginlinktext">Log in</span></Link>
+            <div className="demosection">
+              <br/>
+                    <button onClick={this.handleDemo} className="demobutton" >Login as Demo User</button>
+</div>
+        <div className="gotologin">
+          <div className="logintext">Already a member?   <Link to="/login">Log in</Link></div>
           </div>
-        </form>
       </div>
       </div>
     );

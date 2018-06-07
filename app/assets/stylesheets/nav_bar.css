@@ -11,8 +11,9 @@
 }
 
 .btn {
+  /* margin-top: 10px; */
   text-decoration: none;
-  padding: 0px 0px 0px 10px;
+  padding: 0px 0px 0px 20px;
   text-decoration: none;
   font-size: 15px;
   color: rgba(46,62,72,.6);
@@ -22,13 +23,14 @@
   color: #00a2c7;
 }
 .buttons {
+  margin-top: 8px;
   border-left: 1px solid lightgrey;
 }
 .startGroup {
   color: #00a2c7;
   font-weight: 900;
   font-size: 15px;
-  padding: 5px 16px 0px 16px;
+  padding: 13px 16px 0px 16px;
   text-decoration: none;
   text-align: center;
   letter-spacing: 1px;

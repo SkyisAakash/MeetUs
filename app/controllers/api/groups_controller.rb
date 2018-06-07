@@ -1,7 +1,7 @@
 class Api::GroupsController < ApplicationController
 
   def index
-    if params[search_query] = ""
+    if params[search_query] == ""
       @groups = Group.all
     else
       @groups = Group.where("title LIKE '%#{params[:search_query]}'")

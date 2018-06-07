@@ -21,10 +21,13 @@ const App = () => (
    <Route path="/" component={NavBarContainer}/>
    </div>
    <div className="mainpage">
+     <Switch>
     <AuthRoute exact path="/" component={Video}/>
     <AuthRoute exact path="/signup" component={SignupContainer}/>
     <AuthRoute exact path="/login" component={LoginContainer} />
     <ProtectedRoute path="/groups" component={GroupIndexContainer}/>
+    <Route path="/" component={Video}/>
+    </Switch>
     </div>
     <div>
     <Route path="/" component={Footer} className="routefooter"/>

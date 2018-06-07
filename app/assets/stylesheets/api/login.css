@@ -64,7 +64,8 @@ input {
   display: inline;
 }
 .formHeader h2 {
-  padding-top: 50px;
+  padding-top: 100px;
+  text-align: center;
 }
 hr {
 width:211px;
@@ -109,13 +110,14 @@ table {
   margin-top: 49px;
 }
 .demobutton {
-    width: 460px;
+    width: 432px;
       height: 36px;
       background-color: #3b5998;
       border: 1px solid #3b5998;
       border-radius: 3px;
       color: white;
       font-weight: 900;
+      margin-left: 15px;
       text-align: center;
       align-self: center;
 }
@@ -135,10 +137,11 @@ table {
   text-align: center;
   padding-top: 10px;
   height: 36px;
-  width: 460px;
+  width: 433px;
   line-height: 1.45;
   font-size:16px;
   text-align: center;
+  margin-left: 15px;
   padding-top: 5px;
   display: block;
   vertical-align: middle;
@@ -179,10 +182,10 @@ table {
 
 .demosection {
   margin-top: 33px;
-  background-color: #D8DFEA;
+  /* background-color: #D8DFEA; */
 
   width: 458px;
-  border: 1px solid rgba(0,0,0,.12);
+  /* border: 1px solid rgba(0,0,0,.12); */
   align-items: center;
   /* padding-left: 15px; */
   display: run-in;
@@ -204,12 +207,13 @@ table {
   transform: translate(-50%, -80%);
   top: 500px; */
   font-family: Arial,sans-serif;
-  height: 380px;
+  height: 403px;
   width: 460px;
   vertical-align: middle;
   margin: 0 auto;
   border: 1px solid rgba(0,0,0,.12);
   border-radius: 3px;
+  padding-bottom: 20px;
   background-color: white;
 }
 body {
@@ -240,8 +244,9 @@ html {
   width: 435px !important;
   /* display: absolute; */
 }
-.signup {
-  border: 0px;
+#signup {
+  height: 468px;
+  /* border: 0px; */
   /* top:50%; */
   /* position: absolute; */
 }
@@ -258,12 +263,17 @@ html {
 
 
 .logintext {
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.6;
   padding-top: 7px;
   height: 10px;
-  font-size: 13px;
 }
 .loginlink {
   height: 0px;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.6;
 }
 .loginlinktext {
   font-size: 13px;
@@ -277,7 +287,8 @@ html {
   justify-content: center;
 }
 .session-form h2 {
-  padding-top: 10px;
+  padding-bottom: 15px;
+  padding-top: 30px;
   font-weight: 500;
   margin: 0px;
   font-size: 34px;
