@@ -12,3 +12,9 @@ export const createMembership = (group_id, user_id) => {
     data:{group_id, user_id}
   });
 };
+export const receiveMemberships = () => {
+  return $.ajax({
+    url:`api/group_members`,
+    method:'GET',
+  });
+};

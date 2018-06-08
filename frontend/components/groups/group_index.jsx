@@ -13,14 +13,28 @@ class GroupIndex extends React.Component {
   //   }
   // }
 
-  componentDidMount() {
-    // var header = document.getElementById("myHeader");
+  constructor(props){
     // debugger
-    // var sticky = header.offsetTop;
-    // window.onscroll = function() {this.myFunction(sticky, header);};
+    super(props);
+    this.state ={
+      myGroups:[]
+    };
+  }
+  componentDidMount() {
+    this.props.requestGroups();
+    this.props.requestgroupmembers();
+  }
+
+  componentWillReceiveProps(nextProps){
+    // debugger
+    this.setState({
+      myGroups:nextProps.memberGroups
+    });
   }
 
   render() {
+    // debugger
+    // console.log(this.state.myGroups);
     return (
       <div id="myHeader">
         <SearchBox requestGroups={this.props.requestGroups} searchtype="group"/>
@@ -30,6 +44,9 @@ class GroupIndex extends React.Component {
     })}
     </ul>
     <Link to={`/groups/new`}>GroupForm</Link>
+    {this.state.myGroups.map((group)=>{
+    return <p>{group.title}</p>;
+    })}
   </div>
     );
   }

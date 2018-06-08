@@ -1,12 +1,14 @@
 class Api::GroupMembersController < ApplicationController
 
+  def index
+    # debugger
+    @groupmembers = GroupMember.all
+  end
     def create
-      debugger
+      # debugger
       @groupmember = GroupMember.new(user_id:params[:user_id], group_id:params[:group_id])
       if @groupmember.save
-        debugger
-        @user = User.find(params[:user_id])
-        render "api/users/show"
+        render :show
       else
         render json: @groupmember.errors.full_messages, status: 422
       end

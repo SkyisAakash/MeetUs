@@ -3,6 +3,8 @@ import {connect} from 'react-redux';
 import NavBar from './nav_bar';
 import { logout } from '../../actions/session_actions';
 import { createGroup } from '../../actions/group_actions.js';
+import { openModal, closeModal} from '../../actions/modal_actions';
+
 
 
 const mapStateToProps = (state) => ({
@@ -10,7 +12,13 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  logout: () => dispatch(logout())
+  logout: () => dispatch(logout()),
+  otherForm: (
+    <button onClick={() => dispatch(openModal('create'))}>
+     create Modal
+    </button>
+  ),
+  closeModal: () => dispatch(closeModal())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(NavBar);

@@ -18,6 +18,7 @@ class GroupShow extends React.Component {
         // debugger
       }
     );
+
     this.groupoptions = this.groupoptions.bind(this);
   }
 
@@ -32,13 +33,16 @@ class GroupShow extends React.Component {
       this.props.history.push(`/groups`);
     });
   }
-  render(){
 
+  render(){
+    if (!this.props.group) {
+      return null;
+    }
     return(
       <div className="groupshow">
         <div className="grouphead">
 
-          <img src={this.props.group.image_url} className="groupimage"/>
+          <img src={this.props.group.image_url} className="groupimage" alt="wrong url"/>
           <p className="groupShowTitle">{this.props.group.title}</p>
           {this.state.organizer.username}
         </div>
@@ -63,7 +67,8 @@ class GroupShow extends React.Component {
     const deletebtn = (this.props.currentUser.id == this.props.group.organizer_id) ?
     (<div>
       // debugger
-           <button onClick={() => openModal('login')}>Login</button>
+           {this.props.otherForm}
+          
     <Link to={`/groups/${this.props.group.id}/edit`}>Edit</Link>
     <button onClick={()=>this.deleteGroup()}>Delete</button>
     </div>

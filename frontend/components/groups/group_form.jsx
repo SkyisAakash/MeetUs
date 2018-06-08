@@ -20,15 +20,20 @@ handleInput(field) {
 submitform() {
 
   this.props.submitGroup(this.state).then((payload) => {
+    debugger
     this.props.history.push(`/groups/${payload.group.id}`);
-  });
+  }).then(this.props.closeModal);
 
 }
 
   render () {
+    if (!this.props.group) {
+      return null;
+    }
     // debugger
     return (
       <div>
+           <div onClick={this.props.closeModal} className="close-x">X</div>
 <form onSubmit={()=>this.submitform()}>
 <input type="text" value={this.state.description} onChange={this.handleInput('description')}/>
 <input type="string" value={this.state.title} onChange={this.handleInput('title')}/>

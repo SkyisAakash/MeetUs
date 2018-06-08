@@ -11,10 +11,12 @@ function Modal({modal}) {
   }
   let component;
   switch (modal) {
-    case 'editGroup':
+    case 'edit':
+    // debugger
       component = <EditGroupFormContainer />;
       break;
-    case 'createGroup':
+    case 'create':
+    // debugger
       component = <CreateGroupFormContainer />;
       break;
     default:

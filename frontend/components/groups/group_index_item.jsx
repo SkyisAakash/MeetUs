@@ -11,7 +11,7 @@ class GroupIndexItem extends React.Component {
     return (
       <Link to={`/groups/${this.props.group.id}`} className="groupIndexLink">
       <li className="eachGroup">
-        <img src={this.props.group.image_url} className="groupIndexImage"/>
+        <img src={this.props.group.image_url} className="groupIndexImage" alt="wrong url"/>
         <div className="container">
           <p className="groupIndexTitle">{this.props.group.title}</p>
         </div>

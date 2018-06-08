@@ -18,10 +18,12 @@ import Video from './video/video.jsx';
 import Footer from './footer/footer.jsx';
 import NavBarContainer from './nav_bar/nav_bar_container';
 import HeadingBar from './heading/heading.jsx';
+import Modal from './modal/modal.jsx';
 
 const App = () => (
   <div className="page">
     <div>
+      <Modal />
    <Route path="/" component={NavBarContainer}/>
    </div>
    <ProtectedRoute exact path="/groups" component={HeadingBar}/>

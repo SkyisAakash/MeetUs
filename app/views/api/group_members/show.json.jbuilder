@@ -1,1 +1,2 @@
-json.extract! @membership, :group_id, :user_id
+# debugger
+json.extract! @groupmember, :group_id, :user_id
