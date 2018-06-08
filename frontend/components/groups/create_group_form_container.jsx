@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import { createGroup } from '../../actions/group_actions';
 import GroupForm from './group_form';
+import { openModal, closeModal } from '../../actions/modal_actions';
 
 const msp = (state,ownProps) => ({
   group: {description:'', title:'', organizer_id:state.session.currentUser.id, image_url:"https://s26.postimg.cc/i809pisxl/food.jpg"},
@@ -9,7 +10,13 @@ const msp = (state,ownProps) => ({
 });
 
 const mdp = (dispatch,ownProps) => ({
-  submitGroup: (group) => dispatch(createGroup(group))
+  submitGroup: (group) => dispatch(createGroup(group)),
+  otherForm: (
+  <button onClick={() => dispatch(openModal('create'))}>
+    Login
+  </button>
+),
+closeModal: () => dispatch(closeModal())
 });
 
 export default connect(msp, mdp)(GroupForm);

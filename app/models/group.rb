@@ -25,7 +25,7 @@ has_many :memberships,
 foreign_key: :user_id,
 class_name: :GroupMember
 
-has_many :members, through: :memberships, source: :member, inverse_of: :groups
+has_many :members, through: :memberships, source: :member
 
 
 end

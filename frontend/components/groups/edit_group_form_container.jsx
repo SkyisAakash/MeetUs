@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { requestGroup, updateGroup } from '../../actions/group_actions';
 import GroupForm from './group_form';
-
+import { openModal, closeModal } from '../../actions/modal_actions';
 
 class EditGroupForm extends React.Component {
 
@@ -30,7 +30,13 @@ const msp = (state,ownProps) => ({
 
 const mdp = (dispatch,ownProps) => ({
   submitGroup: (group) => dispatch(updateGroup(group)),
-  requestGroup: () => dispatch(requestGroup(ownProps.match.params.groupId))
+  requestGroup: () => dispatch(requestGroup(ownProps.match.params.groupId)),
+  otherForm: (
+  <button onClick={() => dispatch(openModal('edit'))}>
+    Signup
+  </button>
+),
+closeModal: () => dispatch(closeModal())
 });
 
 export default connect(msp, mdp)(EditGroupForm);

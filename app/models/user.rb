@@ -24,7 +24,7 @@ class User < ApplicationRecord
   class_name: :GroupMember,
   dependent: :destroy
 
-  has_many :groups, through: :group_followed, source: :group, inverse_of: :members
+  has_many :groups, through: :group_followed, source: :group
 
 
   def self.find_by_credentials(email, password)

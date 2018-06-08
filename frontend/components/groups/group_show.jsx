@@ -71,6 +71,7 @@ class GroupShow extends React.Component {
     const deletebtn = (this.props.currentUser.id == this.props.group.organizer_id) ?
     (<div>
       // debugger
+           <button onClick={() => openModal('login')}>Login</button>
     <Link to={`/groups/${this.props.group.id}/edit`}>Edit</Link>
     <button onClick={()=>this.deleteGroup()}>Delete</button>
     </div>

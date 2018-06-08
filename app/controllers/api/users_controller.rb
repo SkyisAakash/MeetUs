@@ -21,23 +21,23 @@ class Api::UsersController < ApplicationController
     render "api/users/show"
   end
 
-  def update
-    debugger
-    @user = User.find_by(id:params[:user][:id])
-    new_ids = params[:user][:group_ids]
-    result = [];
-    new_ids.each do |asso|
-      result.push asso.to_i
-    end
-    debugger
-    @user.group_ids = result;
-    debugger
-    # if @user.update_attributes(group_followed_ids: new_ids)
-      render "api/users/show"
+  # def update
+  #   debugger
+  #   @user = User.find_by(id:params[:user][:id])
+  #   new_ids = params[:user][:group_ids]
+  #   result = [];
+  #   new_ids.each do |asso|
+  #     result.push asso.to_i
+  #   end
+  #   debugger
+  #   @user.group_ids = result;
+  #   debugger
+  #   # if @user.update_attributes(group_followed_ids: new_ids)
+  #     render "api/users/show"
     # else
       # render json: @user.errors.full_messages, status: 422
     # end
-  end
+  # end
 
 
 
@@ -49,6 +49,6 @@ class Api::UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:username, :email, :password)
+    params.require(:user).permit(:username, :email, :password, :group_ids)
   end
 end
