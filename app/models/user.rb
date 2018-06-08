@@ -20,7 +20,7 @@ class User < ApplicationRecord
   attr_reader :password
 
   has_many :group_followed,
-  foreign_key: :group_id,
+  foreign_key: :user_id,
   class_name: :GroupMember,
   dependent: :destroy
 

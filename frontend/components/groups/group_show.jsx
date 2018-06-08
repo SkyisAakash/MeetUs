@@ -22,15 +22,7 @@ class GroupShow extends React.Component {
   }
 
   joinGroup() {
-    // debugger
-    let old_ids=this.props.currentUser.group_ids;
-    old_ids.push(this.props.group.id);
-    let newUser = {username:this.props.currentUser.username,
-                email:this.props.currentUser.email,
-                id:this.props.currentUser.id,
-              group_ids:old_ids};
-            // debugger
-    this.props.update(newUser);
+    this.props.createGroupMember(this.props.group.id,this.props.currentUser.id);
   }
 
   deleteGroup() {

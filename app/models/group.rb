@@ -22,7 +22,7 @@ class_name: :User
 
 
 has_many :memberships,
-foreign_key: :user_id,
+foreign_key: :group_id,
 class_name: :GroupMember
 
 has_many :members, through: :memberships, source: :member
