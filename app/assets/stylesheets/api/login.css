@@ -111,12 +111,13 @@ table {
 }
 .demobutton {
     width: 432px;
+    font-size: 15px;
       height: 36px;
       background-color: #3b5998;
       border: 1px solid #3b5998;
       border-radius: 3px;
       color: white;
-      font-weight: 900;
+      font-weight: 700;
       margin-left: 15px;
       text-align: center;
       align-self: center;

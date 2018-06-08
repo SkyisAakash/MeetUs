@@ -1,7 +1,9 @@
-export const fetchGroups = () => {
+export const fetchGroups = (search_query) => {
+  // debugger
   return $.ajax({
     url:`api/groups`,
-    method:'GET'
+    method:'GET',
+    data:{search_query}
   });
 };
 export const fetchGroup = (id) => {

@@ -1,1 +1,1 @@
-json.partial! 'event', event: @event
+json.partial! 'group', group: @group

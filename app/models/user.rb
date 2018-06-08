@@ -19,7 +19,12 @@ class User < ApplicationRecord
   after_initialize :ensure_session_token
   attr_reader :password
 
-  has_many :groups
+  has_many :group_followed,
+  foreign_key: :group_id,
+  class_name: :GroupMember,
+  dependent: :destroy
+
+  has_many :groups, through: :group_followed, source: :group, inverse_of: :members
 
 
   def self.find_by_credentials(email, password)

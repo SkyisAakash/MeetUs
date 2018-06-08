@@ -1,16 +1,23 @@
 class Api::GroupsController < ApplicationController
 
   def index
-    if params[search_query] == ""
-      @groups = Group.all
+    # debugger
+    if params[:search_query]
+      if params[:search_query] == ""
+        @groups = Group.all
+      else
+        query = params[:search_query].upcase + "%"
+        @groups = Group.where("UPPER(title) LIKE ?", query)
+      end
     else
-      @groups = Group.where("title LIKE '%#{params[:search_query]}'")
+      @groups = Group.all
     end
-    render json: @groups
+    render :index
   end
 
 
     def show
+      # debugger
       @group = Group.find(params[:id])
     end
 
@@ -24,9 +31,11 @@ class Api::GroupsController < ApplicationController
     end
 
     def update
+      # debugger
       @group = Group.find_by(id: params[:id])
       if @group.update(group_params)
-        render :show
+        # debugger
+        render json: @group
       else
         render json: @group.errors.full_messages, status: 422
       end
@@ -35,12 +44,11 @@ class Api::GroupsController < ApplicationController
     def destroy
       @group = Group.find(params[:id])
       @group.destroy
-      render :show
     end
 
     private
 
     def group_params
-      params.require(:group).permit(:search_query, :description, :title, :organizer_id)
+      params.require(:group).permit(:search_query, :description, :title, :organizer_id, :image_url)
     end
 end

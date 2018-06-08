@@ -6,6 +6,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <script src="//widget.cloudinary.com/global/all.js" type="text/javascript"></script>
     <% if current_user %>
   <script>
     window.currentUser = {
@@ -17,6 +18,13 @@
 <% end %>
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<script type="text/javascript">
+  window.CLOUDINARY_OPTIONS = {
+    cloud_name: "<%=ENV['CLOUD_NAME']%>",
+    upload_preset: "<%= ENV['UPLOAD_PRESET'] %>"
+  };
+</script>
+
   </head>
 
   <body classname="main-body">

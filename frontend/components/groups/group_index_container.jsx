@@ -1,14 +1,16 @@
 import { connect } from 'react-redux';
-import { requestGroups } from '../../actions/group_actions';
-import GroupIndex from './group_index';
+import { requestGroups, deleteGroup } from '../../actions/group_actions.js';
+import GroupIndex from './group_index.jsx';
 
 
 const msp = state => ({
-  // groups: Object.values(state.groups)
+  groups: Object.values(state.entities.groups),
+  currentUser: state.session.currentUser,
+  search_query: ""
 });
 
 const mdp = dispatch => ({
-  requestGroups:() => dispatch(requestGroups()),
+  requestGroups:(search_query) => dispatch(requestGroups(search_query)),
 });
 
 export default connect(msp, mdp)(GroupIndex);

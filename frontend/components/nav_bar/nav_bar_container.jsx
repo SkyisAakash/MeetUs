@@ -2,6 +2,8 @@ import React from 'react';
 import {connect} from 'react-redux';
 import NavBar from './nav_bar';
 import { logout } from '../../actions/session_actions';
+import { createGroup } from '../../actions/group_actions.js';
+
 
 const mapStateToProps = (state) => ({
   currentUser: state.session.currentUser

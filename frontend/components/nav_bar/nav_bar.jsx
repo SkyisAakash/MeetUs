@@ -10,12 +10,17 @@ class NavBar extends React.Component {
     this.toggle = this.toggle.bind(this);
     this.outofhere = this.outofhere.bind(this);
   }
+
+  makeGroup() {
+
+  }
+
   render() {
     return (
       <header className="nav-bar">
         <Link to="/"><img className="logo" src="https://s26.postimg.cc/eur407edl/meetus_logo.png"/></Link>
         <div className="rightSideNav">
-          <a href="" className="startGroup">Start a new group</a>
+          <Link to="/groups/create" className="startGroup">Start a new group</Link>
           {this.display()}
         </div>
       </header>
