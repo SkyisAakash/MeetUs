@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   resources :users, only: [:create, :index, :show]
   resource :session, only: [:new, :create, :destroy]
   resources :groups
+  resources :events
   resources :group_members, only: [:create, :destroy, :index]
+  resources :event_members, only: [:create, :destroy, :index]
   end
 
   root "static_pages#root"

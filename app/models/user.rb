@@ -24,6 +24,12 @@ class User < ApplicationRecord
   class_name: :GroupMember,
   dependent: :destroy
 
+  has_many :event_attended,
+  foreign_key: :user_id,
+  class_name: :EventMember,
+  dependent: :destroy
+
+  has_many :events, through: :event_attended, source: :event
   has_many :groups, through: :group_followed, source: :group
 
 

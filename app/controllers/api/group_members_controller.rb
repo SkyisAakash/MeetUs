@@ -18,7 +18,7 @@ class Api::GroupMembersController < ApplicationController
       @groupmember = GroupMember.find(params[:id])
       @groupmember.destroy
     end
-    private
+
 
 
 
