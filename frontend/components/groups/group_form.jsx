@@ -36,7 +36,6 @@ upload(e) {
   let that = this;
   window.cloudinary.openUploadWidget(window.CLOUDINARY_OPTIONS, (errors, results) => {
     if (errors === null) {
-      console.log("--------------------------------");
            this.addImage(results[0].secure_url);}
          });
 }
@@ -47,7 +46,6 @@ upload(e) {
     }
     return (
       <div>
-           <div onClick={this.props.closeModal} className="close-x">X</div>
 <form onSubmit={()=>this.submitform()}>
 <input type="text" value={this.state.description} onChange={this.handleInput('description')}/>
 <input type="string" value={this.state.title} onChange={this.handleInput('title')}/>
