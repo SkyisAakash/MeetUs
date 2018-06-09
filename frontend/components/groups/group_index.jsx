@@ -19,6 +19,7 @@ class GroupIndex extends React.Component {
     this.state ={
       myGroups:[]
     };
+    this.awe = this.awe.bind(this);
   }
   componentDidMount() {
     this.props.getusers();
@@ -34,6 +35,18 @@ class GroupIndex extends React.Component {
     });
   }
 
+  checkifempty(obj) {
+    return JSON.stringify(obj) === JSON.stringify([]);
+  }
+
+  awe(){
+    // debugger
+    if (this.checkifempty(this.props.groups) === true) {
+      // debugger
+      return <p className="awe">No matching group enties found</p>;
+      }
+  }
+
   render() {
     // debugger
     // console.log(this.state.myGroups);
@@ -41,11 +54,12 @@ class GroupIndex extends React.Component {
       <div id="myHeader">
         <SearchBox requestGroups={this.props.requestGroups} searchtype="group"/>
     <ul className="groupIndex">
+      {this.awe()}
     {this.props.groups.map((group) => {
       return  <GroupIndexItem group={group} key={group.id} currentUser={this.props.currentUser}/>;
     })}
     </ul>
-    <Link to={`/groups/new`}>GroupForm</Link>
+
     {this.state.myGroups.map((group)=>{
     return <p>{group.title}</p>;
     })}

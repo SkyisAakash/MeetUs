@@ -13,12 +13,6 @@ const msp = (state,ownProps) => ({
 
 const mdp = (dispatch,ownProps) => ({
   submitGroup: (group) => dispatch(createGroup(group)),
-  otherForm: (
-  <button onClick={() => dispatch(openModal('create'))}>
-    Login
-  </button>
-),
-closeModal: () => dispatch(closeModal())
 });
 
 export default connect(msp, mdp)(GroupForm);

@@ -4,6 +4,11 @@
   background: #555;
   color: #f1f1f1;
 }
+.awe {
+  font-size: 20px;
+  color: black;
+  margin-bottom: 500px;
+}
 li {
   list-style: none;
 }
@@ -71,6 +76,8 @@ text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.26);
   margin: 0 auto;
 width: 1100px;;
 height: auto;
+min-height: 600px;
+min-height: 600px;
 color: white;
 padding: 60px 30px 30px 30px;
 display: flex;

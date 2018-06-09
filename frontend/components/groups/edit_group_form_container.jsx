@@ -31,12 +31,6 @@ const msp = (state,ownProps) => ({
 const mdp = (dispatch,ownProps) => ({
   submitGroup: (group) => dispatch(updateGroup(group)),
   requestGroup: () => dispatch(requestGroup(ownProps.match.params.groupId)),
-  otherForm: (
-  <button onClick={() => dispatch(openModal('edit'))}>
-    Signup
-  </button>
-),
-closeModal: () => dispatch(closeModal())
 });
 
 export default connect(msp, mdp)(EditGroupForm);

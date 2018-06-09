@@ -34,7 +34,7 @@ class GroupShow extends React.Component {
   }
 
   joinGroup() {
-    this.props.createGroupMember(this.props.group.id,this.props.currentUser.id);
+    this.props.createGroupMember(this.props.group.id,this.props.currentUser.id);//.then(this.props.history.push(`/groups/${this.props.group.id}`));
   }
 
   leaveGroup() {
@@ -42,13 +42,13 @@ class GroupShow extends React.Component {
     let group_id = this.props.group.id;
     let object = {group_id, user_id};
     let hash = this.props.groupmemberships;
-    debugger
+    // debugger
     let target = Object.keys(hash).filter(function(key) {return JSON.stringify(hash[key]) === JSON.stringify(object)})[0];
     let numtar = parseInt(target)
     // let target = findKey(this.props.groupmemberships, object);
     // let target1 = findKey(this.props.groupmemberships, {group_id: 1, user_id: 1});
-    debugger
-    this.props.deleteGroupMember(this.props.group.id,numtar);
+    // debugger
+    this.props.deleteGroupMember(this.props.group.id,numtar);//.then(this.props.history.push(`/groups/${this.props.group.id}`));
   }
 
 //   getKeyByValue( hash,value ) {

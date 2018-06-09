@@ -22,7 +22,9 @@ handleInput(field) {
 submitform() {
 
   this.props.submitGroup(this.state).then((payload) => {
+    console.log("-------------------");
     // debugger
+    console.log(payload.group.id);
     this.props.history.push(`/groups/${payload.group.id}`);
   }).then(this.props.closeModal);
 

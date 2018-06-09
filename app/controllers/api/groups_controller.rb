@@ -6,7 +6,7 @@ class Api::GroupsController < ApplicationController
       if params[:search_query] == ""
         @groups = Group.all
       else
-        query = params[:search_query].upcase + "%"
+        query = "%" + params[:search_query].upcase + "%"
         @groups = Group.where("UPPER(title) LIKE ?", query)
       end
     else
@@ -35,7 +35,7 @@ class Api::GroupsController < ApplicationController
       @group = Group.find_by(id: params[:id])
       if @group.update(group_params)
         # debugger
-        render json: @group
+        render :show
       else
         render json: @group.errors.full_messages, status: 422
       end
