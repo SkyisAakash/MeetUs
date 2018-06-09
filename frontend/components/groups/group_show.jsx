@@ -123,8 +123,8 @@ class GroupShow extends React.Component {
   groupoptions() {
     // debugger
     const deletebtn = (this.props.currentUser.id == this.props.group.organizer_id) ?
-    (<div>
-    <Link to={`/groups/${this.props.group.id}/edit`} className="groupoptions">Edit</Link>
+    (<div className="op">
+    <Link to={`/groups/${this.props.group.id}/edit`} className="groupoptions" id="editgrp">Edit</Link>
     <button onClick={()=>this.deleteGroup()} className="groupoptions">Delete</button>
     </div>
     ) : (

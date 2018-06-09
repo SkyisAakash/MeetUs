@@ -1,0 +1,67 @@
+.grpform {
+  font-family: arial, sans-serif;
+  margin: 0 auto;
+}
+.groupformcon{
+  border: 1px solid #bfbfbf;
+  border-radius: 5px;
+  padding: 30px;
+  font-family: arial, sans-serif;
+  margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 30px;
+}
+.groupformHead{
+  text-align: center;
+  text-shadow: 5px;
+}
+#gf{
+  margin-left: 0px;
+}
+.sampleImage {
+  align-self: center;
+  margin: 30px 70px 20px 70px;
+  width: 300px;
+  height: 200px;
+}
+#querygf{
+  // width: 292px;
+  // border: none;
+  // background-color: white;
+  font-size: 14px;
+  font-style: italic;
+  letter-spacing: none;
+  // outline:none
+}
+#querygfar{
+  font-size: 14px;
+  font-style: italic;
+  letter-spacing: none;
+  background-color: #F8f9f9;
+  height: 100px;
+}
+.uploadimage {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 13px;
+    background-color: #3b5998;
+    color:white;
+    font-weight: 900;
+    border-radius: 3px;
+    border: 1px solid #3b5998;
+    text-align: center;
+    padding-top: 10px;
+    height: 36px;
+    width: 433px;
+    line-height: 1.45;
+    font-size:16px;
+    text-align: center;
+    margin-left: 15px;
+    padding-top: 5px;
+    display: block;
+    vertical-align: middle;
+}
+.uploadimage:hover {
+    background-color: #24355C;
+    cursor: pointer;
+  }

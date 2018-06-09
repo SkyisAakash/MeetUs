@@ -24,7 +24,7 @@ class EditGroupForm extends React.Component {
 
 const msp = (state,ownProps) => ({
   group: state.entities.groups[ownProps.match.params.groupId],
-  formType: 'create',
+  formType: 'Edit',
   currentUser: state.session.currentUser
 });
 

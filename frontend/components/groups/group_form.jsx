@@ -44,15 +44,21 @@ upload(e) {
     if (!this.props.group) {
       return null;
     }
+    let name=this.props.formType+ " Group";
     return (
-      <div>
-<form onSubmit={()=>this.submitform()}>
-<input type="text" value={this.state.description} onChange={this.handleInput('description')}/>
-<input type="string" value={this.state.title} onChange={this.handleInput('title')}/>
-<input type="string" value={this.state.image_url} onChange={this.handleInput('image_url')}/>
-<input type="submit" value="edit"/>
+      <div className="groupformcon">
+        <h1 className="groupformHead">{this.props.formType} your group</h1>
+<form onSubmit={()=>this.submitform()} className="formlogin grpform">
+  <p className="logininfo">Title:</p>
+  <input type="string" value={this.state.title} onChange={this.handleInput('title')} className="inputField" placeholder="Enter title of group" id="querygf"/>
+  <p className="logininfo">Description:</p>
+<textarea value={this.state.description} onChange={this.handleInput('description')} className="inputField" placeholder="Enter thorough description of group" id="querygfar"/>
+<p className="logininfo">Image:</p>
+<input type="string" onChange={this.handleInput('image_url')} className="inputField"  placeholder="Type URL or upload image" id="querygf"/>
+<div className="imprev"><img src={this.state.image_url} className="sampleImage" alt="Image Preview"/></div>
+<button onClick={this.upload} className="uploadimage" id="gf">Upload Image</button>
+<input type="submit" value={name} className="loginb" id="gf"/>
 </form>
-<button onClick={this.upload}>Upload Image</button>
       </div>
     );
   }
