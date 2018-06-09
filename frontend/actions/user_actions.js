@@ -11,3 +11,17 @@ export const getUser = (id) => dispatch => (
     dispatch(showUser(res))
   ))
 );
+export const GET_USERS = 'GET_USERS';
+
+export const getUsers = users => {
+  return {
+  type: GET_USERS,
+  users
+};
+};
+
+export const requestUsers = () => dispatch => (
+  UserAPIUtil.getUsers().then(res => (
+    dispatch(getUsers(res))
+  ))
+);

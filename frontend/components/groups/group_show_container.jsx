@@ -5,11 +5,15 @@ import { createGroupMember, deleteGroupMember } from '../../actions/group_member
 import {getUser} from '../../actions/user_actions';
 import GroupShow from './group_show';
 import { openModal, closeModal} from '../../actions/modal_actions';
+import { membershipcheck } from '../../reducers/membershipcheck';
 
 
 const msp = (state,ownProps) => ({
   group: state.entities.groups[ownProps.match.params.groupId],
-  currentUser: state.session.currentUser
+  currentUser: state.session.currentUser,
+  users: state.entities.users,
+  groupmemberships: state.entities.groupmembers,
+  membershipcheck: membershipcheck(state, ownProps.match.params.groupId, state.session.currentUser)
 });
 
 const mdp = (dispatch, ownProps) => ({

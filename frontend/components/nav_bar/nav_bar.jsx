@@ -21,9 +21,9 @@ class NavBar extends React.Component {
         <Link to="/"><img className="logo" src="https://s26.postimg.cc/eur407edl/meetus_logo.png"/></Link>
         <div className="rightSideNav">
           {this.props.otherForm}
-      
+
           <Link to="/groups/create" className="startGroup">Start a new group</Link>
-          {this.display()}
+          // {this.display()}
         </div>
       </header>
     );

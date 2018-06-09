@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+
 class GroupShow extends React.Component {
   constructor(props) {
     super(props);
@@ -8,15 +9,24 @@ class GroupShow extends React.Component {
     this.state ={
       organizer:{}
     };
+    this.getOrganizer = this.getOrganizer.bind(this);
+  }
+
+  componentWillReceiveProps(nextProps){
+    // debugger
+    this.setState({
+      memberships:nextProps.membershipcheck
+    });
+  }
+
+  getOrganizer(group){
+    let users = this.props.users;
+    this.setState({organizer:this.props.users[this.props.group.organizer_id]});
   }
   componentDidMount() {
+    // var that=this;
     this.props.requestGroup().then(
-      group => {
-        const owner = this.props.getUser(this.props.group.organizer_id);
-        // debugger
-        this.setState({organizer:owner});
-        // debugger
-      }
+      res => (this.getOrganizer(res.group))
     );
 
     this.groupoptions = this.groupoptions.bind(this);
@@ -27,9 +37,7 @@ class GroupShow extends React.Component {
   }
 
   deleteGroup() {
-    // debugger
     this.props.deleteGroup(this.props.group.id).then(() => {
-      // debugger
       this.props.history.push(`/groups`);
     });
   }
@@ -38,14 +46,16 @@ class GroupShow extends React.Component {
     if (!this.props.group) {
       return null;
     }
+
     return(
       <div className="groupshow">
         <div className="grouphead">
 
           <img src={this.props.group.image_url} className="groupimage" alt="wrong url"/>
           <p className="groupShowTitle">{this.props.group.title}</p>
-          {this.state.organizer.username}
+          uauuuuuuu{this.state.organizer.username}yyayyy
         </div>
+        <h1>{this.state.memberships}</h1>
         <div className="joindeleteetc">
           <a href="" className="useless">About</a>
           <a href="" className="useless">Meetups</a>
@@ -54,7 +64,6 @@ class GroupShow extends React.Component {
           <a href="" className="useless">Discussions</a>
           <a href="" className="useless">More</a>
           <div className="useless">{this.groupoptions()}</div>
-
         </div>
         <div className="groupdes">
           {this.props.group.description}
@@ -66,9 +75,6 @@ class GroupShow extends React.Component {
   groupoptions() {
     const deletebtn = (this.props.currentUser.id == this.props.group.organizer_id) ?
     (<div>
-      // debugger
-           {this.props.otherForm}
-          
     <Link to={`/groups/${this.props.group.id}/edit`}>Edit</Link>
     <button onClick={()=>this.deleteGroup()}>Delete</button>
     </div>

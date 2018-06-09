@@ -5,3 +5,10 @@ export const showUser = (id) => (
     data:{id}
   })
 );
+
+export const getUsers = () => {
+return  $.ajax({
+    method: 'GET',
+    url: `/api/users/`
+  });
+};

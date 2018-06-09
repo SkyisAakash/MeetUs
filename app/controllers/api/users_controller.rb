@@ -13,6 +13,7 @@ class Api::UsersController < ApplicationController
 
   def index
     @users = User.all
+    # debugger
     render :index
   end
 
