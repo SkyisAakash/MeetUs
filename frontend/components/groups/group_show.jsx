@@ -12,6 +12,8 @@ class GroupShow extends React.Component {
       organizer:{}
     };
     this.getOrganizer = this.getOrganizer.bind(this);
+    this.checkpos=this.checkpos.bind(this);
+
     // this.guestoptions = this.guestoptions.bind(this);
     this.leaveGroup = this.leaveGroup.bind(this);
   }
@@ -41,6 +43,8 @@ class GroupShow extends React.Component {
       memberships:this.props.membershipcheck
     });
     this.groupoptions = this.groupoptions.bind(this);
+    window.addEventListener('scroll', this.checkpos);
+
   }
   // getOrganizer(group){
   //   let users = this.props.users;
@@ -124,7 +128,7 @@ class GroupShow extends React.Component {
           </div>
           </div>
         </div>
-        <div className="joindeleteetc">
+        <div className={`joindeleteetc ${this.state.pos}`}>
           <a href="" className="extra">About</a>
           <a href="" className="extra">Meetups</a>
           <a href="" className="extra">Members</a>
@@ -167,6 +171,18 @@ class GroupShow extends React.Component {
     );
    return deletebtn;
   }
+
+checkpos(e) {
+  if (document.scrollingElement.scrollTop > 470) {
+    this.setState({
+      pos: 'stopmovinggrp',
+    });
+  } else {
+    this.setState({
+      pos: '',
+    });
+  }
 }
 
+}
 export default GroupShow;

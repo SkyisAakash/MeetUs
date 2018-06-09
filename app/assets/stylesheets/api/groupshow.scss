@@ -19,6 +19,15 @@
   display: block;
   vertical-align: middle;
 }
+.stopmovinggrp {
+  position: fixed;
+  top: 0px;
+  margin: 0 auto;
+  z-index:100;
+  padding-left: 300px;
+  padding-right: 550px;
+  // margin: 0px 380px;
+}
 #editgrp {
   height: 23px;
   text-decoration: none;

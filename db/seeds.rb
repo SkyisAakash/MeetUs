@@ -23,7 +23,9 @@ stephen = User.create!(username:"stephen",email:"stephen@gmail.com", password:"u
 bob = User.create!(username:"bob",email:"bob@gmail.com", password:"user123")
 charlie = User.create!(username:"charlie",email:"charlie@gmail.com", password:"user123")
 shahab = User.create!(username:"shahab",email:"shahab@gmail.com", password:"user123")
+# name = User.create!(username:"shahab",email:"shahab@gmail.com", password:"user123")
 
+# groupname = Group.create!(title:"", organizer_id: shahab.id,image_url:"")
 food = Group.create!(title:"Bay Area Creative Cooking",description:"
 Greetings Bay Area Creative Cooking Enthusiasts!
 
@@ -56,6 +58,9 @@ Bay Area Creative Cooking (http://meetup.com/Bay-Area-Creative-Cooking)
 
 Bon appétit! Con gusto! Itadakimasu! ...(Can you suggest additional phrases in another language?)",
 organizer_id: sky.id, image_url:"https://s26.postimg.cc/i809pisxl/food.jpg")
+
+groupname = Group.create!(title:"", organizer_id: shahab.id,
+image_url:"")
 
 lgbt = Group.create!(title:"LGBTQ Self Defense Classes",description:"Thanks to Supervisor Ken Yeager, the Board of Supervisors has funded self defense classes for the LGBTQ community.
 These classes are free, and you can attend as many as you like. Classes are taught through Defense-ability in Campbell. (defense-ability.com)
