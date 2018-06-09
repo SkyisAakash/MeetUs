@@ -78,8 +78,16 @@ class GroupShow extends React.Component {
       <div className="groupshow">
         <div className="grouphead">
           <img src={this.props.group.image_url} className="groupimage" alt="wrong url"/>
-          <p className="groupShowTitle">{this.props.group.title}</p>
-          Organizer:{this.state.organizer.username}
+          <div className="righttitle">
+            <p className="groupShowTitle">{this.props.group.title}</p>
+            <div className="organ">
+              <i class="fas fa-user-tie" id="grpuser"></i>
+              <div className="organtext">
+              <h3>Organized by:</h3>
+              <h2>{this.state.organizer.username}</h2>
+              </div>
+          </div>
+          </div>
         </div>
         <div className="joindeleteetc">
           <a href="" className="extra">About</a>
@@ -92,6 +100,7 @@ class GroupShow extends React.Component {
       <div className="dots"><i class="fas fa-ellipsis-h"></i></div>
         </div>
         <div className="groupdes">
+          <p>What we're about</p>
           {this.props.group.description}
         </div>
       </div>
