@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class SearchBox extends React.Component {
 
@@ -42,7 +43,9 @@ class SearchBox extends React.Component {
     }
   }
   render () {
-    let klass = (this.props.searchtype === "group") ? "groupactive" : "";
+    // debugger
+    let klassg = (this.props.searchtype === "group") ? "groupactive" : "";
+    let klasse = (this.props.searchtype === "event") ? "eventactive" : "";
     // debugger
     return (
     <form onSubmit={this.handleSubmit} className={`searchform ${this.state.pos}`}>
@@ -51,8 +54,8 @@ class SearchBox extends React.Component {
         <i className="fas fa-search" onClick={this.handleSubmit}></i>
       </div>
       <div className="twooptions">
-        <a href="" id={klass}>Groups</a>
-        <a href="" id={klass}>Calendar</a>
+        <Link to="/groups/" className="" id={klassg}>Groups</Link>
+        <Link to="/events/" className="" id={klasse}>Calendar</Link>
       </div>
     </form>
   );

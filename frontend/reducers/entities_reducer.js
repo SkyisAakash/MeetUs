@@ -7,6 +7,8 @@ import { combineReducers } from 'redux';
 
 export default combineReducers({
   groups: GroupsReducer,
+  events: EventsReducer,
   groupmembers: GroupmemberReducer,
+  eventmembers: EventmemberReducer,
   users: usersReducer
 });

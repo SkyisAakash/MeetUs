@@ -67,7 +67,7 @@ margin: 2px;
   margin: 12px;
   width: 250px;
 }
-#groupactive {
+#groupactive, #eventactive {
   color: white;
   background-color: #595959;
 }

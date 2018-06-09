@@ -4,14 +4,6 @@ import { Link } from 'react-router-dom';
 import SearchBox from './search_box';
 
 class GroupIndex extends React.Component {
-  //
-  // myFunction(sticky, header) {
-  //   if (window.pageYOffset >= sticky) {
-  //     header.classList.add("sticky");
-  //   } else {
-  //     header.classList.remove("sticky");
-  //   }
-  // }
 
   constructor(props){
     // debugger
@@ -52,7 +44,7 @@ class GroupIndex extends React.Component {
     // console.log(this.state.myGroups);
     return (
       <div id="myHeader">
-        <SearchBox requestGroups={this.props.requestGroups} searchtype="group"/>
+        <SearchBox requestItems={this.props.requestGroups} searchtype="group"/>
     <ul className="groupIndex">
       {this.awe()}
     {this.props.groups.map((group) => {

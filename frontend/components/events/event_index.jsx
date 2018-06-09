@@ -52,7 +52,7 @@ class EventIndex extends React.Component {
     // console.log(this.state.myEvents);
     return (
       <div id="myHeader">
-        <SearchBox requestEvents={this.props.requestEvents} searchtype="event"/>
+        <SearchBox requestItems={this.props.requestEvents} searchtype="event"/>
     <ul className="eventIndex">
       {this.awe()}
     {this.props.events.map((event) => {
