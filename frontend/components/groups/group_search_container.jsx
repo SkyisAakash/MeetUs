@@ -10,7 +10,7 @@ class GroupSearch extends React.Component {
     return (
       <SearchBox
         BoxType={this.props.BoxType}
-        requestGroups={this.props.requestGroups}
+        requestItems={this.props.requestGroups}
       />
     );
   }

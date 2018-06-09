@@ -13,7 +13,7 @@ class SearchBox extends React.Component {
   componentDidMount() {
     // debugger
 
-    this.props.requestGroups(this.state.search_query);
+    this.props.requestItems(this.state.search_query);
     window.addEventListener('scroll', this.checkpos);
   }
 
@@ -26,7 +26,7 @@ class SearchBox extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     // debugger
-    this.props.requestGroups(this.state.search_query);
+    this.props.requestItems(this.state.search_query);
   }
 
 
@@ -52,7 +52,7 @@ class SearchBox extends React.Component {
       </div>
       <div className="twooptions">
         <a href="" id={klass}>Groups</a>
-        <a href="">Calendar</a>
+        <a href="" id={klass}>Calendar</a>
       </div>
     </form>
   );

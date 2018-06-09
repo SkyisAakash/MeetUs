@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { connect } from 'react-redux';
 import { createGroup } from '../../actions/group_actions';
 import GroupForm from './group_form';
