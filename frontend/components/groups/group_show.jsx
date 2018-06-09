@@ -16,25 +16,56 @@ class GroupShow extends React.Component {
     this.leaveGroup = this.leaveGroup.bind(this);
   }
 
+  componentWillMount() {
 
+  }
   getOrganizer(group){
-    let users = this.props.users;
-    this.setState({organizer:this.props.users[this.props.group.organizer_id]});
+    // let users = this.props.users;
+    // debugger
+  }
+  componentWillReceiveProps(newProps){
+    // debugger
+    // if (newProps.users[newProps.group.organizer_id]){//comment thie
+    this.setState({organizer:newProps.users[newProps.group.organizer_id]});
+  // } else {//comment thie
+    // this.setState({organizer:newProps.currentUser});//comment thie
+  // }
+    // debugger
   }
   componentDidMount() {
-    // var that=this;
     this.props.requestGroup().then(
       res => (this.getOrganizer(res.group))
     );
-
+    // var that=thi
     this.setState({
       memberships:this.props.membershipcheck
     });
     this.groupoptions = this.groupoptions.bind(this);
   }
+  // getOrganizer(group){
+  //   let users = this.props.users;
+  //   // debugger
+  //   this.setState({organizer:this.props.users[this.props.group.organizer_id]});
+  // }
+  // componentWillReceiveProps(){
+  //
+  // }
+  // componentDidMount() {
+  //   this.props.requestGroup().then(
+  //     res => (this.getOrganizer(res.group))
+  //   );
+  //   // var that=thi
+  //   this.setState({
+  //     memberships:this.props.membershipcheck
+  //   });
+  //   this.groupoptions = this.groupoptions.bind(this);
+  // }
 
   joinGroup() {
-    this.props.createGroupMember(this.props.group.id,this.props.currentUser.id);//.then(this.props.history.push(`/groups/${this.props.group.id}`));
+    this.props.createGroupMember(this.props.group.id,this.props.currentUser.id).then(this.props.requestgroupmembers)
+    .then(this.setState({
+      memberships: "true"
+    }));//.then(this.props.history.push(`/groups/${this.props.group.id}`));
   }
 
   leaveGroup() {
@@ -48,7 +79,10 @@ class GroupShow extends React.Component {
     // let target = findKey(this.props.groupmemberships, object);
     // let target1 = findKey(this.props.groupmemberships, {group_id: 1, user_id: 1});
     // debugger
-    this.props.deleteGroupMember(this.props.group.id,numtar);//.then(this.props.history.push(`/groups/${this.props.group.id}`));
+    this.props.deleteGroupMember(this.props.group.id,numtar).then(this.props.requestgroupmembers)
+    .then(this.setState({
+      memberships: "false"
+    }));//.then(this.props.history.push(`/groups/${this.props.group.id}`));
   }
 
 //   getKeyByValue( hash,value ) {

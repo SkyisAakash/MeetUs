@@ -6,6 +6,7 @@ import {getUser} from '../../actions/user_actions';
 import GroupShow from './group_show';
 import { openModal, closeModal} from '../../actions/modal_actions';
 import { membershipcheck } from '../../reducers/membershipcheck';
+import { requestGroupMembers } from '../../actions/group_member_actions.js';
 
 
 const msp = (state,ownProps) => ({
@@ -17,6 +18,7 @@ const msp = (state,ownProps) => ({
 });
 
 const mdp = (dispatch, ownProps) => ({
+  requestgroupmembers: () => dispatch(requestGroupMembers()),
   requestGroup: () => dispatch(requestGroup(ownProps.match.params.groupId)),
   deleteGroup:() => dispatch(deleteGroup(ownProps.match.params.groupId)),
   createGroupMember:(group_id, user_id) => dispatch(createGroupMember(group_id,user_id)),
