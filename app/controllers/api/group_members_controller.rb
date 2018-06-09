@@ -15,7 +15,7 @@ class Api::GroupMembersController < ApplicationController
     end
 
     def destroy
-      @groupmember = Group.find_by(user_id:params[:user_id], group_id:params[:group_id])
+      @groupmember = GroupMember.find(params[:id])
       @groupmember.destroy
     end
     private

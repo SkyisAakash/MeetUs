@@ -43,11 +43,12 @@ class GroupShow extends React.Component {
     let object = {group_id, user_id};
     let hash = this.props.groupmemberships;
     debugger
-    let target = Object.keys(hash).filter(function(key) {return hash[key] === object})[0];
+    let target = Object.keys(hash).filter(function(key) {return JSON.stringify(hash[key]) === JSON.stringify(object)})[0];
+    let numtar = parseInt(target)
     // let target = findKey(this.props.groupmemberships, object);
     // let target1 = findKey(this.props.groupmemberships, {group_id: 1, user_id: 1});
     debugger
-    this.props.deleteGroupMember(target);
+    this.props.deleteGroupMember(this.props.group.id,numtar);
   }
 
 //   getKeyByValue( hash,value ) {

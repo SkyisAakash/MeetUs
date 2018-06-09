@@ -10,9 +10,9 @@ export const createGroupMember = (group_id, user_id) => {
   };
 };
 
-export const deleteGroupMember = (group_id, user_id) => {
+export const deleteGroupMember = (groupId, id) => {
   return dispatch => {
-    return GroupMemberAPIUtil.deleteMembership(group_id, user_id).then(res => dispatch({type:REMOVE_GROUPMEMBER, groupmember:res}));
+    return GroupMemberAPIUtil.deleteMembership(id).then(res => dispatch({type:REMOVE_GROUPMEMBER, groupmember:groupId}));
   };
 };
 export const requestGroupMembers = () => {

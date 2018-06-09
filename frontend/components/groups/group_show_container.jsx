@@ -20,7 +20,7 @@ const mdp = (dispatch, ownProps) => ({
   requestGroup: () => dispatch(requestGroup(ownProps.match.params.groupId)),
   deleteGroup:() => dispatch(deleteGroup(ownProps.match.params.groupId)),
   createGroupMember:(group_id, user_id) => dispatch(createGroupMember(group_id,user_id)),
-  deleteGroupMember:(group_id, user_id) => dispatch(deleteGroupMember(group_id,user_id)),
+  deleteGroupMember:(groupId, id) => dispatch(deleteGroupMember(groupId,id)),
   getUser:(id)=> dispatch(getUser(id)),
   otherForm: (
     <button onClick={() => dispatch(openModal('edit'))}>

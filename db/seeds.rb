@@ -5,6 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+# DELETE FROM Group
+# DELETE FROM GroupMember
+# DELETE FROM User
 
 demo = User.create!(username:"user",email:"user17", password:"user123")
 sky = User.create!(username:"sky",email:"sky@gmail.com", password:"user123")
