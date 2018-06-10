@@ -120,9 +120,9 @@ class EventShow extends React.Component {
           <div className="righttitle">
             <p className="eventShowTitle">{this.props.event.title}</p>
             <div className="organ">
-              <i class="fas fa-user-tie" id="grpuser"></i>
+              <i className="fas fa-user-tie" id="grpuser"></i>
               <div className="organtext">
-              <h3>Organized by:</h3>
+              <h3>Hosted by:</h3>
               <h2>{this.state.organizer.username}</h2>
               </div>
           </div>
@@ -136,7 +136,7 @@ class EventShow extends React.Component {
           <a href="" className="extra">Discussions</a>
           <a href="" className="extra">More</a>
           <div>{this.eventoptions()}</div>
-      <div className="dots"><i class="fas fa-ellipsis-h"></i></div>
+      <div className="dots"><i className="fas fa-ellipsis-h"></i></div>
         </div>
         <div className="eventdes">
           <p>What we're about</p>

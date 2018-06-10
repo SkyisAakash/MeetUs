@@ -79,7 +79,7 @@ class GroupShow extends React.Component {
     let hash = this.props.groupmemberships;
     // debugger
     let target = Object.keys(hash).filter(function(key) {return JSON.stringify(hash[key]) === JSON.stringify(object)})[0];
-    let numtar = parseInt(target)
+    let numtar = parseInt(target);
     // let target = findKey(this.props.groupmemberships, object);
     // let target1 = findKey(this.props.groupmemberships, {group_id: 1, user_id: 1});
     // debugger
@@ -120,7 +120,7 @@ class GroupShow extends React.Component {
           <div className="righttitle">
             <p className="groupShowTitle">{this.props.group.title}</p>
             <div className="organ">
-              <i class="fas fa-user-tie" id="grpuser"></i>
+              <i className="fas fa-user-tie" id="grpuser"></i>
               <div className="organtext">
               <h3>Organized by:</h3>
               <h2>{this.state.organizer.username}</h2>
@@ -136,7 +136,7 @@ class GroupShow extends React.Component {
           <a href="" className="extra">Discussions</a>
           <a href="" className="extra">More</a>
           <div>{this.groupoptions()}</div>
-      <div className="dots"><i class="fas fa-ellipsis-h"></i></div>
+      <div className="dots"><i className="fas fa-ellipsis-h"></i></div>
         </div>
         <div className="groupdes">
           <p>What we're about</p>
@@ -165,6 +165,7 @@ class GroupShow extends React.Component {
     (<div className="op">
     <Link to={`/groups/${this.props.group.id}/edit`} className="groupoptions" id="editgrp">Edit</Link>
     <button onClick={()=>this.deleteGroup()} className="groupoptions">Delete</button>
+    <Link to={`/${this.props.group.id}/events/create`} className="groupoptions" id="editgrp">Create an Event</Link>
     </div>
     ) : (
       <div>{this.guestoptions()}</div>

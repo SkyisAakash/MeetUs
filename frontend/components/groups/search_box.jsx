@@ -56,6 +56,8 @@ class SearchBox extends React.Component {
       <div className="twooptions">
         <Link to="/groups/" className="" id={klassg}>Groups</Link>
         <Link to="/events/" className="" id={klasse}>Calendar</Link>
+
+
       </div>
     </form>
   );

@@ -2,7 +2,7 @@
 import values from 'lodash/values';
 import keys from 'lodash/keys';
 
-export const membershipcheck = (state, eventid, member) => {
+export const eventmembershipcheck = (state, eventid, member) => {
   let gid = Number(eventid);
   let result = "false";
   let objects = Object.values(state.entities.eventmembers);
