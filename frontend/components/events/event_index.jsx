@@ -79,7 +79,7 @@ class EventIndex extends React.Component {
     })}
     </ul>
     <ul className="eventIndex">
-      <p className={`${moreevents}`}>More Meetus Events</p>
+      <p className={`${moreevents}`}>Meetus Events you can attend</p>
 
     {this.state.myEvents.map((event) => {
       return  <EventIndexItem event={event} key={event.id} users={this.props.users} groups={this.props.groups} currentUser={this.props.currentUser}/>;

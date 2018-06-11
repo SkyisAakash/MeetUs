@@ -68,7 +68,7 @@ class GroupIndex extends React.Component {
             return  <GroupIndexItem group={group} key={group.id} currentUser={this.props.currentUser}/>;
           })}
         </ul>
-        <p className={`${moregroups}`}>More Meetus Groups</p>
+        <p className={`${moregroups}`}>Meetus Groups you can join</p>
     <ul className="groupIndex">
     {this.props.groups.map((group) => {
       return  <GroupIndexItem group={group} key={group.id} currentUser={this.props.currentUser}/>;
