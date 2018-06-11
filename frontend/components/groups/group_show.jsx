@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import EventCard from '../events/event_card';
 import findKey from 'lodash/keys';
 
 
@@ -40,7 +40,8 @@ class GroupShow extends React.Component {
     );
     // var that=thi
     this.setState({
-      memberships:this.props.membershipcheck
+      memberships:this.props.membershipcheck,
+      newEvent:this.props.selectEvent
     });
     this.groupoptions = this.groupoptions.bind(this);
     window.addEventListener('scroll', this.checkpos);
@@ -112,11 +113,15 @@ class GroupShow extends React.Component {
     if (!this.props.group) {
       return null;
     }
+    if(!this.state.organizer){
+      return null;
+    }
 
     return(
       <div className="groupshow">
         <div className="grouphead">
-          <img src={this.props.group.image_url} className="groupimage" alt="wrong url"/>
+          <object data={this.props.group.image_url} type="image/png" class="groupimage"> <img src="https://s26.postimg.cc/7c57ixvuh/image-not-found.jpg" id="grpshwimgobj" className="groupimage"/></object>
+
           <div className="righttitle">
             <p className="groupShowTitle">{this.props.group.title}</p>
             <div className="organ">
@@ -138,6 +143,7 @@ class GroupShow extends React.Component {
           <div>{this.groupoptions()}</div>
       <div className="dots"><i className="fas fa-ellipsis-h"></i></div>
         </div>
+//render event card here
         <div className="groupdes">
           <p>What we're about</p>
           {this.props.group.description}

@@ -24,6 +24,7 @@ class EventIndex extends React.Component {
   componentDidMount() {
     this.props.getusers();
     this.props.requestEvents();
+    this.props.requestGroups();
     this.props.requesteventmembers();
     // debugger
   }
@@ -51,19 +52,23 @@ class EventIndex extends React.Component {
     // debugger
     // console.log(this.state.myEvents);
     return (
+      <div>
       <div id="myHeader">
         <SearchBox requestItems={this.props.requestEvents} searchtype="event"/>
+      </div>
+      <div className="indexbody">
     <ul className="eventIndex">
       {this.awe()}
     {this.props.events.map((event) => {
-      return  <EventIndexItem event={event} key={event.id} currentUser={this.props.currentUser}/>;
+      return  <EventIndexItem event={event} key={event.id} users={this.props.users} groups={this.props.groups} currentUser={this.props.currentUser}/>;
     })}
     </ul>
 
     {this.state.myEvents.map((event)=>{
     return <p>{event.title}</p>;
     })}
-  </div>
+    </div>
+    </div>
     );
   }
 }

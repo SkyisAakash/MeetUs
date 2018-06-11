@@ -17,6 +17,7 @@ class GroupIndex extends React.Component {
     this.props.getusers();
     this.props.requestGroups();
     this.props.requestgroupmembers();
+    this.props.requestEvents();
     // debugger
   }
 

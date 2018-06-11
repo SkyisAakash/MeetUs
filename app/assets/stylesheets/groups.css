@@ -4,10 +4,20 @@
   background: #555;
   color: #f1f1f1;
 }
+.editeve{
+  text-decoration: none;
+    height: 26px;
+    padding-top: 13px;
+    margin-top: 12px;
+}
+#grpshwimgobj{
+  margin:-21px;
+}
 .awe {
   font-size: 20px;
   color: black;
   margin-bottom: 500px;
+  padding-left: 417px;
 }
 li {
   list-style: none;
@@ -63,6 +73,10 @@ text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.26);
   text-shadow: 2px 2px 2px 2px black;
   word-wrap: break-word;
 }
+.groupIndexLink{
+  margin-left: 9px;
+  height: 218px;
+}
 /* .groupIndex{
   display: flex;
   display: flex;
@@ -73,15 +87,18 @@ text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.26);
   padding: 30px;
 } */
 .groupIndex {
+  /* padding: 60px 30px 30px 46px;
+display: flex;
+justify-content: flex-start; */
   margin: 0 auto;
 width: 1100px;;
 height: auto;
-min-height: 700px;
+/* min-height: 700px; */
 /* min-height: 600px; */
 color: white;
-padding: 60px 30px 30px 30px;
+padding: 60px 30px 125px 30px;
 display: flex;
-justify-content: space-around;
+justify-content: flex-start;
 flex-direction: row;
 flex-wrap: wrap;
 

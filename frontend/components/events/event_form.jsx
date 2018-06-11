@@ -69,7 +69,8 @@ upload(e) {
 <input type="time" value={this.state.end_time} min={this.state.start_time} onChange={this.handleInput('end_time')} className="eventtime"/>
 <p className="logininfo">Image:</p>
 <input type="string" onChange={this.handleInput('image_url')} className="inputField"  placeholder="Type URL or upload image" id="querygf"/>
-<div className="imprev"><img src={this.state.image_url} className="sampleImage" alt="Image Preview"/></div>
+
+<div className="imprev"> <object data={this.state.image_url} type="image/png" class="sampleImage"> <img src="https://s26.postimg.cc/7c57ixvuh/image-not-found.jpg" id="imgobj" className="sampleImage"/></object></div>
 <button onClick={this.upload} className="uploadimage" id="gf">Upload Image</button>
 <input type="submit" value={name} className="loginb" id="gf"/>
 </form>

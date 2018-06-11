@@ -8,10 +8,11 @@ class GroupIndexItem extends React.Component {
   }
 
   render() {
+
     return (
       <Link to={`/groups/${this.props.group.id}`} className="groupIndexLink">
       <li className="eachGroup">
-        <img src={this.props.group.image_url} className="groupIndexImage" alt="wrong url"/>
+        <object data={this.props.group.image_url} type="image/png" class="groupIndexImage"> <img src="https://s26.postimg.cc/7c57ixvuh/image-not-found.jpg" id="grpidximgobj" className="groupIndexImage"/></object>
         <div className="container">
           <p className="groupIndexTitle">{this.props.group.title}</p>
         </div>

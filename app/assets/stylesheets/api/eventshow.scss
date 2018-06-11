@@ -1,0 +1,335 @@
+.eventshow{
+  display: flex;
+  flex-direction: column;
+  font-family: arial, sans-serif;
+
+}
+.eventhead{
+  border-top: 2px solid #cccccc;
+  border-bottom: 2px solid #cccccc;
+  padding: 0px 150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;//////////////////////////////////////////flex-start
+}
+.showlittlehead {
+  display: flex;
+  flex-direction: column;
+}
+#showhiddenhead{
+  position: fixed;
+  top: 0px;
+  margin: 0 auto;
+  // display: flex;
+  // flex-direction: row;
+  z-index:100;
+  // margin: 0px 380px;
+}
+#hidehiddenhead{
+  display: none;
+}
+.showlittlehead{
+  width: 100%;
+}
+.titledatehidden{
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  margin-left: 270px;
+  .minidate {
+    padding-top: 12px;
+  }
+}
+.hiddentop {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width:100%;//
+  // margin-left: 72px;//
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  .hiddentopleft {
+    margin-left: 18px;
+    display: flex;
+    flex-direction: column;
+    width: 537px;
+    margin-top: 7px;
+    .eventShowTitle {
+      font-size: 20px;
+      margin-top: 0px
+    }
+  }
+  .hiddentopright {
+    margin: 19px 261px;
+  .gonogotext {
+    display: none;
+  }
+}
+}
+.hiddenbtm{
+  margin-left: 1101px;
+}
+#stopmovingeventbody{
+  // position: fixed;
+  // top: 30px;
+  // z-index:100;
+  // right: 198px;
+  // height: 340px;
+  // margin: 69px;
+  display: none;
+}
+.minidate{
+padding-top: 25px;
+}
+.dateline{
+color:#cccccc;
+font-weight: 100;
+font-size: 0.875;
+line-height:1.6;
+
+h5{
+  margin: 0px;
+  font-weight: 300px;
+}
+}
+.eventheadright{
+  padding: 30px 10px 30px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.eventheadleft{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 860px;
+  padding: 20px 20px 10px 20px;
+  h1 {margin: 0px 0px 10px 0px;;
+  font-weight: 600;
+line-height: 1.1;
+font-size: 2rem;
+letter-spacing: 1px;}
+}
+#g:hover{
+  text-decoration: underline;
+}
+.evelinks{
+  padding-left: 5px;
+  color:#00a2c7;
+  text-decoration: none;
+  font-size: 17px;
+  line-height: 1.3;
+  font-weight: 200;
+  .g:hover{
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+.dayblock{
+  text-align: center;
+  max-width:54px;
+  max-height: 54px;
+  overflow: hidden;
+  padding: 12px 15px;;
+  background-color:#f6f7f8;
+  border-radius: 8px;
+  border:1px solid rgba(46,62,72,.12);
+  p:first-child{
+    font-weight: 900px;
+    color:#f13a59;
+    font-size: 20px;
+    margin: 0px;
+  }
+  p:last-child{
+    margin: 0px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color:rgba(46,62,72,.6);
+    text-transform: uppercase;
+  }
+}
+#eveuser{
+  text-align: center;
+  height: 90px;
+  font-size: 50px;
+  padding-top: 6px;
+}
+.eventbody{
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.eveorgan{
+  display: flex;
+  flex-direction: row;
+  h3{
+    color:rgba(46,62,72,.6);
+    font-size: 17px;
+    line-height: 1.3;
+    font-weight: 100px;
+    .eveorgantext{
+      font-weight: 100px;
+      color: #cccccc;
+    }
+  }
+}
+.timediv{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.addressdiv{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.datetimeeve{
+  display: flex;
+  flex-direction: column;
+}
+.eveimage {
+  width: 780px;
+  height: 480px;
+  border: 1px solid #f2f2f2;
+    margin: 70px 70px 35px 70px;
+    border-radius: 23px;
+  }
+  #evenotfound{
+    margin:31px 70px 45px 34px;
+  }
+#evedes{
+  padding-top: 0px;
+  padding-left: 20px;
+  width: 760px;
+  margin-left: 50px;
+  p {margin: 13px 13px 13px -1px;}
+}
+.detailinfo{
+  display: flex;
+  flex-direction: column;
+  padding-left: 18px;
+  h3{
+    margin: 0px;
+  }
+}
+.gonogotext{
+  display: flex;
+  flex-direction: column;
+  line-height: 1.45;
+  font-size: 23px;
+  font-weight: 500px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+}
+.mar{
+  margin-left: 20px;
+}
+.joinevent{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 430px;
+  // padding-left: 10px;
+}
+
+.gonogo{
+  font-size: 20px;
+  }
+  #activebtn{
+    background-color: #00a2c7;
+    border: 1px solid #00a2c7;
+    border-radius: 5px;
+    padding: 10px 90px 10px 90px;
+    color: white;
+    // :hover{
+    //   border: 1px solid #0092b3;
+    //   border-radius: 5px;
+    //   background-color: #0092b3;
+    //   cursor: pointer;
+    // }
+  }
+  #inactivebtn{
+    padding: 10px 90px 10px 90px;
+    // width: 180px;
+    // height: 20px;
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+    background-color: white;
+    color:black;
+
+  }
+  .joinevent{
+    button:hover {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          cursor: pointer;
+        }
+  }
+.eventbodyleft{
+  padding-left: 200px;
+  display: flex;
+  flex-direction: column;
+}
+#editeve {
+  text-decoration: none;
+height: 31px;
+}
+.eventoptions{
+  // padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 13px;
+  background-color: rgb(237, 28, 64);
+  color:white;
+  font-weight: 300;
+  border-radius: 3px;
+  border: 1px solid rgb(237, 28, 64);
+  text-align: center;
+  // padding-top: 10px;
+  height: 50px;
+  width: 140px;
+  line-height: 1.45;
+  font-size:16px;
+  text-align: center;
+  margin: 13px 15px;
+  padding-top: 8px;
+  display: block;
+  vertical-align: middle;
+  :hover {
+    background-color: #bd0f2d;
+    cursor: pointer;
+}}
+
+.eventbodyright{
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 15px;
+  margin: 69px;
+  max-height:340px;
+  width: 400px;
+  padding-top: 15px;
+  color:#2e3e48;
+  font-weight:400;
+  font-size: 17px;
+  letter-spacing: 1px;
+  display: flex;
+  flex-direction: column;
+  // width:350px;
+  padding-left: 20px;
+  p{margin: 0px;
+    padding: 10px;
+  h5 {
+    margin: 0px;
+  }}
+  p:last-child {
+    h5 {
+      display: inline-block;
+    }
+  }
+  i {font-size: 25px;
+  padding: 7px;};
+}
+.eventorgantext h3 {
+  padding-left: 0px;
+  font-weight: 400px;
+  font-size: 17px;
+  margin-bottom: 5px;
+}

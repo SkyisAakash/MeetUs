@@ -12,6 +12,7 @@ import { requestEventMembers } from '../../actions/event_member_actions.js';
 const msp = (state,ownProps) => ({
   event: state.entities.events[ownProps.match.params.eventId],
   currentUser: state.session.currentUser,
+  groups: state.entities.groups,
   users: state.entities.users,
   eventmemberships: state.entities.eventmembers,
   eventmembershipcheck: eventmembershipcheck(state, ownProps.match.params.eventId, state.session.currentUser)

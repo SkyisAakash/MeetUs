@@ -1,0 +1,80 @@
+.eachEvent > .container{
+  border: 1px solid #bfbfbf;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  border-radius: 7px;
+width:709px;
+}
+.indexbody{
+  background-color: #f2f2f2;
+}
+.indexeventdate{
+  color: black;
+  h5{margin-bottom: 13px;}
+}
+.eachEvent{
+  font-family: arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+.eventIndex {
+  margin: 0 auto;
+width: 1075px;
+// height: auto;
+// min-height: 700px;
+/* min-height: 600px; */
+color: white;
+padding: 60px 30px 30px 30px;
+display: flex;
+justify-content: flex-start;
+flex-direction: column;
+// flex-wrap: wrap;
+}
+.indexitemright{
+  display: flex;
+  flex-direction: column;
+}
+.eventgroupname{
+  font-size: 15px;
+    margin-top: 13px;
+font-weight: 600;
+line-height: 1.6;
+letter-spacing: -.02em;
+    word-spacing: .1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #737373;
+  :hover{cursor: pointer;}
+}
+.eventIndexTitle{
+  padding-right: 5px;
+  font-size: 22px;
+    line-height: 1.25;
+    font-weight: 900;
+    color: black;
+    letter-spacing: -.02em;
+    :hover{cursor: pointer;}
+    text-decoration: none;
+
+}
+.eventhostname{
+  margin-bottom: 10px;
+margin-top: 6px;
+font-size: 18px;
+  line-height: 1.45;
+  font-weight: 400;
+  color: #a6a6a6;
+}
+.eventtime{
+  text-decoration: none;
+  color: #a6a6a6;
+  h5{
+    width: 71px;
+    font-size: 18px;
+  font-weight: 600;
+  margin: 18px 17px;
+}
+  :hover{cursor: pointer;}
+}

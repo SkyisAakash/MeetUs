@@ -7,6 +7,7 @@ import GroupShow from './group_show';
 import { openModal, closeModal} from '../../actions/modal_actions';
 import { membershipcheck } from '../../reducers/membershipcheck';
 import { requestGroupMembers } from '../../actions/group_member_actions.js';
+import { selectEventId } from '../../reducers/firsteventselector.js';
 
 
 const msp = (state,ownProps) => ({
@@ -14,7 +15,8 @@ const msp = (state,ownProps) => ({
   currentUser: state.session.currentUser,
   users: state.entities.users,
   groupmemberships: state.entities.groupmembers,
-  membershipcheck: membershipcheck(state, ownProps.match.params.groupId, state.session.currentUser)
+  membershipcheck: membershipcheck(state, ownProps.match.params.groupId, state.session.currentUser),
+  selectEvent: selectEventId(Object.values(state.entities.events), parseInt(ownProps.match.params.groupId))
 });
 
 const mdp = (dispatch, ownProps) => ({

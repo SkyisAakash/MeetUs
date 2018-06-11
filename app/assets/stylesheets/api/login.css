@@ -87,9 +87,9 @@ width:211px;
   background-color: white !important;
 }
 table {
-  padding-top: 20px;
+  padding-top: 15px;
   padding-bottom: 0px;
-  position: fixed;
+  /* position: fixed; */
   /* position: absolute; */
 }
 
@@ -182,7 +182,7 @@ table {
 }
 
 .demosection {
-  margin-top: 33px;
+  margin-top: -14px;
   /* background-color: #D8DFEA; */
 
   width: 458px;
@@ -198,6 +198,7 @@ table {
 }
 .mainpage {
   display: flex;
+  background-color: #f2f2f2;
   flex-direction: column;
   height:100%;
 }
