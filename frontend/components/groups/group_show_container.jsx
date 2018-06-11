@@ -14,6 +14,7 @@ const msp = (state,ownProps) => ({
   group: state.entities.groups[ownProps.match.params.groupId],
   currentUser: state.session.currentUser,
   users: state.entities.users,
+  events: state.entities.events,
   groupmemberships: state.entities.groupmembers,
   membershipcheck: membershipcheck(state, ownProps.match.params.groupId, state.session.currentUser),
   selectEvent: selectEventId(Object.values(state.entities.events), parseInt(ownProps.match.params.groupId))

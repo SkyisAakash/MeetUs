@@ -117,6 +117,7 @@ class GroupShow extends React.Component {
       return null;
     }
 
+    const { selectEvent } = this.props;
     return(
       <div className="groupshow">
         <div className="grouphead">
@@ -141,9 +142,9 @@ class GroupShow extends React.Component {
           <a href="" className="extra">Discussions</a>
           <a href="" className="extra">More</a>
           <div>{this.groupoptions()}</div>
-      <div className="dots"><i className="fas fa-ellipsis-h"></i></div>
+          <div className="dots"><i className="fas fa-ellipsis-h"></i></div>
         </div>
-//render event card here
+        <EventCard event={this.props.selectEvent} organizer={this.state.organizer}/>
         <div className="groupdes">
           <p>What we're about</p>
           {this.props.group.description}

@@ -295,6 +295,36 @@ Bay Area Creative Cooking (http://meetup.com/Bay-Area-Creative-Cooking)
 Bon appÃ©tit! Con gusto! Itadakimasu! ...(Can you suggest additional phrases in another language?)",
 organizer_id: sky.id, image_url:"https://s26.postimg.cc/i809pisxl/food.jpg")
 
+Event.create!(
+ title: "Wine and Socialize long long long long l",
+ description:
+  "\n• What we'll do\nHey guys,\n\nLet's get together and enjoy great wine. Our second Meetup was a success and looking forward to this one. I will be providing Spanish wine and cheese. It would be great if all members can bring a bottle of wine to have more variety. If you guys have any questions feel free to call / text me at 408.420.6993\n\nHope to see you all!\n\nDPR.\n\n• What to bring\n1 Bottle of wine",
+ address: "904, ketny street, santa clara, ca",
+ organizer_id: sky.id,
+ group_id: food.id,
+ image_url:
+  "https://res.cloudinary.com/df4s95pqa/image/upload/v1528685232/hclmbuvvrbwmswryoham.jpg",
+ start_date: "2018-06-04",
+ end_date: "2018-06-04",
+ start_time: "08:01",
+ end_time: "17:00")
+ # id: 10,
+ # title: "Wine and Socialize long long long long l",
+ # description:
+ #  "\n• What we'll do\nHey guys,\n\nLet's get together and enjoy great wine. Our second Meetup was a success and looking forward to this one. I will be providing Spanish wine and cheese. It would be great if all members can bring a bottle of wine to have more variety. If you guys have any questions feel free to call / text me at 408.420.6993\n\nHope to see you all!\n\nDPR.\n\n• What to bring\n1 Bottle of wine",
+ # address: "904, ketny street, santa clara, ca",
+ # organizer_id: 168,
+ # group_id: 213,
+ # image_url:
+ #  "https://res.cloudinary.com/df4s95pqa/image/upload/v1528685232/hclmbuvvrbwmswryoham.jpg",
+ # start_date: Mon, 04 Jun 2018,
+ # end_date: Mon, 04 Jun 2018,
+ # start_time: Sat, 01 Jan 2000 08:01:00 UTC +00:00,
+ # end_time: Sat, 01 Jan 2000 17:00:00 UTC +00:00,
+ # created_at: Mon, 11 Jun 2018 02:47:15 UTC +00:00,
+ # updated_at: Mon, 11 Jun 2018 02:47:15 UTC +00:00>
+
+
 # groupname = Group.create!(title:"", organizer_id: shahab.id,
 # image_url:"")
 

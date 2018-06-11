@@ -1,0 +1,80 @@
+.eventcard{
+  color:black;
+  display: flex;
+  width: 1155px;
+  background-color: #f2f2f2;
+  flex-direction: column;
+  margin-left: 389px;
+  margin-top: 26px;
+  p {
+    margin-bottom: 25px;
+    font-size: 16px;
+    font-weight: 200;
+line-height: 1.45;
+  }
+  .maincard {
+    color:black;
+    text-decoration: none;
+    max-height: 418px;
+overflow: hidden;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+}
+
+.cardaddressdiv{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  i {
+        margin: 30px 20px 10px 10px;
+  }
+}
+.maincard:hover {
+    box-shadow: 3px 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+  }
+.eventcardShowTitle {
+    margin-top: -19px;
+font-size: 30px;
+margin-bottom: 7px;
+line-height: 1.2;
+}
+#cardtext{
+  margin-top: 20px;
+  margin-left:14px;
+}
+#cardorgan{
+  .fa-user-tie:before {
+    font-size: 48px;
+    .detailinfo h3 {
+          margin: 19px 0px;
+    }
+  }
+}
+#cardminidate{
+      margin: 0px 27px;
+      .dayblock{
+        padding: 5px 15px;
+      }
+}
+.cardmiddle {
+  width:780px;
+  .dateline {
+    h5 {
+      margin: 23px 0px;
+    }
+  }
+}
+#carddata {
+  font-weight: 400;
+      font-size: 17px;
+      line-height: 1.45;
+      list-style: none;
+      margin-top: 7px;
+}

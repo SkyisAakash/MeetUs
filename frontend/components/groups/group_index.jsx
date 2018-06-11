@@ -9,11 +9,13 @@ class GroupIndex extends React.Component {
     // debugger
     super(props);
     this.state ={
-      myGroups:[]
+      myGroups:props.memberGroups
     };
+    this.ownGroups = this.ownGroups.bind(this);
     this.awe = this.awe.bind(this);
   }
   componentDidMount() {
+    // debugger
     this.props.getusers();
     this.props.requestGroups();
     this.props.requestgroupmembers();
@@ -40,6 +42,13 @@ class GroupIndex extends React.Component {
       }
   }
 
+  ownGroups(){
+    // debugger
+    {this.state.myGroups.map((group)=>{
+    return <p>{group.title}------------</p>;
+    });}
+  }
+
   render() {
     // debugger
     // console.log(this.state.myGroups);
@@ -52,10 +61,8 @@ class GroupIndex extends React.Component {
       return  <GroupIndexItem group={group} key={group.id} currentUser={this.props.currentUser}/>;
     })}
     </ul>
+    <div>{this.ownGroups()}</div>
 
-    {this.state.myGroups.map((group)=>{
-    return <p>{group.title}</p>;
-    })}
   </div>
     );
   }

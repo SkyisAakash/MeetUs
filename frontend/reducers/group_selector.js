@@ -3,6 +3,7 @@ import values from 'lodash/values';
 
 
 export const selectMemberGroups = (state) => {
+  // debugger
   let result = [];
   let userId = state.session.currentUser.id; // 11
   // console.log(state);
@@ -11,6 +12,7 @@ export const selectMemberGroups = (state) => {
         result.push(state.entities.groups[object.group_id]);
       }
   });
+  // debugger
   // console.log(result);
   return result;
 };

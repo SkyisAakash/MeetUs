@@ -10,7 +10,7 @@ const msp = state => ({
   groups: Object.values(state.entities.groups),
   currentUser: state.session.currentUser,
   search_query: "",
-  memberGroups: selectMemberGroups(state)
+  memberGroups: selectMemberGroups(state),
 });
 
 const mdp = dispatch => ({
