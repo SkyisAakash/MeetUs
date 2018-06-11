@@ -44,11 +44,15 @@ class GroupIndex extends React.Component {
 
   ownGroups(){
     // debugger
-    {this.state.myGroups.map((group)=>{
-    return <p>{group.title}------------</p>;
-    });}
+    return this.state.myGroups.map((group)=>{
+      // debugger
+    return <GroupIndexItem group={group} key={group.id} currentUser={this.props.currentUser}/>;
+    });
   }
-
+  // Your Meetups
+  // {this.ownGroups()}
+  // More Meetups
+// goes on 62, 63, 64
   render() {
     // debugger
     // console.log(this.state.myGroups);
@@ -57,11 +61,14 @@ class GroupIndex extends React.Component {
         <SearchBox requestItems={this.props.requestGroups} searchtype="group"/>
     <ul className="groupIndex">
       {this.awe()}
+
+
+
     {this.props.groups.map((group) => {
       return  <GroupIndexItem group={group} key={group.id} currentUser={this.props.currentUser}/>;
     })}
     </ul>
-    <div>{this.ownGroups()}</div>
+
 
   </div>
     );

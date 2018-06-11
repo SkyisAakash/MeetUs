@@ -12,21 +12,36 @@ constructor(props) {
   this.upload = this.upload.bind(this);
 }
 
-
+componentDidMount() {
+  this.props.removegrpErrors();
+}
 handleInput(field) {
   return (e) => (
     this.setState({[field]:e.target.value})
   );
 }
+// renderErrors() {
+// return(
+//   <ul>
+//     {this.props.errors.map((error, i) => (
+//       <li key={`error-${i}`}>
+//         {error}
+//       </li>
+//     ))}
+//   </ul>
+// );
+// }
 
-submitform() {
-
+submitform(e) {
+e.preventDefault();
   this.props.submitGroup(this.state).then((payload) => {
+
     console.log("-------------------");
+
     // debugger
     console.log(payload.group.id);
     this.props.history.push(`/groups/${payload.group.id}`);
-  }).then(this.props.closeModal);
+  });
 
 }
 
@@ -43,14 +58,16 @@ upload(e) {
 }
 
   render () {
+    // debugger
     if (!this.props.group) {
       return null;
     }
+
     let name=this.props.formType+ " Group";
     return (
       <div className="groupformcon">
         <h1 className="groupformHead">{this.props.formType} your group</h1>
-<form onSubmit={()=>this.submitform()} className="formlogin grpform">
+<form onSubmit={(e)=>this.submitform(e)} className="formlogin grpform">
   <p className="logininfo">Title:</p>
   <input type="string" value={this.state.title} onChange={this.handleInput('title')} className="inputField" placeholder="Enter title of group" id="querygf"/>
   <p className="logininfo">Description:</p>
@@ -66,5 +83,6 @@ upload(e) {
     );
   }
 }
+//  <span className="errors">{this.renderErrors()}</span>//line 74
 
 export default withRouter(GroupForm);

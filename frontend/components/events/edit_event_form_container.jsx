@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { requestEvent, updateEvent } from '../../actions/event_actions';
+import { requestEvent, updateEvent, removeEveErrors } from '../../actions/event_actions';
 import EventForm from './event_form';
 import { openModal, closeModal } from '../../actions/modal_actions';
 
@@ -11,13 +11,15 @@ class EditEventForm extends React.Component {
   }
 
   render () {
-    const { event, formType, submitEvent, currentUser } = this.props;
+    const { event, formType, submitEvent, currentUser, errors } = this.props;
     return (
       <EventForm
         event={event}
         formType={formType}
         submitEvent={submitEvent}
-        currentUser={currentUser} />
+        currentUser={currentUser}
+        errors={errors}
+        removeErrors={removeEveErrors}/>
     );
   }
 }
@@ -25,12 +27,14 @@ class EditEventForm extends React.Component {
 const msp = (state,ownProps) => ({
   event: state.entities.events[ownProps.match.params.eventId],
   formType: 'Edit',
-  currentUser: state.session.currentUser
+  currentUser: state.session.currentUser,
+  errors: state.errors.events
 });
 
 const mdp = (dispatch,ownProps) => ({
   submitEvent: (event) => dispatch(updateEvent(event)),
   requestEvent: () => dispatch(requestEvent(ownProps.match.params.eventId)),
+  removeEveErrors: () => dispatch(removeEveErrors)
 });
 
 export default connect(msp, mdp)(EditEventForm);

@@ -17,7 +17,7 @@ class EventIndex extends React.Component {
     // debugger
     super(props);
     this.state ={
-      myEvents:[]
+      myEvents:props.memberEvents
     };
     this.awe = this.awe.bind(this);
   }
@@ -27,6 +27,13 @@ class EventIndex extends React.Component {
     this.props.requestGroups();
     this.props.requesteventmembers();
     // debugger
+  }
+  ownEvents(){
+    // debugger
+    return this.state.myEvents.map((event)=>{
+      // debugger
+    return <EventIndexItem event={event} key={event.id} users={this.props.users} groups={this.props.groups} currentUser={this.props.currentUser}/>;
+    });
   }
 
   componentWillReceiveProps(nextProps){
@@ -47,7 +54,10 @@ class EventIndex extends React.Component {
       return <p className="awe">No matching event enties found</p>;
       }
   }
-
+  // your events
+  // {this.ownEvents()}
+  // more events
+  // on line 69 70 71
   render() {
     // debugger
     // console.log(this.state.myEvents);
@@ -59,14 +69,15 @@ class EventIndex extends React.Component {
       <div className="indexbody">
     <ul className="eventIndex">
       {this.awe()}
+
+
+
     {this.props.events.map((event) => {
       return  <EventIndexItem event={event} key={event.id} users={this.props.users} groups={this.props.groups} currentUser={this.props.currentUser}/>;
     })}
     </ul>
 
-    {this.state.myEvents.map((event)=>{
-    return <p>{event.title}</p>;
-    })}
+
     </div>
     </div>
     );

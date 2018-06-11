@@ -9,9 +9,9 @@ class GroupShow extends React.Component {
     super(props);
     this.joinGroup = this.joinGroup.bind(this);
     this.state ={
-      organizer:{}
+      pos:""
     };
-    this.getOrganizer = this.getOrganizer.bind(this);
+    // this.getOrganizer = this.getOrganizer.bind(this);
     this.checkpos=this.checkpos.bind(this);
 
     // this.guestoptions = this.guestoptions.bind(this);
@@ -22,24 +22,26 @@ class GroupShow extends React.Component {
   componentWillMount() {
 
   }
-  getOrganizer(group){
+  // getOrganizer(group){
     // let users = this.props.users;
     // debugger
-  }
-  componentWillReceiveProps(newProps){
+  // }
+  // componentWillReceiveProps(newProps){
     // debugger
     // if (newProps.users[newProps.group.organizer_id]){//comment thie
-    this.setState({organizer:newProps.users[newProps.group.organizer_id]});
+    // this.setState({organizer:newProps.users[newProps.group.organizer_id]});
+    // this.props.requestGroup().then(
+    // this.setState({organizer:newProps.users[newProps.group.organizer_id]}))
   // } else {//comment thie
     // this.setState({organizer:newProps.currentUser});//comment thie
   // }
     // debugger
-  }
+  // }
   componentDidMount() {
-    this.props.requestGroup().then(
-      res => (this.getOrganizer(res.group))
-    );
-    // var that=thi
+    this.props.requestGroup().then((res) => {
+      // debugger
+      this.props.getUser(res.group.organizer_id);
+    });
     this.setState({
       memberships:this.props.membershipcheck,
       newEvent:this.props.selectEvent
@@ -111,13 +113,16 @@ class GroupShow extends React.Component {
   }
 
   render(){
+    console.log(this.props.group);
     if (!this.props.group) {
       return null;
     }
-    if(!this.state.organizer){
+    const organizer = this.props.users[this.props.group.organizer_id];
+    console.log(organizer);
+    if(!organizer){
       return null;
     }
-
+    const dotclass = this.state.pos+"dot";
     const { selectEvent } = this.props;
     return(
       <div className="groupshow">
@@ -130,7 +135,7 @@ class GroupShow extends React.Component {
               <i className="fas fa-user-tie" id="grpuser"></i>
               <div className="organtext">
               <h3>Organized by:</h3>
-              <h2>{this.state.organizer.username}</h2>
+              <h2>{organizer.username}</h2>
               </div>
           </div>
           </div>
@@ -143,9 +148,9 @@ class GroupShow extends React.Component {
           <a href="" className="extra">Discussions</a>
           <a href="" className="extra">More</a>
           <div>{this.groupoptions()}</div>
-          <div className="dots"><i className="fas fa-ellipsis-h"></i></div>
+          <div id={`${dotclass}`} className="dots"><i className="fas fa-ellipsis-h"></i></div>
         </div>
-        {this.firsteventcard()}
+        {this.firsteventcard(organizer)}
         <div className="groupdes">
           <p>What we're about</p>
           {this.props.group.description}
@@ -154,11 +159,11 @@ class GroupShow extends React.Component {
     );
   }
 
-  firsteventcard(){
+  firsteventcard(organizer){
     if(!this.props.selectEvent){
       return null;
     }
-    return <EventCard event={this.props.selectEvent} organizer={this.state.organizer}/>;
+    return <EventCard event={this.props.selectEvent} organizer={organizer} getUser={this.props.getUser}/>;
   }
 
   guestoptions(){

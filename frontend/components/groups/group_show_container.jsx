@@ -1,8 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { requestGroup, deleteGroup } from '../../actions/group_actions';
+import { getUser } from '../../actions/user_actions';
 import { createGroupMember, deleteGroupMember } from '../../actions/group_member_actions';
-import {getUser} from '../../actions/user_actions';
+// import {getUser} from '../../actions/user_actions';
 import GroupShow from './group_show';
 import { openModal, closeModal} from '../../actions/modal_actions';
 import { membershipcheck } from '../../reducers/membershipcheck';
@@ -26,13 +27,7 @@ const mdp = (dispatch, ownProps) => ({
   deleteGroup:() => dispatch(deleteGroup(ownProps.match.params.groupId)),
   createGroupMember:(group_id, user_id) => dispatch(createGroupMember(group_id,user_id)),
   deleteGroupMember:(groupId, id) => dispatch(deleteGroupMember(groupId,id)),
-  getUser:(id)=> dispatch(getUser(id)),
-  otherForm: (
-    <button onClick={() => dispatch(openModal('edit'))}>
-      Edit Modal
-    </button>
-  ),
-  closeModal: () => dispatch(closeModal())
+  getUser:(id )=> dispatch(getUser(id)),
 });
 
 export default connect(msp, mdp)(GroupShow);

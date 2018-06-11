@@ -8,7 +8,9 @@ export const selectMemberGroups = (state) => {
   let userId = state.session.currentUser.id; // 11
   // console.log(state);
   let memberGroups = Object.values(state.entities.groupmembers).map(object => {
+    // debugger
       if(object.user_id === userId && state.entities.groups[object.group_id]){
+        // debugger
         result.push(state.entities.groups[object.group_id]);
       }
   });

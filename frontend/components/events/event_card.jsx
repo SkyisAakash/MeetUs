@@ -11,12 +11,18 @@ import { Link } from 'react-router-dom';
     //   };
     //   // this.getOrganizer = this.getOrganizer.bind(this);
     // }
-
+    componentDidMount() {
+      this.props.getUser(this.props.event.organizer_id);
+    }
     render(){
+      // debugger
+      if(!this.props.organizer){
+        return null;
+      }
       return(
         <div className="eventcard">
           <p>Next Meetup</p>
-          <Link to={`./events/${this.props.event.id}`} className="maincard">
+          <Link to={`/events/${this.props.event.id}`} className="maincard">
           <div className="minidate" id="cardminidate">{this.datemethod(this.props.event.start_date, "block")}</div>
           <div className="cardmiddle">
             <span className="dateline">{this.datemethod(this.props.event.start_date, "line")}</span>

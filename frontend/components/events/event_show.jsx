@@ -9,34 +9,39 @@ class EventShow extends React.Component {
     super(props);
     this.joinEvent = this.joinEvent.bind(this);
     this.state ={
-      organizer:{}
+      // organizer:{}
     };
-    this.getOrganizer = this.getOrganizer.bind(this);
+    // this.getOrganizer = this.getOrganizer.bind(this);
     this.checkpos=this.checkpos.bind(this);
 
     // this.guestoptions = this.guestoptions.bind(this);
     this.leaveEvent = this.leaveEvent.bind(this);
   }
 
-  componentDidMount() {
-    window.addEventListener('scroll', this.checkpos);
-  }
-  getOrganizer(event){
+  // componentDidMount() {
+    // window.addEventListener('scroll', this.checkpos);
+  // }
+  // getOrganizer(event){
     // let users = this.props.users;
     // debugger
-  }
-  componentWillReceiveProps(newProps){
+  // }
+  // componentWillReceiveProps(newProps){
     // debugger
     // if (newProps.users[newProps.event.organizer_id]){//comment thie
-    this.setState({organizer:newProps.users[newProps.event.organizer_id]});
+    // this.setState({organizer:newProps.users[newProps.event.organizer_id]});
   // } else {//comment thie
     // this.setState({organizer:newProps.currentUser});//comment thie
   // }
     // debugger
-  }
+  // }
   componentDidMount() {
+    const that = this;
     this.props.requestEvent().then(
-      res => (this.getOrganizer(res.event))
+      res => {
+        // debugger
+        this.props.getUser(res.event.organizer_id);
+        this.props.requestGroup(res.event.group_id);
+      }
     );
     // var that=thi
     this.setState({
@@ -45,7 +50,6 @@ class EventShow extends React.Component {
     });
     this.eventoptions = this.eventoptions.bind(this);
     window.addEventListener('scroll', this.checkpos);
-
   }
   // getOrganizer(event){
   //   let users = this.props.users;
@@ -97,9 +101,17 @@ class EventShow extends React.Component {
   }
 
   render(){
-    if (!this.props.event) {
+    // debugger
+    if (!this.props.event || !this.props.groups[this.props.event.group_id]) {
+      // debugger
       return null;
     }
+    const organizer = this.props.users[this.props.event.organizer_id];
+    console.log(organizer);
+    if(!organizer){
+      return null;
+    }
+    // debugger
     return (
       <div className="eventshow">
         <div className="eventhead">
@@ -140,7 +152,7 @@ class EventShow extends React.Component {
              <div className="eveorgan">
                   <i className="fas fa-user-tie" id="eveuser"></i>
                   <div className="detailinfo">
-                  <h3 className="eveorgantext">Hosted by<span className="evelinks">{this.state.organizer.username}</span></h3>
+                  <h3 className="eveorgantext">Hosted by<span className="evelinks">{organizer.username}</span></h3>
                   <h3 className="eveorgantext">From<Link to={`/groups/${this.props.event.group_id}`} className="evelinks" id="g">{this.props.groups[this.props.event.group_id].title}</Link></h3>
                   <h3> Public group</h3>
                 </div>
