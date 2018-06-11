@@ -66,6 +66,7 @@ text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.26);
   text-shadow: 2px 2px 2px 2px black;
 } */
 .groupIndexTitle{
+  font-family: arial, sans-serif;
   letter-spacing: -.02em;
   font-weight: 900;
   font-size: 25px;
