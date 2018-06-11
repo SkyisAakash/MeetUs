@@ -34,7 +34,7 @@ import { Link } from 'react-router-dom';
             <p id="carddata">{this.props.event.description}</p>
           </div>
           <div className="cardaddressdiv">
-              <i class="fas fa-map-marker-alt"></i>
+              <i className="fas fa-map-marker-alt"></i>
               <p>{this.props.event.address}</p>
           </div>
         </Link>

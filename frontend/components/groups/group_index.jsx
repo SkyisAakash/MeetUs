@@ -11,7 +11,7 @@ class GroupIndex extends React.Component {
     this.state ={
       myGroups:props.memberGroups
     };
-    this.ownGroups = this.ownGroups.bind(this);
+    // this.ownGroups = this.ownGroups.bind(this);
     this.awe = this.awe.bind(this);
   }
   componentDidMount() {
@@ -41,14 +41,14 @@ class GroupIndex extends React.Component {
       return <p className="awe">No matching group enties found</p>;
       }
   }
-
-  ownGroups(){
-    // debugger
-    return this.state.myGroups.map((group)=>{
-      // debugger
-    return <GroupIndexItem group={group} key={group.id} currentUser={this.props.currentUser}/>;
-    });
-  }
+  //
+  // ownGroups(){
+  //   // debugger
+  //   return this.state.myGroups.map((group)=>{
+  //     // debugger
+  //   return <GroupIndexItem group={group} key={group.id} currentUser={this.props.currentUser}/>;
+  //   });
+  // }
   // Your Meetups
   // {this.ownGroups()}
   // More Meetups
@@ -56,19 +56,24 @@ class GroupIndex extends React.Component {
   render() {
     // debugger
     // console.log(this.state.myGroups);
+    const moregroups = (this.props.groups.length > 0) ? "showgroups" : "hidegroups";
+    const yourgroups = (this.state.myGroups.length > 0) ? "showgroups" : "hidegroups";
     return (
       <div id="myHeader">
         <SearchBox requestItems={this.props.requestGroups} searchtype="group"/>
+        {this.awe()}
+        <p className={`${yourgroups}`}>Your Meetus Groups</p>
+        <ul className="groupIndex">
+          {this.state.myGroups.map((group) => {
+            return  <GroupIndexItem group={group} key={group.id} currentUser={this.props.currentUser}/>;
+          })}
+        </ul>
+        <p className={`${moregroups}`}>More Meetus Groups</p>
     <ul className="groupIndex">
-      {this.awe()}
-
-
-
     {this.props.groups.map((group) => {
       return  <GroupIndexItem group={group} key={group.id} currentUser={this.props.currentUser}/>;
     })}
     </ul>
-
 
   </div>
     );

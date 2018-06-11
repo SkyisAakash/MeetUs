@@ -19,7 +19,7 @@ class EditEventForm extends React.Component {
         submitEvent={submitEvent}
         currentUser={currentUser}
         errors={errors}
-        removeErrors={removeEveErrors}/>
+        removeEveErrors={removeEveErrors}/>
     );
   }
 }

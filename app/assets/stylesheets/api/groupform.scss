@@ -2,7 +2,15 @@
   font-family: arial, sans-serif;
   margin: 0 auto;
 }
+.grplogininfo{
+  font-size: 20px;
+      font-weight: 800;
+      padding-top: 20px;
+      padding-bottom: 10px;
+      margin: 0px;
+}
 .groupformcon{
+  background-color: white;
   border: 1px solid #bfbfbf;
   border-radius: 5px;
   padding: 30px;
@@ -23,6 +31,11 @@
   margin: 30px 70px 20px 70px;
   width: 300px;
   height: 200px;
+}
+#calen{
+  height: 29px;
+  width: 430px;
+  border-radius: 5px;
 }
 #imgobj {
   margin: 28px 0px;

@@ -19,6 +19,16 @@
   margin-bottom: 500px;
   padding-left: 417px;
 }
+.hide{
+display: none;
+}
+.showgroups{
+  /* display: block; */
+  font-size: 27px;
+font-family: arial, sans-serif;
+font-weight: 600;
+margin: 50px 0px 0px 380px;
+}
 li {
   list-style: none;
 }
@@ -97,7 +107,7 @@ height: auto;
 /* min-height: 700px; */
 /* min-height: 600px; */
 color: white;
-padding: 60px 30px 125px 30px;
+padding: 60px 30px 0px 30px;
 display: flex;
 justify-content: flex-start;
 flex-direction: row;

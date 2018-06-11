@@ -131,14 +131,14 @@ class EventShow extends React.Component {
             <div className="hiddenbtm">
               <div className="eventbodyright">
                 <div className="timediv">
-                    <i class="far fa-clock"></i>
+                    <i className="far fa-clock"></i>
                     <div className="datetimeeve">
                     <p>{this.datemethod(this.props.event.start_date, "line")}</p>
                     <p>{this.timemethod(this.props.event.start_time)} to {this.timemethod(this.props.event.start_time)}</p>
                     </div>
                 </div>
                 <div className="addressdiv">
-                  <i class="fas fa-map-marker-alt"></i>
+                  <i className="fas fa-map-marker-alt"></i>
                     <p>{this.props.event.address}</p>
                   </div>
               </div>
@@ -164,7 +164,7 @@ class EventShow extends React.Component {
         </div>
           <div className="eventbody">
             <div className="eventbodyleft">
-              <object data={this.props.event.image_url} type="image/png" class="eveimage"> <img src="https://s26.postimg.cc/7c57ixvuh/image-not-found.jpg" id="evenotfound" className="eveimage"/></object>
+              <object data={this.props.event.image_url} type="image/png" className="eveimage"> <img src="https://s26.postimg.cc/7c57ixvuh/image-not-found.jpg" id="evenotfound" className="eveimage"/></object>
 
               <div className="groupdes" id="evedes">
                   <p>Details</p>
@@ -173,14 +173,14 @@ class EventShow extends React.Component {
             </div>
             <div className="eventbodyright" id={`${this.state.pos}`}>
               <div className="timediv">
-                  <i class="far fa-clock"></i>
+                  <i className="far fa-clock"></i>
                   <div className="datetimeeve">
                   <p>{this.datemethod(this.props.event.start_date, "line")}</p>
                   <p>{this.timemethod(this.props.event.start_time)} to {this.timemethod(this.props.event.start_time)}</p>
                   </div>
               </div>
               <div className="addressdiv">
-                <i class="fas fa-map-marker-alt"></i>
+                <i className="fas fa-map-marker-alt"></i>
                   <p>{this.props.event.address}</p>
                 </div>
             </div>
@@ -240,16 +240,16 @@ class EventShow extends React.Component {
       <div className="attendence">
       <div className="gonogotext">You're going</div>
       <div  className="joinevent">
-        <a href="" className="gonogo" id="activebtn">  <i class="fas fa-check"></i> </a>
-        <button onClick={()=>this.leaveEvent(this.props.event.id)} className="gonogo" id="inactivebtn"> <i class="fas fa-times"></i> </button>
+        <a href="" className="gonogo" id="activebtn">  <i className="fas fa-check"></i> </a>
+        <button onClick={()=>this.leaveEvent(this.props.event.id)} className="gonogo" id="inactivebtn"> <i className="fas fa-times"></i> </button>
       </div>
       </div>
     ) : (
       <div className="attendence">
       <div className="gonogotext">Are you going?</div>
       <div  className="joinevent">
-        <button onClick={()=>this.joinEvent(this.props.event.id)} className="gonogo" id="inactivebtn"><i class="fas fa-check"></i></button>
-        <a href="" className="gonogo" id="activebtn">  <i class="fas fa-times"></i> </a>
+        <button onClick={()=>this.joinEvent(this.props.event.id)} className="gonogo" id="inactivebtn"><i className="fas fa-check"></i></button>
+        <a href="" className="gonogo" id="activebtn">  <i className="fas fa-times"></i> </a>
       </div>
       </div>
     );

@@ -57,7 +57,7 @@ export const updateEvent = event => dispatch => (
   EventAPIUtil.updateEvent(event).then(res => (
     dispatch(receiveEvent(res))
   ), err => (
-    dispatch(receivegrpErrors(err.responseJSON))
+    dispatch(receiveEveErrors(err.responseJSON))
   ))
 );
 

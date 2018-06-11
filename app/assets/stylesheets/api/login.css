@@ -246,7 +246,11 @@ html {
   width: 435px !important;
   /* display: absolute; */
 }
+#loginsession{
+  padding-bottom: 40px;
+}
 #signup {
+  padding-bottom: 90px;
   height: 468px;
   /* border: 0px; */
   /* top:50%; */

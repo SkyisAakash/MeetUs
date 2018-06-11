@@ -23,7 +23,7 @@ class Login extends React.Component {
 
   renderErrors() {
   return(
-    <ul>
+    <ul className="grperrors">
       {this.props.errors.map((error, i) => (
         <li key={`error-${i}`}>
           {error}
@@ -59,7 +59,7 @@ componentDidMount() {
     // console.log(this.props);
     return (
       <div className="loginpage">
-        <div className="session-form">
+        <div className="session-form" id="loginsession">
           <div className="formHeader">
               <h2>Log In</h2>
           </div>

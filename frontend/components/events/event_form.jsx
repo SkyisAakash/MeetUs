@@ -45,17 +45,20 @@ upload(e) {
            this.addImage(results[0].secure_url);}
          });
 }
-// renderErrors() {
-// return(
-//   <ul>
-//     {this.props.errors.map((error, i) => (
-//       <li key={`error-${i}`}>
-//         {error}
-//       </li>
-//     ))}
-//   </ul>
-// );
-// }
+renderErrors() {
+    if (!this.props.errors){return null;}
+return(
+  <ul className="grperrors">
+    {this.props.errors.map((error, i) => (
+      <li key={`error-${i}`}>
+        {error}
+      </li>
+    ))}
+  </ul>
+);
+}
+// <p className="grplogininfo">Image:</p>
+// <input type="string" onChange={this.handleInput('image_url')} className="inputField"  placeholder="Type URL or upload image" id="querygf"/>
 
   render () {
     if (!this.props.event) {
@@ -66,24 +69,23 @@ upload(e) {
       <div className="groupformcon">
         <h1 className="groupformHead">{this.props.formType} your event</h1>
 <form onSubmit={this.submitform} className="formlogin grpform">
-  <p className="logininfo">Title:</p>
+  <p className="grplogininfo">Title:</p>
   <input type="string" value={this.state.title} onChange={this.handleInput('title')} className="inputField" placeholder="Enter title of event" id="querygf"/>
-  <p className="logininfo">Description:</p>
+  <p className="grplogininfo">Description:</p>
 <textarea value={this.state.description} onChange={this.handleInput('description')} className="inputField" placeholder="Enter thorough description of event" id="querygfar"/>
-<p className="logininfo">Address:</p>
+<p className="grplogininfo">Address:</p>
 <input type="string" value={this.state.address} onChange={this.handleInput('address')} className="inputField" placeholder="Enter address of event" id="querygf"/>
-<p className="logininfo">Start Date:</p>
-<input type="date" value={this.state.start_date} onChange={this.handleInput('start_date')}/>
-<p className="logininfo">End Date:</p>
-<input type="date" value={this.state.end_date} min={this.state.start_date} onChange={this.handleInput('end_date')}/>
-<p className="logininfo">Start Time:</p>
-<input type="time" value={this.state.start_time} onChange={this.handleInput('start_time')}/>
-<p className="logininfo">End Time:</p>
-<input type="time" value={this.state.end_time} min={this.state.start_time} onChange={this.handleInput('end_time')} className="eventtime"/>
-<p className="logininfo">Image:</p>
-<input type="string" onChange={this.handleInput('image_url')} className="inputField"  placeholder="Type URL or upload image" id="querygf"/>
+<p className="grplogininfo" id="calen">Start Date:</p>
+<input type="date"  id="calen" value={this.state.start_date} onChange={this.handleInput('start_date')}/>
+<p className="grplogininfo">End Date:</p>
+<input type="date" id="calen" value={this.state.end_date} min={this.state.start_date} onChange={this.handleInput('end_date')}/>
+<p className="grplogininfo">Start Time:</p>
+<input type="time" id="calen" value={this.state.start_time} onChange={this.handleInput('start_time')}/>
+<p className="grplogininfo">End Time:</p>
+<input type="time" id="calen" value={this.state.end_time} min={this.state.start_time} onChange={this.handleInput('end_time')} className="eventtime"/>
 
-<div className="imprev"> <object data={this.state.image_url} type="image/png" class="sampleImage"> <img src="https://s26.postimg.cc/7c57ixvuh/image-not-found.jpg" id="imgobj" className="sampleImage"/></object></div>
+<div className="imprev"> <object data={this.state.image_url} type="image/png" className="sampleImage"> <img src="https://s26.postimg.cc/7c57ixvuh/image-not-found.jpg" id="imgobj" className="sampleImage"/></object></div>
+<span className="errors">{this.renderErrors()}</span>
 
 
 <button onClick={this.upload} className="uploadimage" id="gf">Upload Image</button>
@@ -95,5 +97,4 @@ upload(e) {
   }
 }
 
-//  <span className="errors">{this.renderErrors()}</span>
 export default withRouter(EventForm);

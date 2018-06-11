@@ -28,13 +28,14 @@ class EventIndex extends React.Component {
     this.props.requesteventmembers();
     // debugger
   }
-  ownEvents(){
-    // debugger
-    return this.state.myEvents.map((event)=>{
-      // debugger
-    return <EventIndexItem event={event} key={event.id} users={this.props.users} groups={this.props.groups} currentUser={this.props.currentUser}/>;
-    });
-  }
+  // ownEvents(){
+  //   // debugger
+  //   return this.state.myEvents.map((event)=>{
+  //     // debugger
+  //   return <EventIndexItem event={event} key={event.id} users={this.props.users} groups={this.props.groups} currentUser={this.props.currentUser}/>;
+  //   });
+  // }
+  //
 
   componentWillReceiveProps(nextProps){
     // debugger
@@ -61,18 +62,26 @@ class EventIndex extends React.Component {
   render() {
     // debugger
     // console.log(this.state.myEvents);
+    const moreevents = (this.props.events.length > 0) ? "showevents" : "hidegroups";
+    const yourevents = (this.state.myEvents.length > 0) ? "showevents" : "hidegroups";
     return (
       <div>
       <div id="myHeader">
         <SearchBox requestItems={this.props.requestEvents} searchtype="event"/>
       </div>
+      {this.awe()}
       <div className="indexbody">
     <ul className="eventIndex">
-      {this.awe()}
-
-
+      <p className={`${yourevents}`}>Your Meetus Events</p>
 
     {this.props.events.map((event) => {
+      return  <EventIndexItem event={event} key={event.id} users={this.props.users} groups={this.props.groups} currentUser={this.props.currentUser}/>;
+    })}
+    </ul>
+    <ul className="eventIndex">
+      <p className={`${moreevents}`}>More Meetus Events</p>
+
+    {this.state.myEvents.map((event) => {
       return  <EventIndexItem event={event} key={event.id} users={this.props.users} groups={this.props.groups} currentUser={this.props.currentUser}/>;
     })}
     </ul>
