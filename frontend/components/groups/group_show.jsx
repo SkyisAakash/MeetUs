@@ -16,6 +16,7 @@ class GroupShow extends React.Component {
 
     // this.guestoptions = this.guestoptions.bind(this);
     this.leaveGroup = this.leaveGroup.bind(this);
+    this.firsteventcard = this.firsteventcard.bind(this);
   }
 
   componentWillMount() {
@@ -144,13 +145,20 @@ class GroupShow extends React.Component {
           <div>{this.groupoptions()}</div>
           <div className="dots"><i className="fas fa-ellipsis-h"></i></div>
         </div>
-        <EventCard event={this.props.selectEvent} organizer={this.state.organizer}/>
+        {this.firsteventcard()}
         <div className="groupdes">
           <p>What we're about</p>
           {this.props.group.description}
         </div>
       </div>
     );
+  }
+
+  firsteventcard(){
+    if(!this.props.selectEvent){
+      return null;
+    }
+    return <EventCard event={this.props.selectEvent} organizer={this.state.organizer}/>;
   }
 
   guestoptions(){
