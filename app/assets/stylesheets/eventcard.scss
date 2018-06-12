@@ -22,11 +22,37 @@ overflow: hidden;
     border-radius: 5px;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
   }
 
 }
-
+.eventcardShowcuteTitle{
+  margin-top: 2px;
+}
+.cardtemplate{
+  display: flex;
+  flex-direction: row;
+  .cardtempright{
+    margin-top: 20px;
+margin-left: 5px;
+  }
+}
+.cardtempminidate{
+  .dayblock{
+    margin: 22px 10px;
+padding: 15px 19px;
+  }
+}
+.cuteblocks{
+  background-color: white;
+border: 1px solid white;
+border-radius: 10px;
+margin-left: 24px;
+}
+.cuteblocks:hover {
+    box-shadow: 3px 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+  }
 .cardaddressdiv{
   display: flex;
   flex-direction: row;

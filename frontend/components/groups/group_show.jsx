@@ -20,7 +20,7 @@ class GroupShow extends React.Component {
   }
 
   componentWillMount() {
-
+    this.props.requestEvents();
   }
   // getOrganizer(group){
     // let users = this.props.users;
@@ -117,6 +117,7 @@ class GroupShow extends React.Component {
     if (!this.props.group) {
       return null;
     }
+    const cutebox = (this.props.laterEvents.length === 0)? "hidegroups" : "cuteblocks";
     const organizer = this.props.users[this.props.group.organizer_id];
     console.log(organizer);
     if(!organizer){
@@ -152,19 +153,36 @@ class GroupShow extends React.Component {
         </div>
         {this.firsteventcard(organizer)}
         <div className="groupdes">
+          <div className="description">
           <p>What we're about</p>
           {this.props.group.description}
+          </div>
+          <div className={`${cutebox}`}>
+            {this.eventtemplates(organizer)}
+          </div>
         </div>
       </div>
     );
   }
-
+      // -----------{this.props.laterEvents.map((event) => (<p>{event.title}</p>))};
   firsteventcard(organizer){
+    // debugger
     if(!this.props.selectEvent){
       return null;
     }
-    return <EventCard event={this.props.selectEvent} organizer={organizer} getUser={this.props.getUser}/>;
+    return <EventCard cardid="big" event={this.props.selectEvent} organizer={organizer} getUser={this.props.getUser}/>;
   }
+  eventtemplates(organizer){
+    // debugger
+    if(this.props.laterEvents.length === 0){
+      return null;
+    }
+    // debugger
+    return this.props.laterEvents.map((laterevent) => (
+    <EventCard cardid="cute" event={laterevent} organizer={organizer} getUser={this.props.getUser}/>
+    )
+  );
+}
 
   guestoptions(){
     const forguest = (this.state.memberships === "true") ? (

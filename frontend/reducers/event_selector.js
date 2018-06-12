@@ -14,3 +14,17 @@ export const selectMemberEvents = (state) => {
   // console.log(result);
   return result;
 };
+
+export const findByDate = (state, date) => {
+  // debugger
+  let result = [];
+  Object.values(state.entities.events).map(event => {
+    // debugger
+    let datecomp = new Date(event.start_date); 
+    if (+datecomp >= +date) {
+      // debugger
+      result.push(event);
+    }
+  });
+  return result;
+};

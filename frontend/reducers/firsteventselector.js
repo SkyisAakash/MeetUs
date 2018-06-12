@@ -20,6 +20,7 @@
 export const selectEventId = (events, grp_id) => {
   let result; // 11
   let mindate = new Date("3050-3-3");
+  let more = [];
   // debugger
   if (events !== []){
 for (var i = 0; i < events.length; i++) {
@@ -31,10 +32,12 @@ if(events[i].group_id === grp_id){
       mindate = date1;
       result = events[i];
       // debugger
+  } else {
+    more.push(events[i]);
   }
 }
 }
 // debugger
-return result;
+return [result].concat(more);
 }
 };

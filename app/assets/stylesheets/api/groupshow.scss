@@ -20,6 +20,7 @@
   vertical-align: middle;
 }
 .stopmovinggrp {
+  border-bottom: 1px solid lightgray;
   position: fixed;
   top: 0px;
   margin: 0 auto;
@@ -27,6 +28,13 @@
   // padding-left: 300px;
   padding-right: 550px;
   // margin: 0px 380px;
+}
+.description{
+  width: 75%;
+padding-right: 20px;
+p {
+  margin-top:0px;
+}
 }
 #stopmovinggrpdot {
   width: 29px;
@@ -39,12 +47,33 @@
   margin-top: 13px;
   text-align: center;
 }
+.cardtemplate{
+  text-decoration: none;
+}
+.cuteblocks{
+      margin-top: 20px;
+  max-height: 150px;
+}
+.eventcardShowcuteTitle{
+  font-size: 18px;
+  color: black;
+}
+#cardtempminidate{
+  margin-left: 9px;
+  width: 64px;
+    margin-top: -7px;
+    display: flex;
+    flex-direction: row;
+}
 .op{display: flex;}
 .groupdes{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
   min-height: 500px;
   line-height: 1.45;
-  padding: 50px;
-  width: 700px;
+  padding: 50px 0px 50px 50px;
+  width: 1154px;
   margin-left: 340px;
   text-rendering: optimizeLegibility;
   font-size: 1rem;

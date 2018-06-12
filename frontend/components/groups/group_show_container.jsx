@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { requestGroup, deleteGroup } from '../../actions/group_actions';
+import { requestEvents } from '../../actions/event_actions';
 import { getUser } from '../../actions/user_actions';
 import { createGroupMember, deleteGroupMember } from '../../actions/group_member_actions';
 // import {getUser} from '../../actions/user_actions';
@@ -18,7 +19,8 @@ const msp = (state,ownProps) => ({
   events: state.entities.events,
   groupmemberships: state.entities.groupmembers,
   membershipcheck: membershipcheck(state, ownProps.match.params.groupId, state.session.currentUser),
-  selectEvent: selectEventId(Object.values(state.entities.events), parseInt(ownProps.match.params.groupId))
+  selectEvent: selectEventId(Object.values(state.entities.events), parseInt(ownProps.match.params.groupId))[0],
+  laterEvents: selectEventId(Object.values(state.entities.events), parseInt(ownProps.match.params.groupId)).slice(1)
 });
 
 const mdp = (dispatch, ownProps) => ({
@@ -28,6 +30,7 @@ const mdp = (dispatch, ownProps) => ({
   createGroupMember:(group_id, user_id) => dispatch(createGroupMember(group_id,user_id)),
   deleteGroupMember:(groupId, id) => dispatch(deleteGroupMember(groupId,id)),
   getUser:(id )=> dispatch(getUser(id)),
+  requestEvents: ()=>dispatch(requestEvents())
 });
 
 export default connect(msp, mdp)(GroupShow);

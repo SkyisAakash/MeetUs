@@ -88,6 +88,8 @@ class EventIndex extends React.Component {
 
 
     </div>
+    {this.props.dateEvents.map(event=>
+      { return <p>{event.title}</p>;})}-------------------
     </div>
     );
   }
