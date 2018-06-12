@@ -55,6 +55,8 @@ class EventIndex extends React.Component {
       return <p className="awe">No matching event enties found</p>;
       }
   }
+  // {this.props.dateEvents.map(event=>
+  //   { return <p>{event.title}</p>;})}-
   // your events
   // {this.ownEvents()}
   // more events
@@ -86,10 +88,9 @@ class EventIndex extends React.Component {
     })}
     </ul>
 
-
+    <input type="date" id="datepicker"/>
     </div>
-    {this.props.dateEvents.map(event=>
-      { return <p>{event.title}</p>;})}-------------------
+
     </div>
     );
   }

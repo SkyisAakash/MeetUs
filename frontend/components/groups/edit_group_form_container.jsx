@@ -7,7 +7,9 @@ import { openModal, closeModal } from '../../actions/modal_actions';
 class EditGroupForm extends React.Component {
 
   componentDidMount() {
+    // debugger
     this.props.requestGroup();
+    // debugger
   }
 
   render () {
@@ -19,7 +21,8 @@ class EditGroupForm extends React.Component {
         submitGroup={submitGroup}
         currentUser={currentUser}
         errors={errors}
-        removegrpErrors={removegrpErrors} />
+        removegrpErrors={removegrpErrors}
+        requestGroup={requestGroup}/>
     );
   }
 }

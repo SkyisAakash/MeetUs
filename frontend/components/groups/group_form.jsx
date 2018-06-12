@@ -13,6 +13,7 @@ constructor(props) {
 }
 
 componentDidMount() {
+  this.props.requestGroup();
   this.props.removegrpErrors();
   this.setState({
     organizer_id:this.props.group.organizer_id,
@@ -27,7 +28,7 @@ handleInput(field) {
   );
 }
 renderErrors() {
-  if (!this.props.errors){return null;}
+  if (!this.props.errors.group){return null;}
 return(
   <ul className="grperrors">
     {this.props.errors.map((error, i) => (

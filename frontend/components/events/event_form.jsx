@@ -46,7 +46,10 @@ upload(e) {
          });
 }
 renderErrors() {
-    if (!this.props.errors){return null;}
+  // debugger
+    if (!this.props.errors.events){return null;}
+    if (this.props.errors === {}){return null;}
+    // debugger
 return(
   <ul className="grperrors">
     {this.props.errors.map((error, i) => (
