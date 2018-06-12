@@ -13,7 +13,8 @@ const msp = (state,ownProps) => ({
 
 const mdp = (dispatch,ownProps) => ({
   submitGroup: (group) => dispatch(createGroup(group)),
-  removegrpErrors: () => dispatch(removegrpErrors())
+  removegrpErrors: () => dispatch(removegrpErrors()),
+  requestGroup:() => {}
 });
 
 export default connect(msp, mdp)(GroupForm);

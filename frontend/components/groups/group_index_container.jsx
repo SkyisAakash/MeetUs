@@ -4,13 +4,14 @@ import { requestEvents } from '../../actions/event_actions.js';
 import { requestUsers } from '../../actions/user_actions.js';
 import { requestGroupMembers } from '../../actions/group_member_actions.js';
 import GroupIndex from './group_index.jsx';
-import { selectMemberGroups } from '../../reducers/group_selector';
+import { selectMemberGroups, selectOtherGroups } from '../../reducers/group_selector';
 
 const msp = state => ({
   groups: Object.values(state.entities.groups),
   currentUser: state.session.currentUser,
   search_query: "",
   memberGroups: selectMemberGroups(state),
+  otherGroups: selectOtherGroups(state)
 });
 
 const mdp = dispatch => ({

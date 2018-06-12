@@ -17,7 +17,8 @@ class EventIndex extends React.Component {
     // debugger
     super(props);
     this.state ={
-      myEvents:props.memberEvents
+      myEvents:props.memberEvents,
+      otherEvents: props.otherEvents
     };
     this.awe = this.awe.bind(this);
   }
@@ -40,7 +41,8 @@ class EventIndex extends React.Component {
   componentWillReceiveProps(nextProps){
     // debugger
     this.setState({
-      myEvents:nextProps.memberEvents
+      myEvents:nextProps.memberEvents,
+      otherEvents:nextProps.otherEvents
     });
   }
 
@@ -64,7 +66,8 @@ class EventIndex extends React.Component {
   render() {
     // debugger
     // console.log(this.state.myEvents);
-    const moreevents = (this.props.events.length > 0) ? "showevents" : "hidegroups";
+    console.log(this.state.myEvents);
+    const moreevents = (this.state.otherEvents.length > 0) ? "showevents" : "hidegroups";
     const yourevents = (this.state.myEvents.length > 0) ? "showevents" : "hidegroups";
     return (
       <div>
@@ -76,19 +79,19 @@ class EventIndex extends React.Component {
     <ul className="eventIndex">
       <p className={`${yourevents}`}>Your Meetus Events</p>
 
-    {this.props.events.map((event) => {
+    {this.state.myEvents.map((event) => {
       return  <EventIndexItem event={event} key={event.id} users={this.props.users} groups={this.props.groups} currentUser={this.props.currentUser}/>;
     })}
     </ul>
     <ul className="eventIndex">
       <p className={`${moreevents}`}>Meetus Events you can attend</p>
 
-    {this.state.myEvents.map((event) => {
+    {this.state.otherEvents.map((event) => {
       return  <EventIndexItem event={event} key={event.id} users={this.props.users} groups={this.props.groups} currentUser={this.props.currentUser}/>;
     })}
     </ul>
 
-    <input type="date" id="datepicker"/>
+
     </div>
 
     </div>

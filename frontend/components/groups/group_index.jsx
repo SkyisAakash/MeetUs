@@ -9,7 +9,8 @@ class GroupIndex extends React.Component {
     // debugger
     super(props);
     this.state ={
-      myGroups:props.memberGroups
+      myGroups:props.memberGroups,
+      otherGroups: props.otherGroups
     };
     // this.ownGroups = this.ownGroups.bind(this);
     this.awe = this.awe.bind(this);
@@ -26,7 +27,8 @@ class GroupIndex extends React.Component {
   componentWillReceiveProps(nextProps){
     // debugger
     this.setState({
-      myGroups:nextProps.memberGroups
+      myGroups:nextProps.memberGroups,
+      otherGroups:nextProps.otherGroups
     });
   }
 
@@ -55,8 +57,10 @@ class GroupIndex extends React.Component {
 // goes on 62, 63, 64
   render() {
     // debugger
+    // debugger
     // console.log(this.state.myGroups);
-    const moregroups = (this.props.groups.length > 0) ? "showgroups" : "hidegroups";
+    const moregroups = (this.state.otherGroups.length > 0) ? "showgroups" : "hidegroups";
+    // debugger
     const yourgroups = (this.state.myGroups.length > 0) ? "showgroups" : "hidegroups";
     return (
       <div id="myHeader">
@@ -70,7 +74,7 @@ class GroupIndex extends React.Component {
         </ul>
         <p className={`${moregroups}`}>Meetus Groups you can join</p>
     <ul className="groupIndex">
-    {this.props.groups.map((group) => {
+    {this.state.otherGroups.map((group) => {
       return  <GroupIndexItem group={group} key={group.id} currentUser={this.props.currentUser}/>;
     })}
     </ul>

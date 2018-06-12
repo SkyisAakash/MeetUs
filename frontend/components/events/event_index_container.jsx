@@ -4,7 +4,7 @@ import { requestGroups, deleteGroup } from '../../actions/group_actions.js';
 import { requestUsers } from '../../actions/user_actions.js';
 import { requestEventMembers } from '../../actions/event_member_actions.js';
 import EventIndex from './event_index.jsx';
-import { selectMemberEvents, findByDate } from '../../reducers/event_selector';
+import { selectMemberEvents, findByDate, selectOtherEvents } from '../../reducers/event_selector';
 
 const msp = state => ({
   events: Object.values(state.entities.events),
@@ -14,7 +14,8 @@ const msp = state => ({
   memberEvents: selectMemberEvents(state),
   users: state.entities.users,
   groups: state.entities.groups,
-  dateEvents: findByDate(state, new Date("2018-07-10"))
+  dateEvents: findByDate(state, new Date("2018-07-10")),
+  otherEvents: selectOtherEvents(state)
 });
 
 const mdp = dispatch => ({
