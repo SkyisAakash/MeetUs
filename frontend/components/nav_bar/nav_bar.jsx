@@ -46,13 +46,12 @@ class NavBar extends React.Component {
         <div id="gear-dropdown-btn">
   				<i className="fas fa-user-circle" id="usericon" onClick={this.toggle}></i>
         </div>
-
             <ul id="gear-dropdown" className="gear-dropdown" hidden={this.state.showDropdown}>
               <div className="triangle"></div>
               <div className="gearbox">
             <p><a className="gearcontent" href="">Find Groups></a></p>
               <div className="dropdownlist">
-      			       <li><a className="dropdownOptions" id="profile" href="#">Profile</a></li>
+      			       <li><a className="dropdownOptions" onClick={()=>{this.props.openModal('user');this.toggle();}} id="profile">Profile</a></li>
       			       <li><a className="dropdownOptions" href="#">Settings</a></li>
       			       <li><a className="dropdownOptions" id="log" href="#" onClick={this.outofhere}>Logout</a></li>
             </div>

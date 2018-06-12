@@ -13,11 +13,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   logout: () => dispatch(logout()),
-  otherForm: (
-    <button onClick={() => dispatch(openModal('create'))}>
-     create Modal
-    </button>
-  ),
+  openModal: modal => dispatch(openModal(modal)),
   closeModal: () => dispatch(closeModal())
 });
 

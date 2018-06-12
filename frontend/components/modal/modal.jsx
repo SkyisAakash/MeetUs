@@ -2,26 +2,16 @@
 import React from 'react';
 import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
-import EditGroupFormContainer from '../groups/edit_group_form_container';
-import CreateGroupFormContainer from '../groups/create_group_form_container';
+import UserProfileContainer from './user_profile_container';
 
 function Modal({modal}) {
   if (!modal) {
     return null;
   }
-  let component;
-  switch (modal) {
-    case 'edit':
-    // debugger
-      component = <EditGroupFormContainer />;
-      break;
-    case 'create':
-    // debugger
-      component = <CreateGroupFormContainer />;
-      break;
-    default:
-      return null;
-  }
+
+    let component = <UserProfileContainer />;
+
+
   return (
     <div className="modal-background" onClick={closeModal}>
       <div className="modal-child" onClick={e => e.stopPropagation()}>
