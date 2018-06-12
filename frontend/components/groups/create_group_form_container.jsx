@@ -8,7 +8,7 @@ const msp = (state,ownProps) => ({
   group: {description:'', title:'', organizer_id:state.session.currentUser.id, image_url:"https://s26.postimg.cc/i2sdl8ktl/group.jpg"},
   formType: 'Create',
   currentUser: state.session.currentUser,
-  errors: state.errors.group
+  errors: state.errors
 });
 
 const mdp = (dispatch,ownProps) => ({

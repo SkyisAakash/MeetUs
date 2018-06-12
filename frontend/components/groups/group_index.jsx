@@ -2,7 +2,7 @@ import React from 'react';
 import GroupIndexItem from './group_index_item';
 import { Link } from 'react-router-dom';
 import SearchBox from './search_box';
-
+import LoadingIcon from '../loading_icon';
 class GroupIndex extends React.Component {
 
   constructor(props){
@@ -56,6 +56,10 @@ class GroupIndex extends React.Component {
   // More Meetups
 // goes on 62, 63, 64
   render() {
+    // debugger
+    if (this.props.loading) {
+     return <section className="pokemon-detail"><LoadingIcon /></section>;
+   }
     // debugger
     // debugger
     // console.log(this.state.myGroups);

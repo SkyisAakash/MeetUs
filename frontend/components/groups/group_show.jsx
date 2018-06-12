@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import EventCard from '../events/event_card';
 import findKey from 'lodash/keys';
+import LoadingIcon from '../loading_icon';
 
 
 class GroupShow extends React.Component {
@@ -113,6 +114,9 @@ class GroupShow extends React.Component {
   }
 
   render(){
+    if (this.props.loading) {
+     return <section className="pokemon-detail"><LoadingIcon /></section>;
+   }
     console.log(this.props.group);
     if (!this.props.group) {
       return null;

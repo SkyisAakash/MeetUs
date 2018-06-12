@@ -2,6 +2,7 @@ class Api::GroupsController < ApplicationController
 
   def index
     # debugger
+    # sleep 1
     if params[:search_query]
       if params[:search_query] == ""
         @groups = Group.all
@@ -17,6 +18,7 @@ class Api::GroupsController < ApplicationController
 
 
     def show
+      # sleep 1
       # debugger
       @group = Group.find(params[:id])
     end

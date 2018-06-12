@@ -20,7 +20,9 @@ const msp = (state,ownProps) => ({
   groupmemberships: state.entities.groupmembers,
   membershipcheck: membershipcheck(state, ownProps.match.params.groupId, state.session.currentUser),
   selectEvent: selectEventId(Object.values(state.entities.events), parseInt(ownProps.match.params.groupId))[0],
-  laterEvents: selectEventId(Object.values(state.entities.events), parseInt(ownProps.match.params.groupId)).slice(1)
+  laterEvents: selectEventId(Object.values(state.entities.events), parseInt(ownProps.match.params.groupId)).slice(1),
+  loading: state.ui.loading.detailLoading
+
 });
 
 const mdp = (dispatch, ownProps) => ({

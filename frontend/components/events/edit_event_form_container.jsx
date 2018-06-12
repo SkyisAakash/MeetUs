@@ -28,7 +28,7 @@ const msp = (state,ownProps) => ({
   event: state.entities.events[ownProps.match.params.eventId],
   formType: 'Edit',
   currentUser: state.session.currentUser,
-  errors: state.errors.events
+  errors: state.errors
 });
 
 const mdp = (dispatch,ownProps) => ({

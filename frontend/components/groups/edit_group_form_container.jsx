@@ -31,7 +31,7 @@ const msp = (state,ownProps) => ({
   group: state.entities.groups[ownProps.match.params.groupId],
   formType: 'Edit',
   currentUser: state.session.currentUser,
-  errors: state.errors.group
+  errors: state.errors
 });
 
 const mdp = (dispatch,ownProps) => ({

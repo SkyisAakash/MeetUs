@@ -11,7 +11,8 @@ const msp = state => ({
   currentUser: state.session.currentUser,
   search_query: "",
   memberGroups: selectMemberGroups(state),
-  otherGroups: selectOtherGroups(state)
+  otherGroups: selectOtherGroups(state),
+      loading: state.ui.loading.detailLoading
 });
 
 const mdp = dispatch => ({

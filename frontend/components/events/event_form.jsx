@@ -52,7 +52,7 @@ renderErrors() {
     // debugger
 return(
   <ul className="grperrors">
-    {this.props.errors.map((error, i) => (
+    {this.props.errors.events.map((error, i) => (
       <li key={`error-${i}`}>
         {error}
       </li>

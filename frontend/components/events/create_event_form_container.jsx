@@ -13,7 +13,7 @@ const msp = (state,ownProps) => ({
           //have to pass group id
   formType: 'Create',
   currentUser: state.session.currentUser,
-  errors: state.errors.events
+  errors: state.errors
 });
 
 const mdp = (dispatch,ownProps) => ({

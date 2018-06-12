@@ -28,10 +28,11 @@ handleInput(field) {
   );
 }
 renderErrors() {
+  // debugger
   if (!this.props.errors.group){return null;}
 return(
   <ul className="grperrors">
-    {this.props.errors.map((error, i) => (
+    {this.props.errors.group.map((error, i) => (
       <li key={`error-${i}`} className="grperritem">
         {error}
       </li>

@@ -1,5 +1,7 @@
 import * as GroupAPIUtil from '../util/group_api_util';
 export const RECEIVE_GROUPS = "RECEIVE_GROUPS";
+export const START_RECEIVING_GROUPS = "START_RECEIVING_GROUPS";
+export const START_RECEIVING_GROUP = "START_RECEIVING_GROUP";
 export const RECEIVE_GROUP = "RECEIVE_GROUP";
 export const REMOVE_GROUP = "REMOVE_GROUP";
 export const RECEIVE_GRP_ERRORS = "RECEIVE_GRP_ERRORS";
@@ -7,6 +9,8 @@ export const REMOVE_GRP_ERRORS = "REMOVE_GRP_ERRORS";
 
 export const requestGroups = (search_query) => {
   return dispatch => {
+    dispatch(startLoadingAllGroups);
+    
     return GroupAPIUtil.fetchGroups(search_query).then(res => dispatch({type: RECEIVE_GROUPS, groups:res}));
   };
 };
@@ -19,10 +23,21 @@ export const removegrpErrors = errors => ({
 });
 export const requestGroup = (id) => {
   return dispatch => {
+    dispatch(startLoadingSingleGroup);
     return GroupAPIUtil.fetchGroup(id).then(res => dispatch({type: RECEIVE_GROUP, group:res}));
   };
 };
 
+
+
+
+export const startLoadingAllGroups = () => ({
+  type: START_RECEIVING_GROUPS
+});
+
+export const startLoadingSingleGroup = () => ({
+  type: START_RECEIVING_GROUP
+});
 // export const createGroup = (group) => {
 //   return dispatch => {
 //     return GroupAPIUtil.createGroup(group).then(res => dispatch({type: RECEIVE_GROUP, group:res})),
