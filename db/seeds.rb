@@ -12,6 +12,7 @@ Group.delete_all
 GroupMember.delete_all
 User.delete_all
 Event.delete_all
+EventMember.delete_all
 
 demo = User.create!(username:"user",email:"user17", password:"user123")
 sky = User.create!(username:"sky",email:"sky@gmail.com", password:"user123")
