@@ -28,6 +28,7 @@ font-weight: 600;
   font-size: 2.625rem
 }
 .video {
+      filter: brightness(82%);
      position: relative;
   /* max-height: 600px; */
   width: 100%;
