@@ -11,7 +11,8 @@ export const requestGroups = (search_query) => {
   return dispatch => {
     dispatch(startLoadingAllGroups);
 
-    return GroupAPIUtil.fetchGroups(search_query).then(res => dispatch({type: RECEIVE_GROUPS, groups:res}));
+    return GroupAPIUtil.fetchGroups(search_query)
+    .then(res => dispatch({type: RECEIVE_GROUPS, groups:res}));
   };
 };
 export const receivegrpErrors = errors => ({
@@ -24,7 +25,8 @@ export const removegrpErrors = errors => ({
 export const requestGroup = (id) => {
   return dispatch => {
     dispatch(startLoadingSingleGroup);
-    return GroupAPIUtil.fetchGroup(id).then(res => dispatch({type: RECEIVE_GROUP, group:res}));
+    return GroupAPIUtil.fetchGroup(id)
+    .then(res => dispatch({type: RECEIVE_GROUP, group:res}));
   };
 };
 // export const getGroup = group => ({
@@ -82,6 +84,7 @@ export const updateGroup = group => dispatch => (
 
 export const deleteGroup = (id) => {
   return dispatch => {
-    return GroupAPIUtil.deleteGroup(id).then(res => dispatch({type: REMOVE_GROUP}));
+    return GroupAPIUtil.deleteGroup(id)
+    .then(res => dispatch({type: REMOVE_GROUP}));
   };
 };

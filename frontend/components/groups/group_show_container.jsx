@@ -18,9 +18,13 @@ const msp = (state,ownProps) => ({
   users: state.entities.users,
   events: state.entities.events,
   groupmemberships: state.entities.groupmembers,
-  membershipcheck: membershipcheck(state, ownProps.match.params.groupId, state.session.currentUser),
-  selectEvent: selectEventId(Object.values(state.entities.events), parseInt(ownProps.match.params.groupId))[0],
-  laterEvents: selectEventId(Object.values(state.entities.events), parseInt(ownProps.match.params.groupId)).slice(1),
+  membershipcheck: membershipcheck(state,
+              ownProps.match.params.groupId,
+              state.session.currentUser),
+  selectEvent: selectEventId(Object.values(state.entities.events),
+                            parseInt(ownProps.match.params.groupId))[0],
+  laterEvents: selectEventId(Object.values(state.entities.events),
+                            parseInt(ownProps.match.params.groupId)).slice(1),
   loading: state.ui.loading.detailLoading
 
 });
@@ -29,7 +33,8 @@ const mdp = (dispatch, ownProps) => ({
   requestgroupmembers: () => dispatch(requestGroupMembers()),
   requestGroup: () => dispatch(requestGroup(ownProps.match.params.groupId)),
   deleteGroup:() => dispatch(deleteGroup(ownProps.match.params.groupId)),
-  createGroupMember:(group_id, user_id) => dispatch(createGroupMember(group_id,user_id)),
+  createGroupMember:(group_id, user_id) =>
+                    dispatch(createGroupMember(group_id,user_id)),
   deleteGroupMember:(groupId, id) => dispatch(deleteGroupMember(groupId,id)),
   getUser:(id )=> dispatch(getUser(id)),
   requestEvents: ()=>dispatch(requestEvents())

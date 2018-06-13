@@ -16,12 +16,6 @@ const msp = (state, ownProps) => {
 };};
 
 const mdp = (dispatch) => ({
-  // requesteventmembers: () => dispatch(requestEventMembers()),
-  // requestEvent: () => dispatch(requestEvent(ownProps.match.params.eventId)),
-  // deleteEvent:() => dispatch(deleteEvent(ownProps.match.params.eventId)),
-  // createEventMember:(event_id, user_id) => dispatch(createEventMember(event_id,user_id)),
-  // deleteEventMember:(eventId, id) => dispatch(deleteEventMember(eventId,id)),
-  // getUser:(id)=> dispatch(getUser(id)),
 });
 
 export default connect(msp, mdp)(EventCard);

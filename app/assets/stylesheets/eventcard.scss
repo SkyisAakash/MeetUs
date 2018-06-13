@@ -14,6 +14,7 @@
 line-height: 1.45;
   }
   .maincard {
+    justify-content: flex-start;
     color:black;
     text-decoration: none;
     max-height: 418px;
@@ -22,8 +23,8 @@ overflow: hidden;
     border: 1px solid white;
     border-radius: 5px;
     display: flex;
+    // justify-content: space-between;
     flex-direction: row;
-    justify-content: space-between;
   }
 
 }

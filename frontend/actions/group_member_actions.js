@@ -6,17 +6,20 @@ import { receiveCurrentUser } from '../actions/session_actions';
 
 export const createGroupMember = (group_id, user_id) => {
   return dispatch => {
-    return GroupMemberAPIUtil.createMembership(group_id, user_id).then(res => dispatch({type:RECEIVE_GROUPMEMBER, groupmember:res}));
+    return GroupMemberAPIUtil.createMembership(group_id, user_id)
+    .then(res => dispatch({type:RECEIVE_GROUPMEMBER, groupmember:res}));
   };
 };
 
 export const deleteGroupMember = (groupId, id) => {
   return dispatch => {
-    return GroupMemberAPIUtil.deleteMembership(id).then(res => dispatch({type:REMOVE_GROUPMEMBER, groupmember:groupId}));
+    return GroupMemberAPIUtil.deleteMembership(id)
+    .then(res => dispatch({type:REMOVE_GROUPMEMBER, groupmember:groupId}));
   };
 };
 export const requestGroupMembers = () => {
   return dispatch => {
-    return GroupMemberAPIUtil.receiveMemberships().then(res => dispatch({type: RECEIVE_GROUPMEMBERS, groupmembers:res}));
+    return GroupMemberAPIUtil.receiveMemberships()
+    .then(res => dispatch({type: RECEIVE_GROUPMEMBERS, groupmembers:res}));
   };
 };

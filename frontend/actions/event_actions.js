@@ -14,19 +14,22 @@ export const removeEveErrors = errors => ({
 });
 export const requestEvents = (search_query) => {
   return dispatch => {
-    return EventAPIUtil.fetchEvents(search_query).then(res => dispatch({type: RECEIVE_EVENTS, events:res}));
+    return EventAPIUtil.fetchEvents(search_query).
+    then(res => dispatch({type: RECEIVE_EVENTS, events:res}));
   };
 };
 export const requestEvent = (id) => {
   return dispatch => {
-    return EventAPIUtil.fetchEvent(id).then(res => dispatch({type: RECEIVE_EVENT, event:res}));
+    return EventAPIUtil.fetchEvent(id)
+    .then(res => dispatch({type: RECEIVE_EVENT, event:res}));
   };
 };
 
 //
 // export const createEvent = (event) => {
 //   return dispatch => {
-//     return EventAPIUtil.createEvent(event).then(res => dispatch({type: RECEIVE_EVENT, event:res})),
+//     return EventAPIUtil.createEvent(event)
+//.then(res => dispatch({type: RECEIVE_EVENT, event:res})),
 //     err => dispatch(receiveEveErrors(err.responseJSON));
 //   };
 // };
@@ -45,7 +48,8 @@ export const createEvent = event => dispatch => (
 
 // export const updateEvent = (event) => {
 //   return dispatch => {
-//     return EventAPIUtil.updateEvent(event).then(res => dispatch({type: RECEIVE_EVENT, event:res})),
+//     return EventAPIUtil.updateEvent(event)
+//.then(res => dispatch({type: RECEIVE_EVENT, event:res})),
 //     err => dispatch(receiveEveErrors(err.responseJSON));
 //   };
 // };
@@ -63,6 +67,7 @@ export const updateEvent = event => dispatch => (
 
 export const deleteEvent = (id) => {
   return dispatch => {
-    return EventAPIUtil.deleteEvent(id).then(res => dispatch({type: REMOVE_EVENT}));
+    return EventAPIUtil.deleteEvent(id)
+    .then(res => dispatch({type: REMOVE_EVENT}));
   };
 };

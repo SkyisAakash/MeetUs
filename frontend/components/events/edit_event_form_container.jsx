@@ -1,6 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { requestEvent, updateEvent, removeEveErrors } from '../../actions/event_actions';
+import { requestEvent,
+        updateEvent,
+        removeEveErrors } from '../../actions/event_actions';
 import EventForm from './event_form';
 import { openModal, closeModal } from '../../actions/modal_actions';
 
@@ -27,7 +29,6 @@ class EditEventForm extends React.Component {
 const msp = (state,ownProps) => {
   // debugger
   return ({
-
   event: state.entities.events[ownProps.match.params.eventId],
   formType: 'Edit',
   currentUser: state.session.currentUser,

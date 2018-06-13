@@ -23,8 +23,8 @@
   position: fixed;
   top: 0px;
   margin: 0 auto;
-  // display: flex;
-  // flex-direction: row;
+  display: flex;
+  flex-direction: column;
   z-index:100;
   // margin: 0px 380px;
 }
@@ -73,6 +73,7 @@
 }
 
 .hiddenbtm{
+  position: relative;
   // margin-left: 1101px;
 }
 #stopmovingeventbody{
@@ -286,7 +287,7 @@ font-weight: 600;
 }
 #editeve {
   text-decoration: none;
-height: 31px;
+height: 20px;
 }
 .eventoptions{
   // padding-top: 10px;
@@ -352,6 +353,9 @@ height: 31px;
   padding: 7px;};
 }
 #hiddenevebodyright{
+  position: absolute;
+  right: 16px;
+top: 17px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 }

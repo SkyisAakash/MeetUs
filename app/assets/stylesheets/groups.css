@@ -46,13 +46,17 @@ position: relative;
 .eachGroup > .container {
   /* background: linear-gradient(rgba(0, 0, 0, 0.7), transparent); */
 position: absolute;
-background: linear-gradient(rgba(15,20,31,0) 0,rgba(15,20,31,.1) 25%,rgba(15,20,31,.8) 100%, transparent);
 top: 127px;
 left: 5px;
 width: calc(100% - 25px);
 height: calc(50% - 30px);
+background: linear-gradient(rgba(15,20,31,0) 0,rgba(15,20,31,.1) 25%,rgba(15,20,31,.8) 100%, transparent);
 text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.26);
   padding-left: 15px;
+}
+.eachGroup >.container > .internalcontainer {
+height: 100%;
+width: 100%;
 }
 /* .container { */
   /* position: relative; */

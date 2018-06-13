@@ -12,22 +12,19 @@ class SearchBox extends React.Component {
   }
 
   componentDidMount() {
-    // debugger
-
     this.props.requestItems(this.state.search_query);
     window.addEventListener('scroll', this.checkpos);
   }
 
   handleInput() {
-    // debugger
     return (e) => (
-      this.setState({search_query:e.target.value}, () => this.props.requestItems(this.state.search_query))
+      this.setState({search_query:e.target.value},
+        () => this.props.requestItems(this.state.search_query))
     );
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    // debugger
     this.props.requestItems(this.state.search_query);
   }
 
@@ -49,16 +46,16 @@ class SearchBox extends React.Component {
     let klasse = (this.props.searchtype === "event") ? "eventactive" : "";
     // debugger
     return (
-    <form onSubmit={this.handleSubmit} className={`searchform ${this.state.pos}`}>
+    <form onSubmit={this.handleSubmit}
+      className={`searchform ${this.state.pos}`}>
       <div className="searchtextbox">
-        <input type="text" onChange={this.handleInput()} id="query" placeholder="All Meetups"/>
+        <input type="text" onChange={this.handleInput()}
+          id="query" placeholder="All Meetups"/>
         <i className="fas fa-search" onClick={this.handleSubmit}></i>
       </div>
       <div className="twooptions">
         <Link to="/groups/" className="" id={klassg}>Groups</Link>
         <Link to="/events/" className="" id={klasse}>Calendar</Link>
-
-
       </div>
     </form>
   );
