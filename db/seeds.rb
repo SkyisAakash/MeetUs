@@ -14,7 +14,7 @@ User.delete_all
 Event.delete_all
 EventMember.delete_all
 
-demo = User.create!(username:"Stephen",email:"stephen@gmail.com", password:"user123")
+demo = User.create!(username:"stephen",email:"stephen@gmail.com", password:"user123")
 sky = User.create!(username:"sky",email:"sky@gmail.com", password:"user123")
 mark = User.create!(username:"mark",email:"mark@gmail.com", password:"user123")
 kevin = User.create!(username:"kevin",email:"kwvin@gmail.com", password:"user123")

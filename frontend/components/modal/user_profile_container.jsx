@@ -5,7 +5,7 @@ class userProfile extends React.Component {
 render() {
     return (<div className="userprofile">
   <div onClick={this.props.closeModal} id="close-x">
-    <i class="fas fa-times"></i></div>
+    <i className="fas fa-times"></i></div>
      <div className="user">
       <i className="fas fa-user-circle" id="userprofileicon"></i>
       <ul className="usertext">

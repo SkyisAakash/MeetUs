@@ -28,7 +28,7 @@ class Signup extends React.Component {
 
   handleDemo(e) {
     e.preventDefault();
-    this.props.login({email:'user17', password:'user123'})
+    this.props.login({email:'stephen@gmail.com', password:'user123'})
       .then(() => this.props.history.push('/groups'));
   }
 

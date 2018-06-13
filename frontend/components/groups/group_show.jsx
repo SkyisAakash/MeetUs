@@ -116,7 +116,7 @@ class GroupShow extends React.Component {
           <div className="groupdes">
             <div className="description">
               <p>What we're about</p>
-              <span class="justtext">{this.props.group.description}</span>
+              <span className="justtext">{this.props.group.description}</span>
             </div>
             <div className={`${cutebox}`}>
               {this.eventtemplates(organizer)}

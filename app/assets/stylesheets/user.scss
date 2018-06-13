@@ -1,7 +1,8 @@
 .userprofile{
   font-family: arial, sans-serif;
   height: 120px;
-      width: 310px;
+      // width: 310px;
+      padding: 0px 20px 0px 0px;
   background-color: white;
   border: 1px solid grey;
   border-radius: 10px;
@@ -12,7 +13,7 @@
   color: black;
   font-size: 20px;
   font-weight: 500;
-  margin-left: 91%;
+  margin-left: 97%;
   margin-top: 10px;
   :hover{
     cursor: pointer;
