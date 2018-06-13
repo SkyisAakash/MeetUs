@@ -334,4 +334,4 @@ Regular classes are offered monthly, but we can also accommodate those who would
 Please join us and take advantage of this opportunity!", organizer_id: shahab.id,
 image_url:"https://s26.postimg.cc/6y7juh0q1/lgbt.jpg")
 burgersandbeers = Event.create!(title:"Eureka! Burgers and Beer",description:"I\'ve never been here and have been meaning to check it out.
-http://eurekarestaurantgroup.com/eat/",address:"Some place, San Jose, CA",start_date:"2018-12-03", end_date:"2018-12-03", start_time:"12:34", end_time:"14:53",organizer_id:sky.id, group_id:food.id, image_url:"http://res.cloudinary.com/df4s95pqa/image/upload/v1528667262/events/burger.jpg")
+http://eurekarestaurantgroup.com/eat/",address:"Some place, San Jose, CA",start_date:"2018-12-03", end_date:"2018-12-03", start_time:"12:34", end_time:"14:53",organizer_id:sky.id, group_id:food.id, image_url:"https://res.cloudinary.com/df4s95pqa/image/upload/v1528667262/events/burger.jpg")

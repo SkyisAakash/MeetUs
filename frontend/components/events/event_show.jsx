@@ -188,7 +188,7 @@ class EventShow extends React.Component {
 
           <div className="eventbody">
             <div className="eventbodyleft">
-              <object data={this.props.event.image_url} type="image/png" className="eveimage"> <img src="http://res.cloudinary.com/df4s95pqa/image/upload/v1528853972/No_Image_Available.jpg" id="evenotfound" className="eveimage"/></object>
+              <object data={this.props.event.image_url} type="image/png" className="eveimage"> <img src="https://res.cloudinary.com/df4s95pqa/image/upload/v1528853972/No_Image_Available.jpg" id="evenotfound" className="eveimage"/></object>
 
               <div className="groupdes" id="evedes">
                   <p>Details</p>

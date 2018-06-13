@@ -90,7 +90,7 @@ upload(e) {
   <p className="grplogininfo">Description:</p>
 <textarea value={this.state.description} onChange={this.handleInput('description')} className="inputField" placeholder="Enter thorough description of group" id="querygfar"/>
 
-  <div className="imprev"> <object data={this.state.image_url} type="image/png" className="sampleImage"> <img src="http://res.cloudinary.com/df4s95pqa/image/upload/v1528853972/No_Image_Available.jpg" id="imgobj" className="sampleImage"/></object></div>
+  <div className="imprev"> <object data={this.state.image_url} type="image/png" className="sampleImage"> <img src="https://res.cloudinary.com/df4s95pqa/image/upload/v1528853972/No_Image_Available.jpg" id="imgobj" className="sampleImage"/></object></div>
     <span className="errors">{this.renderErrors()}</span>
     <button onClick={this.upload} className="uploadimage" id="gf">Upload Image</button>
 <input type="submit" value={name} className="loginb" id="gf"/>

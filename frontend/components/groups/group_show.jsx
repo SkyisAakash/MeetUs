@@ -133,7 +133,7 @@ class GroupShow extends React.Component {
     return(
       <div className="groupshow">
         <div className="grouphead">
-          <object data={this.props.group.image_url} type="image/png" className="groupimage"> <img src="http://res.cloudinary.com/df4s95pqa/image/upload/v1528853972/No_Image_Available.jpg" id="grpshwimgobj" className="groupimage"/></object>
+          <object data={this.props.group.image_url} type="image/png" className="groupimage"> <img src="https://res.cloudinary.com/df4s95pqa/image/upload/v1528853972/No_Image_Available.jpg" id="grpshwimgobj" className="groupimage"/></object>
 
           <div className="righttitle">
             <p className="groupShowTitle">{this.props.group.title}</p>
