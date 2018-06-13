@@ -127,7 +127,14 @@ The DevOps Exchange is an opportunity to exchange some of the latest ideas and t
 
 DOXLON has now crossed the Atlantic and we are looking to bring some exciting events to San Francisco in the near future - we hope to see you at an event soon!", image_url:"https://s26.postimg.cc/olvdgawjt/rawpixel-557123-unsplash.jpg")
 unit = Group.create!(title:"Serverless", organizer_id: jay.id, description: "A group for anyone interested in building web, mobile and Internet-of-Things applications with serverless architectures using the Serverless Framework and more! We'll focus heavily on Amazon Web Services and discuss AWS Lambda as the focal point of AWS.", image_url:"https://s26.postimg.cc/bhpt3nmih/rawpixel-574844-unsplash.jpg")
-uno = Group.create!(title:"Black Girls in the Marina", organizer_id: vee.id, description: "We\’re a group of black females in their 20s and 30\’s looking to hang out, make friends, explore the Bay, and build community. Ugly sweater parties, the opera, brunch, Lands End, First Fridays – you name it, we\’ve done it. All black and african american women welcome. Come kick it with us.", image_url:"https://res.cloudinary.com/df4s95pqa/image/upload/v1528910871/black_girls.jpg")
+black = Group.create!(title:"Black Girls in the Marina", organizer_id: vee.id, description: "We\’re a group of black females in their 20s and 30\’s looking to hang out, make friends, explore the Bay, and build community. Ugly sweater parties, the opera, brunch, Lands End, First Fridays – you name it, we\’ve done it. All black and african american women welcome. Come kick it with us.
+  \nThis is a meetup for women who like to read and discuss books. We welcome you to join one of our existing book groups or volunteer to host a new group. Currently, we have 2 book clubs – the Page Turners and the Rambler Readers. Each of these groups has a core membership who regularly attend meetings. Each group has a limit (10 attendees) for each meeting, but there is usually room for a couple of newcomers or “semi-regulars” to join each meeting. If the limit for the next meetup for either group has not been reached, feel free to RSVP. The format for each group is a little different, but generally the same book is read by all members of the group and then discussed at the meeting. The Page Turners is organized by Judy and meets the last Thursday of each month, usually at a coffee shop. The Rambler Readers is organized by Lori and meets every 4-6 weeks, usually on a Thursday or Friday at Boudin SF or at a member home. We started as a social group for the women of the South Bay Ramblers Hiking group, so most of the women in the Ramblers Readers are also hikers. The Page Turners group has more of a mix of hikers and non-hikers.
+\n
+If the two current book groups become full with regular members, we encourage someone else to set up and lead a group.
+\n
+RSVP Guidelines for the Page Turner group: If you attend a meeting, you will be automatically RSVP'd Yes for the following months meeting. If you will be unable to attend, please let us know by changing that RSVP to No so others can attend in your place.
+\n
+RSVP Guidelines for the Rambler Readers group: Regular attendees (i.e., core group member) will automatically be RSVP'd "Yes". If your RSVP is "Yes" please be sure to attend. If you are unable to attend, please change your RSVP to "No" so others can attend in your place. If a core group member misses three meetings in a row, she will no longer be automatically RSVP'd "Yes" and will need to add herself in if she wants to attend the meeting.", image_url:"https://res.cloudinary.com/df4s95pqa/image/upload/v1528910871/black_girls.jpg")
 dc = Group.create!(title:"BlackChain", organizer_id: josh.id, description: "A group of blockchain enthusiasts across all Blockchain and DAG communities.", image_url:"https://s26.postimg.cc/kqrzdd2zt/jim-beaudoin-628555-unsplash.jpg")
 divide = Group.create!(title:"SF Cryptocurrency Devs", organizer_id: ram.id, description: "Every week, we host the best engineer and developer presentations to share their projects and papers on innovation occurring in the cryptocurrency ecosystem.
 
@@ -173,10 +180,15 @@ All our meetings are recorded! Catch up with previous office hours by checking o
 
 https://www.youtube.com/playlist?list=PLVWq... (https://www.youtube.com/playlist?list=PLVWqoBEzghqdpHYXcOESRPLJseA6cRT_q)", image_url:"https://s26.postimg.cc/y7oxwmikp/headway-537308-unsplash.jpg")
 dron = Group.create!(title:"The San Francisco Figure Drawing Group", organizer_id: joy.id, description: "The San Francisco Figure Drawing group has multiple organizers each doing different workshops. We offer many venues and days and times to best fit your needs for drawing and painting. ENJOY! More...", image_url:"https://s26.postimg.cc/r4h2h10ah/dino-demopoulos-437664-unsplash.jpg")
-help = Group.create!(title:"Get Volunteering", organizer_id: serena.id, description: "Time on your hands during the working week?
+help = Group.create!(title:"Get Volunteering", organizer_id: serena.id, description: "We're a fun & friendly group that enjoys a variety of activities. We have regular meetups for softball, tennis, working out, volunteering, and bowling. There are also meetups for house parties, dancing, happy hours, ice skating, movie nights, kickball, game nights, volleyball, frisbee, eating out, beach days, the list goes on and on! Everyone strives to be friendly and welcoming at our events, so you'll have a lot of fun when you come out for an activity. See you out there!
+\n
+Attendance Policy:
+\n
+If you RSVP, please make every effort to make it. Last minute cancellations and no-shows are not permitted. We ask you do make every effort to make events as we want our events to be as fun and attending as possible!!
+  \nTime on your hands during the working week?
 
 Join us for short (2 - 4 hour) volunteer shifts during business hours with non-profit organizations around San Francisco and Oakland.
-
+\n
 We aim to get out and help others through volunteering.", image_url:"https://s26.postimg.cc/gvolamri1/alex-boyd-260336-unsplash.jpg")
 finfet = Group.create!(title:"Bay Area FinTech Meetup", organizer_id: venus.id, description: "Meetups and conferences on all things FinTech including Cryptocurrencies and Blockchain in San Francisco Bay Area!", image_url:"https://s26.postimg.cc/z616447wp/rawpixel-678089-unsplash.jpg")
 mosfet = Group.create!(title:"Tout's All-Things-Data Meetup", organizer_id: william.id, description: "This is a group for anyone interested in a wide variety of data topics. Ranging from practical Data Science and Machine Learning, to how to build platforms that can enable Data Scientists, ML Practitioners and Engineers at scale. The target audience is a mixed bag of Data Engineers, Scientists and ML Engineers/Practitioners.", image_url:"https://s26.postimg.cc/yt9rxys7t/carlos-muza-84523-unsplash.jpg")
@@ -296,7 +308,7 @@ Bay Area Creative Cooking (http://meetup.com/Bay-Area-Creative-Cooking)
 Bon appÃ©tit! Con gusto! Itadakimasu! ...(Can you suggest additional phrases in another language?)",
 organizer_id: sky.id, image_url:"https://s26.postimg.cc/i809pisxl/food.jpg")
 
-Event.create!(
+wineevent = Event.create!(
  title: "Wine and Socialize",
  description:
   "\n• What we'll do\nHey guys,\n\nLet's get together and enjoy great wine. Our second Meetup was a success and looking forward to this one. I will be providing Spanish wine and cheese. It would be great if all members can bring a bottle of wine to have more variety. If you guys have any questions feel free to call / text me at 408.420.6993\n\nHope to see you all!\n\nDPR.\n\n• What to bring\n1 Bottle of wine",
@@ -309,7 +321,7 @@ Event.create!(
  end_date: "2018-06-04",
  start_time: "08:01",
  end_time: "17:00")
-Event.create!(
+oaklandevent = Event.create!(
  title: "Oakland's Eat Real Festival",
  description:
   "Your Bay Area Creative Cooking group cordially invites you to enjoy this year's annual \"Eat Real Festival,\" a street-food block party festival designed to celebrate good local food, that's held at Jack London Square, Oakland. As a naturally creative group made up of chefs/cooks/noobs-in-the-kitchen, our goal is to see how many food and beverage vendors we can collectively visit, while sharing up samples from one another's purchased dish. Bring your cash, camera, your smile, a positive sharing attitude, and a hearty appetite as we walk and learn what we can from chefs and vendors!\n
@@ -333,7 +345,7 @@ ABOUT\n
  end_date: "2019-06-04",
  start_time: "08:01",
  end_time: "17:00")
-Event.create!(
+pizza event = Event.create!(
  title: "Pizza Party",
  description:
   "Your Bay Area Creative Cooking group cordially invites you to enjoy this year's annual \"Eat Real Festival,\" a street-food block party festival designed to celebrate good local food, that's held at Jack London Square, Oakland. As a naturally creative group made up of chefs/cooks/noobs-in-the-kitchen, our goal is to see how many food and beverage vendors we can collectively visit, while sharing up samples from one another's purchased dish. Bring your cash, camera, your smile, a positive sharing attitude, and a hearty appetite as we walk and learn what we can from chefs and vendors!\n
@@ -357,6 +369,194 @@ ABOUT\n
  end_date: "2019-12-04",
  start_time: "08:01",
  end_time: "17:00")
+ # Event.create!(title:"", description:"",address:"",organizer_id:renena.id, group_id:help.id ,image_url:"",start_date:"2018-10-23", start_time:"10:30",end_date:"2018-10-14",end_time:"23:40")
+ foodbankevent = Event.create!(title:"Volunteer at Second Harvest Food Bank",
+   description:"Do you enjoy volunteering? We will be volunteering in Second Harvest Food Bank’s warehouse. Possible activities may include sorting food, breaking down boxes, etc. (*Adults only for this event, please! More info is below.) Ready…set….go! - Let’s give back to our community!
+\n
+Date: Wednesday, June 13, 2018
+\n
+Time: 6-8pm
+\n
+We will meet at:
+\n
+Second Harvest Food Bank
+\n
+Cypress Center
+\n
+4001 North First Street, San Jose, CA 95134
+\n
+*Important*
+\n
+1.Please plan to arrive no sooner than 10 minutes before and no later than 10 minutes after your scheduled sorting shift time. In order to keep the warehouse and volunteers secure,Second Harvest Food Bank is unable to accommodate late arrivals.)
+\n
+2.All volunteers must complete and sign participation form at the Food Bank which is valid for one calendar year. The dress code at the Food Bank is casual and comfortable. No shorts and no tank tops are permitted. Closed toe shoes and long pants are required. Please leave all valuables in the trunk of your cars. No purses or backpacks.
+\n
+3. Optional: Please consider bringing donations of non-perishable food
+items. High protein items such as tuna and peanut butter are greatly appreciated or meals in a can like stew and soups. One can or one case does make a difference!
+\n
+*4. How to find me: Please see Conversation section
+\n
+This is a wonderful volunteering opportunity, and I hope you’ll be able to join us!",
+address:"3450, bakesto park, San Francisco, CA 95683",
+organizer_id:serena.id,
+group_id:help.id ,
+image_url:"",
+start_date:"2018-10-23", start_time:"10:30",end_date:"2018-10-14",end_time:"23:40")
+basketballevent =  Event.create!(title:"Sunday Morning Pick Up Basketball",
+   description:"Do you enjoy volunteering? We will be volunteering in Second Harvest Food Bank’s warehouse. Possible activities may include sorting food, breaking down boxes, etc. (*Adults only for this event, please! More info is below.) Ready…set….go! - Let’s give back to our community!
+\nPick Up Basketball - Every Sunday - 9.30am to noon.
+\n
+20+ Ballers - 6 courts - No wait time for ballers between pickups.\n
+See link for full details - https://www.meetup.com/Silicon-Valley-Basketball/ \n
+*Important*
+\n
+1.Please plan to arrive no sooner than 10 minutes before and no later than 10 minutes after your scheduled sorting shift time. In order to keep the warehouse and volunteers secure,Second Harvest Food Bank is unable to accommodate late arrivals.)
+\n
+2.All volunteers must complete and sign participation form at the Food Bank which is valid for one calendar year. The dress code at the Food Bank is casual and comfortable. No shorts and no tank tops are permitted. Closed toe shoes and long pants are required. Please leave all valuables in the trunk of your cars. No purses or backpacks.
+\n
+3. Optional: Please consider bringing donations of non-perishable food
+items. High protein items such as tuna and peanut butter are greatly appreciated or meals in a can like stew and soups. One can or one case does make a difference!
+\n
+*4. How to find me: Please see Conversation section
+\n
+This is a wonderful volunteering opportunity, and I hope you’ll be able to join us!",
+address:"3450, bakesto park, San Francisco, CA 95683",
+organizer_id:serena.id,
+group_id:help.id ,
+image_url:"",
+start_date:"2018-11-10", start_time:"09:30",end_date:"2018-11-10",end_time:"13:40")
+tennisevent =  Event.create!(title:"Sunday Evening Tennis \(Father's Day\)",
+   description:"Let's meet for tennis!! Just bring your rackets and any tennis balls you may have, preferably new ones. We'll rally or play a game or something. SC Tennis Center has 8 courts there but 4 courts available if Park & Rec or USTA has scheduled classes/events.
+\n
+Before you RSVP, please read: (description updated Nov 2017)
+\n
+The tennis center has a reservation and walk-in process. I will check in at the office for the courts under "Shirley". If you get there before me, check with the office the court numbers under my name. For those with smartphone app, please see the comment section for the court number(s) to find us. Now that Daylight Saving ended, I will collect money for the court reservation. (Most of the times, I can get the courts free of charge but be prepare to pay for the access of courts if they are full). Bring small bills. If we have to use the paid reservation option, I will split the reservation fee evenly among those who show up for tennis. Reservation is $9/hour for residents (e.g. worse case scenario: reserving 2 courts for 2 hours = $36. $36.00/8 attendees = $4.50). I use the Yes (RSVP) as headcount when I check in with the tennis center office when getting court(s). I can get max 2 courts from the tennis office (sorry, I have tried to get a 3rd court but it can't be under my name.).
+\n
+If you are coming to watch the rally/cheer at our games or to use the backboard/wall for practice, just mention in comments section. No need to rsvp for backboard nor watching. I use the Yes for court reservation.
+\n
+If you cannot make it to tennis, please UPDATE your RSVP status AS SOON AS POSSIBLE (before 1 pm). We will get charge and get kick off for empty courts if there are no-shows or if we break the reservation rules per the SC Center manager!
+\n
+Number #1 reason why you have to be diligent about your changing your RSVP: This will gives the people on the waiting list time to get to the courts. Meetup.com's servers are painfully slow in notifying organizer and the person bumped from wait list to Going/RSVP list so hence the 1 pm deadline. Also, these courts fill up quickly.
+\n
+If you have 2 no-shows to SBIO events, I will reserve the right to place you on the wait-list. We want to make the RSVP fair to those making the effort in attending the meetups.
+\n
+Wait List people: I recommend checking the Meetup app or website to see if you have been bumped to the RSVP before start time. The Meetup email servers are slow in notifying (about 2-4 hour delay in sending RSVP confirmation). You are welcome to show up 1 hour after the start time. Some members are ok with rotating out/in but I recommend asking them before making assumptions.
+\n
+Common sense:
+\n
+Weather (e.g. rain, heat wave) or extreme conditions (e.g. construction, closure, park events) will cancel tennis meetup event.
+\n
+If you get kicked out of the Santa Clara Tennis Center, South Bay Indoor/Outdoor Activities Meetup organizers, event hosts and attendees are not responsible on trying to you back into the Santa Clara Tennis Center.
+\n
+Santa Clara Tennis Center, South Bay Indoor/Outdoor Activities Meetup, organizers and event hosts are not responsible for any injuries and/or illnesses that occur during and from the meetup event.
+\n
+Keep in mind that all skills levels will be there.
+\n
+How to find us? We are already on the tennis courts (or bleachers/waiting area if the courts are full) and most of us look like our pictures in the RSVP column. If I am hosting tennis, I am the Asian girl with a blue Prince tennis bag and either a black or pink baseball cap.
+\n
+Now that you read the entire details....Let's have fun, running around and hitting the ball!",
+address:"450, Sunshine middle school, San Francisco, CA",
+organizer_id:serena.id,
+group_id:help.id ,
+image_url:"",
+start_date:"2018-12-10", start_time:"13:30",end_date:"2018-12-10",end_time:"15:40")
+
+
+blackevent1 =  Event.create!(title:"Putlock fun",
+   description:"Location: Marianne's House in Menlo Park for Potluck. Marianne will provide a main dish, please bring sides, dessert and wine. An email will be sent 1 week before with directions to Marianne's house.
+\n
+This months book selection: Varina by Charles Frazier
+\n
+About the Book: Her marriage prospects limited, teenage Varina Howell agrees to wed the much older widower Jefferson Davis, with whom she expects the secure life a Mississippi landowner. Davis instead pursues a career in politics and is eventually appointed president of the confederacy, placing Varina at the white-hot center of one of the darkest moments in American history - culpable regardless of her intentions.
+\n
+The Confederacy falling, her marriage in tatters, and the country divided, Varina and her children escape Richmond and travel south on their own, now fugitives with "bounties on their heads, and entire nation in pursuit".
+\n
+Intimate in it's detailed observations of one woman's tragic life and epic in its scope and power, Varina is a novel of an American war and its aftermath. Ultimately, the book is a portrait of a woman who comes to realize that complicity carries consequences.
+\n
+Future Book Suggestions:
+\n
+Prairie Fires: The American Dreams of Laura Ingalls Wilder by Caroline Fraser
+\n
+Eunice: The Kennedy Who Changed the World by Eileen McNamara
+\n
+You Play the Girl by Carina Chocano
+\n
+Killers of the Flower Moon by David Grann
+\n
+Paul Simon: The Life by Robert Hilburn
+\n
+Readers of the Broken Wheel Recommend by Katarina Bivald
+\n
+In a Lonely Place by Dorothy B. Hughes
+\n
+Rules of Civility by Amor Towles",
+address:"560, Menlo Park, San Francisco, CA",
+organizer_id:vee.id,
+group_id:black.id ,
+image_url:"",
+start_date:"2018-06-10", start_time:"14:30",end_date:"2018-06-11",end_time:"15:40")
+
+blackevent2 =  Event.create!(title:"Page-Turner's Book Club June 2018 Meeting",
+   description:"Page-Turners book group usually meets the last Thursday of each month at the Coffee Factory (3787 Stevens Creek Blvd., Santa Clara).
+\n
+June 28, 2018 Meeting: 'The Alice Network' by Kate Quinn, 528 pages
+\n
+Upcoming books and meeting dates through September 2018:
+\n
+July 26, 2018 Meeting: 'Breaking Clean' by Judy Blunt, 320 pages
+Aug. 30, 2018 Meeting: 'The Last Painting of Sara De Vos' by Dominic Smith, 304 pages
+Sep. 27, 2018 Meeting: 'The Maze at Windermere' by Gregory Blake Smith, 352 pages
+\n
+RSVP guidelines: If you attend a meeting, you will be automatically RSVP'd Yes for the following month's meeting. If you will be unable to attend, please let us know by changing that RSVP to No.
+
+",
+address:"3560, Park Avenue, San Jose, CA",
+organizer_id:vee.id,
+group_id:black.id ,
+image_url:"",
+start_date:"2018-06-30", start_time:"15:30",end_date:"2018-06-30",end_time:"16:40")
+
+blackevent3 =  Event.create!(title:"Beach Party",
+   description:"Page-Turners book group usually meets the last Thursday of each month at the Coffee Factory (3787 Stevens Creek Blvd., Santa Clara).
+\n
+From Amazon: Named a Best Book of 2017 by NPR, The Guardian, Vogue, Esquire, Kirkus Reviews, Philadelphia Inquirer, BookPage, Bustle, Southern Living, and St. Louis Post-Dispatch
+\n
+The daring and magnificent novel from the Pulitzer Prize–winning author of A Visit from the Goon Squad.
+\n
+Anna Kerrigan, nearly twelve years old, accompanies her father to visit Dexter Styles, a man who, she gleans, is crucial to the survival of her father and her family. She is mesmerized by the sea beyond the house and by some charged mystery between the two men.
+\n
+‎Years later, her father has disappeared and the country is at war. Anna works at the Brooklyn Naval Yard, where women are allowed to hold jobs that once belonged to men, now soldiers abroad. She becomes the first female diver, the most dangerous and exclusive of occupations, repairing the ships that will help America win the war. One evening at a nightclub, she meets Dexter Styles again, and begins to understand the complexity of her father’s life, the reasons he might have vanished.
+\n
+With the atmosphere of a noir thriller, Egan’s first historical novel follows Anna and Styles into a world populated by gangsters, sailors, divers, bankers, and union men. Manhattan Beach is a deft, dazzling, propulsive exploration of a transformative moment in the lives and identities of women and men, of America and the world.
+\n
+Upcoming books and meeting dates through September 2018:
+\n
+RSVP guidelines: If you attend a meeting, you will be automatically RSVP'd Yes for the following month's meeting. If you will be unable to attend, please let us know by changing that RSVP to No.
+",
+address:"3560, Folsom Avenue, Santa Clara, CA",
+organizer_id:vee.id,
+group_id:black.id ,
+image_url:"",
+start_date:"2018-06-30", start_time:"15:30",end_date:"2018-06-30",end_time:"16:40")
+blackevent4 =  Event.create!(title:"Bowling Monday Night After hiking",
+   description:"Let's Bowl on Monday Night-- It's Super Fun-- Meet new people, win bowling games.
+\n
+Only on Monday-- there is music and cosmic lighting. We are dancing, singing, and high-fiving. You can win a bowling game when you make a strike when there is a red head pin (like how it looks in the graphic above). We encourage first time bowlers. We don't care of how well we do, just to have a good time.
+\n
+See our pictures from previous weeks: https://www.meetup.com/South-Bay-Indoor-Outdoor-Activities-Group/photos/
+\n
+Bowling games are just $3.50 on Monday Night (normal rate is $6) and shoe rental is $5 (it's Free if you have your own shoes). We all normally bowl 2 games, but you are welcome to bowl any number. There is also drinks at the bar and a full food menu.
+\n
+We start at 9pm. The organizer will take payment before from everyone so no need to wait in line. If you will be late, let us know. We can get you in a lane late anytime.
+\n
+There is also Karaoke in the Bar which is free from 9pm - 11pm. You do both -- bowl and sing.
+
+",
+address:"3560, bowling Avenue, Santa barbara, CA",
+organizer_id:jack.id,
+group_id:dillon.id ,
+image_url:"",
+start_date:"2018-07-30", start_time:"18:30",end_date:"2018-07-30",end_time:"20:40")
 
 
 
