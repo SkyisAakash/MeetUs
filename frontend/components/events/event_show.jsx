@@ -1,9 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import Map from '../map.jsx';
 // import findKey from 'lodash/keys';
 
-
+// ReactDOM.render(
+  // <Map center={mapCenter} burritoPlaces={burritos}/>,
+  // document.getElementById('root')
+// );
 class EventShow extends React.Component {
   constructor(props) {
     super(props);
@@ -48,6 +51,7 @@ class EventShow extends React.Component {
       memberships:this.props.membershipcheck,
       hiddenhead:"hidehiddenhead"
     });
+    this.props.requesteventmembers();
     this.eventoptions = this.eventoptions.bind(this);
     window.addEventListener('scroll', this.checkpos);
   }
@@ -96,7 +100,7 @@ class EventShow extends React.Component {
 
   deleteEvent() {
     this.props.deleteEvent(this.props.event.id).then(() => {
-      this.props.history.push(`/events`);
+      this.props.history.push(`/groups/${this.props.event.group_id}`);
     });
   }
 
@@ -107,13 +111,29 @@ class EventShow extends React.Component {
       return null;
     }
     const organizer = this.props.users[this.props.event.organizer_id];
-    console.log(organizer);
+    // console.log(organizer);
     if(!organizer){
       return null;
     }
+    // let geocoder = new google.maps.Geocoder();
+    // let address = this.props.event.address;
+    // let latitude;
+    // let logitude;
+    // geocoder.geocode({'address':address}, function(results) {
+    //   let latitude = results[0].geometry.location.lat();
+    //   let logitude = results[0].geometry.location.lng();
+    // });
+    // const mapCenter = { lat: latitude, lng: logitude };
+    // I made some lat/lng points for some good burrito spots
+    // const burritos = [
+    //   { lat: 37.775785, lng: -122.445979, name: "Papalote" },
+    //   { lat: 37.772045, lng: -122.437015, name: "The Little Chihuahua" },
+    //   { lat: 37.781899, lng: -122.410426, name: "Cancun" }
+    // ];
     // debugger
     return (
       <div className="eventshow">
+
         <div className="eventhead">
           <div className="showlittlehead" id={`${this.state.hiddenhead}`}>
             <div className="hiddentop">
@@ -129,12 +149,12 @@ class EventShow extends React.Component {
                 </div>
             </div>
             <div className="hiddenbtm">
-              <div className="eventbodyright">
+              <div className="eventbodyright" id="hiddenevebodyright">
                 <div className="timediv">
                     <i className="far fa-clock"></i>
                     <div className="datetimeeve">
                     <p>{this.datemethod(this.props.event.start_date, "line")}</p>
-                    <p>{this.timemethod(this.props.event.start_time)} to {this.timemethod(this.props.event.start_time)}</p>
+                    <p>{this.timemethod(this.props.event.start_time)} to {this.timemethod(this.props.event.end_time)}</p>
                     </div>
                 </div>
                 <div className="addressdiv">
@@ -142,41 +162,46 @@ class EventShow extends React.Component {
                     <p>{this.props.event.address}</p>
                   </div>
               </div>
+
             </div>
 
           </div>
           <div className="minidate">{this.datemethod(this.props.event.start_date, "block")}</div>
-          <div className="eventheadleft">
-            <span className="dateline">{this.datemethod(this.props.event.start_date, "line")}</span>
-             <h1 className="eventShowTitle">{this.props.event.title}</h1>
-             <div className="eveorgan">
-                  <i className="fas fa-user-tie" id="eveuser"></i>
-                  <div className="detailinfo">
-                  <h3 className="eveorgantext">Hosted by<span className="evelinks">{organizer.username}</span></h3>
-                  <h3 className="eveorgantext">From<Link to={`/groups/${this.props.event.group_id}`} className="evelinks" id="g">{this.props.groups[this.props.event.group_id].title}</Link></h3>
-                  <h3> Public group</h3>
+          <div className="eventheaddata">
+              <div className="eventheadleft">
+                  <span className="dateline">{this.datemethod(this.props.event.start_date, "line")}</span>
+                   <h1 className="eventShowTitle">{this.props.event.title}</h1>
+                   <div className="eveorgan">
+                        <i className="fas fa-user-tie" id="eveuser"></i>
+                        <div className="detailinfo">
+                        <h3 className="eveorgantext">Hosted by<span className="littlebold">{organizer.username}</span></h3>
+                        <h3 className="eveorgantext">From<Link to={`/groups/${this.props.event.group_id}`} className="evelinks" id="g">{this.props.groups[this.props.event.group_id].title}</Link></h3>
+                        <h3> Public group</h3>
+                      </div>
+                   </div>
                 </div>
-             </div>
-          </div>
-          <div className="eventheadright">
-                {this.eventoptions()}
-          </div>
+                <div className="eventheadright">
+                  {this.eventoptions()}
+                </div>
+              </div>
         </div>
+
           <div className="eventbody">
             <div className="eventbodyleft">
-              <object data={this.props.event.image_url} type="image/png" className="eveimage"> <img src="https://s26.postimg.cc/7c57ixvuh/image-not-found.jpg" id="evenotfound" className="eveimage"/></object>
+              <object data={this.props.event.image_url} type="image/png" className="eveimage"> <img src="http://res.cloudinary.com/df4s95pqa/image/upload/v1528853972/No_Image_Available.jpg" id="evenotfound" className="eveimage"/></object>
 
               <div className="groupdes" id="evedes">
                   <p>Details</p>
                   {this.props.event.description}
               </div>
             </div>
-            <div className="eventbodyright" id={`${this.state.pos}`}>
+            <div className="eventbodyright">
+              <div id={`${this.state.pos}`}>
               <div className="timediv">
                   <i className="far fa-clock"></i>
                   <div className="datetimeeve">
                   <p>{this.datemethod(this.props.event.start_date, "line")}</p>
-                  <p>{this.timemethod(this.props.event.start_time)} to {this.timemethod(this.props.event.start_time)}</p>
+                  <p>{this.timemethod(this.props.event.start_time)} to {this.timemethod(this.props.event.end_time)}</p>
                   </div>
               </div>
               <div className="addressdiv">
@@ -185,12 +210,13 @@ class EventShow extends React.Component {
                 </div>
             </div>
           </div>
+          </div>
         </div>
     );
   }
 
   checkpos(e) {
-    if (document.scrollingElement.scrollTop > 500) {
+    if (document.scrollingElement.scrollTop > 300) {
       this.setState({
         pos: 'stopmovingeventbody',
         hiddenhead: 'showhiddenhead'
@@ -223,33 +249,59 @@ class EventShow extends React.Component {
     }
   }
 
-  timemethod(time) {
-    let timest = new Date(time);
-    var options = {
-      hour: 'numeric',
-      minute: 'numeric',
-      hour12: true
-    };
-    var timeString = timest.toLocaleString('en-US', options);
+  timemethod(time){
+    if(!time){
+      return null;
+    }
     // debugger
-    return <h5>{timeString}</h5>;
+    let hours = time.slice(11,13);
+    let minutes = time.slice(14,16);
+    let hr;
+    let str;
+    if (hours > 12) {
+      hr = hours - 12;
+      str = "PM";
+    }
+    else {
+      hr = hours;
+      str = "AM";
+    }
+    // debugger
+    let timestring = hr+ ':' +minutes+ ' ' + str;
+    // debugger
+    return <h5>{timestring}</h5>;
   }
+  // timemethod(time) {
+  //   debugger
+  //   let timest = new Date();
+  //   timest.setTime(time);
+  //   debugger
+  //   var options = {
+  //     hour: 'numeric',
+  //     minute: 'numeric',
+  //     hour12: true
+  //   };
+  //   var timeString = timest.toLocaleString('en-US', options);
+  //   debugger
+  //   return <h5>{timeString}</h5>;
+  // }
 
   guestoptions(){
-    const forguest = (this.state.memberships === "true") ? (
+    // debugger
+    const forguest = (this.props.eventmembershipcheck === "true") ? (
       <div className="attendence">
       <div className="gonogotext">You're going</div>
       <div  className="joinevent">
-        <a href="" className="gonogo" id="activebtn">  <i className="fas fa-check"></i> </a>
-        <button onClick={()=>this.leaveEvent(this.props.event.id)} className="gonogo" id="inactivebtn"> <i className="fas fa-times"></i> </button>
+        <a href="" className="gonogo" id="activebtn">  <i className="fas fa-check" id="checknocheck"></i> </a>
+        <button onClick={()=>this.leaveEvent(this.props.event.id)} className="gonogo" id="inactivebtn"> <i className="fas fa-times" id="checknocheck"></i> </button>
       </div>
       </div>
     ) : (
       <div className="attendence">
       <div className="gonogotext">Are you going?</div>
       <div  className="joinevent">
-        <button onClick={()=>this.joinEvent(this.props.event.id)} className="gonogo" id="inactivebtn"><i className="fas fa-check"></i></button>
-        <a href="" className="gonogo" id="activebtn">  <i className="fas fa-times"></i> </a>
+        <button onClick={()=>this.joinEvent(this.props.event.id)} className="gonogo" id="inactivebtn"><i className="fas fa-check" id="checknocheck"></i></button>
+        <a href="" className="gonogo" id="activebtn">  <i className="fas fa-times" id="checknocheck"></i> </a>
       </div>
       </div>
     );

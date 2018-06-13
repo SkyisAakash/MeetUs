@@ -24,12 +24,15 @@ class EditEventForm extends React.Component {
   }
 }
 
-const msp = (state,ownProps) => ({
+const msp = (state,ownProps) => {
+  // debugger
+  return ({
+
   event: state.entities.events[ownProps.match.params.eventId],
   formType: 'Edit',
   currentUser: state.session.currentUser,
   errors: state.errors
-});
+});};
 
 const mdp = (dispatch,ownProps) => ({
   submitEvent: (event) => dispatch(updateEvent(event)),

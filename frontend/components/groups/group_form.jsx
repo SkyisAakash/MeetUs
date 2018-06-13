@@ -15,11 +15,15 @@ constructor(props) {
 componentDidMount() {
   this.props.requestGroup();
   this.props.removegrpErrors();
+
+}
+
+componentWillReceiveProps(newProps){
   this.setState({
-    organizer_id:this.props.group.organizer_id,
-    title:this.props.group.title,
-    description:this.props.group.description,
-    image_url:this.props.group.image_url
+    organizer_id:newProps.group.organizer_id,
+    title:newProps.group.title,
+    description:newProps.group.description,
+    image_url:newProps.group.image_url
   });
 }
 handleInput(field) {
@@ -85,7 +89,7 @@ upload(e) {
   <p className="grplogininfo">Description:</p>
 <textarea value={this.state.description} onChange={this.handleInput('description')} className="inputField" placeholder="Enter thorough description of group" id="querygfar"/>
 
-  <div className="imprev"> <object data={this.state.image_url} type="image/png" className="sampleImage"> <img src="https://s26.postimg.cc/7c57ixvuh/image-not-found.jpg" id="imgobj" className="sampleImage"/></object></div>
+  <div className="imprev"> <object data={this.state.image_url} type="image/png" className="sampleImage"> <img src="http://res.cloudinary.com/df4s95pqa/image/upload/v1528853972/No_Image_Available.jpg" id="imgobj" className="sampleImage"/></object></div>
     <span className="errors">{this.renderErrors()}</span>
     <button onClick={this.upload} className="uploadimage" id="gf">Upload Image</button>
 <input type="submit" value={name} className="loginb" id="gf"/>

@@ -15,6 +15,21 @@ constructor(props) {
 componentDidMount() {
   this.props.removeEveErrors();
 }
+componentWillReceiveProps(newProps){
+  this.setState({
+    address:newProps.event.address,
+description:newProps.event.description,
+end_date:newProps.event.end_date,
+end_time:newProps.event.end_time,
+group_id:newProps.event.group_id,
+organizer_id:newProps.event.organizer_id,
+start_date:newProps.event.start_date,
+start_time:newProps.event.start_time,
+title:newProps.event.title,
+image_url:newProps.event.image_url,
+id:newProps.event.id
+});
+}
 handleInput(field) {
   // debugger
   return (e) => {
@@ -25,6 +40,7 @@ handleInput(field) {
 
 submitform(e) {
 e.preventDefault();
+debugger
   this.props.submitEvent(this.state).then((payload) => {
     // console.log("-------------------");
     // debugger
@@ -67,6 +83,7 @@ return(
     if (!this.props.event) {
       return null;
     }
+    // debugger
     let name=this.props.formType+ " Event";
     return (
       <div className="groupformcon">
@@ -78,7 +95,7 @@ return(
 <textarea value={this.state.description} onChange={this.handleInput('description')} className="inputField" placeholder="Enter thorough description of event" id="querygfar"/>
 <p className="grplogininfo">Address:</p>
 <input type="string" value={this.state.address} onChange={this.handleInput('address')} className="inputField" placeholder="Enter address of event" id="querygf"/>
-<p className="grplogininfo" id="calen">Start Date:</p>
+<p className="grplogininfo">Start Date:</p>
 <input type="date"  id="calen" value={this.state.start_date} onChange={this.handleInput('start_date')}/>
 <p className="grplogininfo">End Date:</p>
 <input type="date" id="calen" value={this.state.end_date} min={this.state.start_date} onChange={this.handleInput('end_date')}/>
@@ -87,7 +104,7 @@ return(
 <p className="grplogininfo">End Time:</p>
 <input type="time" id="calen" value={this.state.end_time} min={this.state.start_time} onChange={this.handleInput('end_time')} className="eventtime"/>
 
-<div className="imprev"> <object data={this.state.image_url} type="image/png" className="sampleImage"> <img src="https://s26.postimg.cc/7c57ixvuh/image-not-found.jpg" id="imgobj" className="sampleImage"/></object></div>
+<div className="imprev"> <object data={this.state.image_url} type="image/png" className="sampleImage"> <img src="http://res.cloudinary.com/df4s95pqa/image/upload/v1528853972/No_Image_Available.jpg" id="imgobj" className="sampleImage"/></object></div>
 <span className="errors">{this.renderErrors()}</span>
 
 

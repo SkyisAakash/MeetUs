@@ -11,10 +11,10 @@ export const eventmembershipcheck = (state, eventid, member) => {
     // debugger
     if (objects[i].user_id === member.id && objects[i].event_id === gid){
       result = "true";
-      // debugger
       break;
     }
   }
+  // debugger
   return result;
 };
 

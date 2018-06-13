@@ -10,7 +10,7 @@ export const REMOVE_GRP_ERRORS = "REMOVE_GRP_ERRORS";
 export const requestGroups = (search_query) => {
   return dispatch => {
     dispatch(startLoadingAllGroups);
-    
+
     return GroupAPIUtil.fetchGroups(search_query).then(res => dispatch({type: RECEIVE_GROUPS, groups:res}));
   };
 };
@@ -27,7 +27,13 @@ export const requestGroup = (id) => {
     return GroupAPIUtil.fetchGroup(id).then(res => dispatch({type: RECEIVE_GROUP, group:res}));
   };
 };
-
+// export const getGroup = group => ({
+//   type: RECEIVE_GROUP,
+//   group:group
+// });
+// export const requestGroup = id => dispatch => (
+//   GroupAPIUtil.fetchGroup(id).then(res => dispatch(getGroup(res)))
+// );
 
 
 

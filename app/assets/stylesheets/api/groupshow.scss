@@ -74,7 +74,7 @@ p {
   line-height: 1.45;
   padding: 50px 0px 50px 50px;
   width: 1154px;
-  margin-left: 340px;
+  // margin-left: 340px;
   text-rendering: optimizeLegibility;
   font-size: 1rem;
   font-weight: 0;
@@ -85,7 +85,10 @@ p {
   font-size: 35px;
   font-weight: 900px;
 }
-
+.bottombodygroup{
+width: 1154px;
+margin: 0 auto;
+}
 .groupshow{
   background-color: #f2f2f2;
   font-family: arial, sans-serif;
@@ -97,11 +100,7 @@ p {
   word-wrap: break-word;
 
 }
-.joindeleteetc{
-  height: 50px;
-  display: flex;
 
-}
 .joinGroup{
   padding-top: 10px;
   padding-bottom: 10px;
@@ -136,6 +135,7 @@ p {
 }
 
 .groupimage{
+  object-fit: cover;
   width: 600px;
   height: 340px;
   padding: 20px;
@@ -167,15 +167,22 @@ p {
 .joindeleteetc {
   background-color: white;
   border-top: 2px solid #d9d9d9;
-  padding-left: 370px;
+  padding-left: 185px;
+    width:100%;
   padding-bottom: 25px;
+  justify-content: center;
+    height: 50px;
+    display: flex;
+    a:hover{
+      cursor: pointer;
+    }
 }
 .extra {
   text-decoration: none;
   padding: 15px 20px;
   color:black;
-  font-size: 19px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 400;
   letter-spacing: 1px;
   margin-top: 15px;
 }

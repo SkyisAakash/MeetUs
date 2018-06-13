@@ -66,7 +66,7 @@ class EventIndex extends React.Component {
   render() {
     // debugger
     // console.log(this.state.myEvents);
-    console.log(this.state.myEvents);
+    // console.log(this.state.myEvents);
     const moreevents = (this.state.otherEvents.length > 0) ? "showevents" : "hidegroups";
     const yourevents = (this.state.myEvents.length > 0) ? "showevents" : "hidegroups";
     return (
@@ -77,14 +77,14 @@ class EventIndex extends React.Component {
       {this.awe()}
       <div className="indexbody">
     <ul className="eventIndex">
-      <p className={`${yourevents}`}>Your Meetus Events</p>
+      <p className={`${yourevents}`}>Your MeetUs Events</p>
 
     {this.state.myEvents.map((event) => {
       return  <EventIndexItem event={event} key={event.id} users={this.props.users} groups={this.props.groups} currentUser={this.props.currentUser}/>;
     })}
     </ul>
     <ul className="eventIndex">
-      <p className={`${moreevents}`}>Meetus Events you can attend</p>
+      <p className={`${moreevents}`}>MeetUs Events you can attend</p>
 
     {this.state.otherEvents.map((event) => {
       return  <EventIndexItem event={event} key={event.id} users={this.props.users} groups={this.props.groups} currentUser={this.props.currentUser}/>;

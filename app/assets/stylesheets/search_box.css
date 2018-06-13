@@ -10,13 +10,16 @@
 
 }
 .stopmoving {
+  align-self: center;
+  left: calc(50% - 539px);
   position: fixed;
   top: 0px;
   margin: 0 auto;
   z-index:100;
-  margin: 0px 380px;
+  /* margin: 0px 380px; */
 }
 .searchtextbox{
+  display: flex;
   background-color: white;
   border: 1px solid black;
   border-radius: 5px;
@@ -31,8 +34,7 @@
   width: 292px;
   border: none;
   background-color: white;
-  font-size: 24px;
-  font-style: italic;
+  font-size: 19px;
   outline:none
 }
 

@@ -18,9 +18,10 @@ class SearchBox extends React.Component {
     window.addEventListener('scroll', this.checkpos);
   }
 
-  handleInput(field) {
+  handleInput() {
+    // debugger
     return (e) => (
-      this.setState({search_query:e.target.value})
+      this.setState({search_query:e.target.value}, () => this.props.requestItems(this.state.search_query))
     );
   }
 

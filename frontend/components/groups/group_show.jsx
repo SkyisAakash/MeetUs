@@ -22,6 +22,7 @@ class GroupShow extends React.Component {
 
   componentWillMount() {
     this.props.requestEvents();
+    this.props.requestgroupmembers();
   }
   // getOrganizer(group){
     // let users = this.props.users;
@@ -117,13 +118,13 @@ class GroupShow extends React.Component {
     if (this.props.loading) {
      return <section className="pokemon-detail"><LoadingIcon /></section>;
    }
-    console.log(this.props.group);
+    // console.log(this.props.group);
     if (!this.props.group) {
       return null;
     }
     const cutebox = (this.props.laterEvents.length === 0)? "hidegroups" : "cuteblocks";
     const organizer = this.props.users[this.props.group.organizer_id];
-    console.log(organizer);
+    // console.log(organizer);
     if(!organizer){
       return null;
     }
@@ -132,7 +133,7 @@ class GroupShow extends React.Component {
     return(
       <div className="groupshow">
         <div className="grouphead">
-          <object data={this.props.group.image_url} type="image/png" className="groupimage"> <img src="https://s26.postimg.cc/7c57ixvuh/image-not-found.jpg" id="grpshwimgobj" className="groupimage"/></object>
+          <object data={this.props.group.image_url} type="image/png" className="groupimage"> <img src="http://res.cloudinary.com/df4s95pqa/image/upload/v1528853972/No_Image_Available.jpg" id="grpshwimgobj" className="groupimage"/></object>
 
           <div className="righttitle">
             <p className="groupShowTitle">{this.props.group.title}</p>
@@ -146,24 +147,26 @@ class GroupShow extends React.Component {
           </div>
         </div>
         <div className={`joindeleteetc ${this.state.pos}`}>
-          <a href="" className="extra">About</a>
-          <a href="" className="extra">Meetups</a>
-          <a href="" className="extra">Members</a>
-          <a href="" className="extra">Photos</a>
-          <a href="" className="extra">Discussions</a>
-          <a href="" className="extra">More</a>
+          <a className="extra">About</a>
+          <a className="extra">Meetups</a>
+          <a className="extra">Members</a>
+          <a className="extra">Photos</a>
+          <a className="extra">Discussions</a>
+          <a className="extra">More</a>
           <div>{this.groupoptions()}</div>
           <div id={`${dotclass}`} className="dots"><i className="fas fa-ellipsis-h"></i></div>
         </div>
+        <div className="bottombodygroup">
         {this.firsteventcard(organizer)}
         <div className="groupdes">
           <div className="description">
-          <p>What we're about</p>
-          {this.props.group.description}
+            <p>What we're about</p>
+            <span class="justtext">{this.props.group.description}</span>
           </div>
           <div className={`${cutebox}`}>
             {this.eventtemplates(organizer)}
           </div>
+        </div>
         </div>
       </div>
     );
@@ -189,7 +192,8 @@ class GroupShow extends React.Component {
 }
 
   guestoptions(){
-    const forguest = (this.state.memberships === "true") ? (
+    // debugger
+    const forguest = (this.props.membershipcheck === "true") ? (
       <div  className="joingroup">
         <button onClick={()=>this.leaveGroup(this.props.group.id)} className="groupoptions">Leave Group</button>
       </div>

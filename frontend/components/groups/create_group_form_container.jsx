@@ -5,7 +5,7 @@ import GroupForm from './group_form';
 import { openModal, closeModal } from '../../actions/modal_actions';
 
 const msp = (state,ownProps) => ({
-  group: {description:'', title:'', organizer_id:state.session.currentUser.id, image_url:"https://s26.postimg.cc/i2sdl8ktl/group.jpg"},
+  group: {description:'', title:'', organizer_id:state.session.currentUser.id, image_url:"http://res.cloudinary.com/df4s95pqa/image/upload/v1528853972/No_Image_Available.jpg"},
   formType: 'Create',
   currentUser: state.session.currentUser,
   errors: state.errors

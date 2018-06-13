@@ -7,7 +7,7 @@ import { openModal, closeModal } from '../../actions/modal_actions';
 const msp = (state,ownProps) => ({
   event: {description:'', title:'',
           organizer_id:state.session.currentUser.id,
-          image_url:"https://s26.postimg.cc/ij4uzl5m1/event.jpg",
+          image_url:"http://res.cloudinary.com/df4s95pqa/image/upload/v1528853972/No_Image_Available.jpg",
           address:'',group_id:ownProps.match.params.groupId,
           start_date:'',end_date:'',start_time:'',end_time:''},
           //have to pass group id

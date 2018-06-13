@@ -5,6 +5,7 @@ import keys from 'lodash/keys';
 export const membershipcheck = (state, groupid, member) => {
   let gid = Number(groupid);
   let result = "false";
+  // debugger
   let objects = Object.values(state.entities.groupmembers);
   // debugger
   for (var i = 0; i < objects.length; i++) {
@@ -15,6 +16,7 @@ export const membershipcheck = (state, groupid, member) => {
       break;
     }
   }
+  // debugger
   return result;
 };
 

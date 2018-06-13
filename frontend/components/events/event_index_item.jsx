@@ -29,11 +29,27 @@ class EventIndexItem extends React.Component {
 
   }
 
-  timemethod(time) {
-    let timest = new Date(time);
-    var options = {hour: 'numeric',minute: 'numeric',hour12: true};
-    var timeString = timest.toLocaleString('en-US', options);
-    return <h5>{timeString}</h5>;
+  timemethod(time){
+    // debugger
+    if(!time){
+      return null;
+    }
+    let hours = time.slice(11,13);
+    let minutes = time.slice(14,16);
+    let hr;
+    let str;
+    if (hours > 12) {
+      hr = hours - 12;
+      str = "PM";
+    }
+    else {
+      hr = hours;
+      str = "AM";
+    }
+    // debugger
+    let timestring = hr+ ':' +minutes+ ' ' + str;
+    // debugger
+    return <h5>{timestring}</h5>;
   }
   datemethod(sdate) {
     let object = sdate + "T10:10:10Z";

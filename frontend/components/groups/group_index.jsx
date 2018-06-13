@@ -70,13 +70,13 @@ class GroupIndex extends React.Component {
       <div id="myHeader">
         <SearchBox requestItems={this.props.requestGroups} searchtype="group"/>
         {this.awe()}
-        <p className={`${yourgroups}`}>Your Meetus Groups</p>
+        <p className={`${yourgroups}`}>Your MeetUs Groups</p>
         <ul className="groupIndex">
           {this.state.myGroups.map((group) => {
             return  <GroupIndexItem group={group} key={group.id} currentUser={this.props.currentUser}/>;
           })}
         </ul>
-        <p className={`${moregroups}`}>Meetus Groups you can join</p>
+        <p className={`${moregroups}`}>MeetUs Groups you can join</p>
     <ul className="groupIndex">
     {this.state.otherGroups.map((group) => {
       return  <GroupIndexItem group={group} key={group.id} currentUser={this.props.currentUser}/>;

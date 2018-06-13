@@ -8,7 +8,7 @@ import merge from 'lodash/merge';
 const eventmemberReducer = (state = {}, action) => {
   switch (action.type) {
     case RECEIVE_EVENTMEMBERS:
-      let object = merge({}, action.eventmembers);
+      let object = merge({}, state, action.eventmembers);
       return merge({}, action.eventmembers);
     case RECEIVE_EVENTMEMBER:
       return merge({}, state, action.eventmember);
