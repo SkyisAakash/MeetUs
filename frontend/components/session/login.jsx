@@ -39,7 +39,7 @@ componentDidMount() {
 
   handleDemo(e) {
     e.preventDefault();
-    this.setState({email:'user17', password:'user123'}, () => this.props.login(this.state)
+    this.setState({email:'stephen@gmail.com', password:'user123'}, () => this.props.login(this.state)
       .then(() => this.props.history.push('/groups')));
   }
 
