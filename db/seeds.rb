@@ -297,7 +297,7 @@ Bon appÃ©tit! Con gusto! Itadakimasu! ...(Can you suggest additional phrases i
 organizer_id: sky.id, image_url:"https://s26.postimg.cc/i809pisxl/food.jpg")
 
 Event.create!(
- title: "Wine and Socialize long long long long l",
+ title: "Wine and Socialize",
  description:
   "\n• What we'll do\nHey guys,\n\nLet's get together and enjoy great wine. Our second Meetup was a success and looking forward to this one. I will be providing Spanish wine and cheese. It would be great if all members can bring a bottle of wine to have more variety. If you guys have any questions feel free to call / text me at 408.420.6993\n\nHope to see you all!\n\nDPR.\n\n• What to bring\n1 Bottle of wine",
  address: "904, ketny street, santa clara, ca",
@@ -309,25 +309,56 @@ Event.create!(
  end_date: "2018-06-04",
  start_time: "08:01",
  end_time: "17:00")
- # id: 10,
- # title: "Wine and Socialize long long long long l",
- # description:
- #  "\n• What we'll do\nHey guys,\n\nLet's get together and enjoy great wine. Our second Meetup was a success and looking forward to this one. I will be providing Spanish wine and cheese. It would be great if all members can bring a bottle of wine to have more variety. If you guys have any questions feel free to call / text me at 408.420.6993\n\nHope to see you all!\n\nDPR.\n\n• What to bring\n1 Bottle of wine",
- # address: "904, ketny street, santa clara, ca",
- # organizer_id: 168,
- # group_id: 213,
- # image_url:
- #  "https://res.cloudinary.com/df4s95pqa/image/upload/v1528685232/hclmbuvvrbwmswryoham.jpg",
- # start_date: Mon, 04 Jun 2018,
- # end_date: Mon, 04 Jun 2018,
- # start_time: Sat, 01 Jan 2000 08:01:00 UTC +00:00,
- # end_time: Sat, 01 Jan 2000 17:00:00 UTC +00:00,
- # created_at: Mon, 11 Jun 2018 02:47:15 UTC +00:00,
- # updated_at: Mon, 11 Jun 2018 02:47:15 UTC +00:00>
+Event.create!(
+ title: "Oakland's Eat Real Festival",
+ description:
+  "Your Bay Area Creative Cooking group cordially invites you to enjoy this year's annual \"Eat Real Festival,\" a street-food block party festival designed to celebrate good local food, that's held at Jack London Square, Oakland. As a naturally creative group made up of chefs/cooks/noobs-in-the-kitchen, our goal is to see how many food and beverage vendors we can collectively visit, while sharing up samples from one another's purchased dish. Bring your cash, camera, your smile, a positive sharing attitude, and a hearty appetite as we walk and learn what we can from chefs and vendors!\n
+
+More importantly enjoy spending your time and cash getting to know other Members in our Meetup community, and let your inner foodie become well known! (Additional details will be posted here in updates.)
+\n
+ABOUT\n
+\"At the Eat Real Festival, participants learn where food comes from, who grows it, and how to make it. Eat Real Festival attendance is 100% free of charge, all street food at the festival costs $10 or less, and incorporates delicious, regionally-sourced, and sustainably-produced ingredients. Eat Real is the premier educational program of the Food Craft Institute, a non-profit organization focused on creating and making viable small to medium-scale, handmade, artisan food companies in the United States. Eat Real\’s mission is to help revitalize regional food systems, build public awareness of and respect for the craft of making good food and to encourage the growth of American food entrepreneurs\" (http://eatrealfest.com/about/).
+\n
+**This event is easily accessible by the Ferry and BART!
+\n
+***Please drink responsibly! If you do plan to drink alcohol, please order yourself a rideshare (Lyft/Uber), or plan to use public transportation when leaving this activity.
+
+",
+ address: "904, ketny street, Oaklans, ca 95843",
+ organizer_id: sky.id,
+ group_id: food.id,
+ image_url:
+  "https://res.cloudinary.com/df4s95pqa/image/upload/v1528912563/oakland.jpg",
+ start_date: "2019-06-04",
+ end_date: "2019-06-04",
+ start_time: "08:01",
+ end_time: "17:00")
+Event.create!(
+ title: "Pizza Party",
+ description:
+  "Your Bay Area Creative Cooking group cordially invites you to enjoy this year's annual \"Eat Real Festival,\" a street-food block party festival designed to celebrate good local food, that's held at Jack London Square, Oakland. As a naturally creative group made up of chefs/cooks/noobs-in-the-kitchen, our goal is to see how many food and beverage vendors we can collectively visit, while sharing up samples from one another's purchased dish. Bring your cash, camera, your smile, a positive sharing attitude, and a hearty appetite as we walk and learn what we can from chefs and vendors!\n
+
+More importantly enjoy spending your time and cash getting to know other Members in our Meetup community, and let your inner foodie become well known! (Additional details will be posted here in updates.)
+\n
+ABOUT\n
+\"At the Eat Real Festival, participants learn where food comes from, who grows it, and how to make it. Eat Real Festival attendance is 100% free of charge, all street food at the festival costs $10 or less, and incorporates delicious, regionally-sourced, and sustainably-produced ingredients. Eat Real is the premier educational program of the Food Craft Institute, a non-profit organization focused on creating and making viable small to medium-scale, handmade, artisan food companies in the United States. Eat Real\’s mission is to help revitalize regional food systems, build public awareness of and respect for the craft of making good food and to encourage the growth of American food entrepreneurs\" (http://eatrealfest.com/about/).
+\n
+**This event is easily accessible by the Ferry and BART!
+\n
+***Please drink responsibly! If you do plan to drink alcohol, please order yourself a rideshare (Lyft/Uber), or plan to use public transportation when leaving this activity.
+
+",
+ address: "904, ketny street, Oaklans, ca 95843",
+ organizer_id: sky.id,
+ group_id: food.id,
+ image_url:
+  "https://res.cloudinary.com/df4s95pqa/image/upload/v1528912746/pizza.jpg",
+ start_date: "2019-09-04",
+ end_date: "2019-12-04",
+ start_time: "08:01",
+ end_time: "17:00")
 
 
-# groupname = Group.create!(title:"", organizer_id: shahab.id,
-# image_url:"")
 
 lgbt = Group.create!(title:"LGBTQ Self Defense Classes",description:"Thanks to Supervisor Ken Yeager, the Board of Supervisors has funded self defense classes for the LGBTQ community.
 These classes are free, and you can attend as many as you like. Classes are taught through Defense-ability in Campbell. (defense-ability.com)
