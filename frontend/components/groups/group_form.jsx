@@ -34,6 +34,7 @@ handleInput(field) {
 renderErrors() {
   // debugger
   if (!this.props.errors.group){return null;}
+  if(!this.props.errors.group[0]){return null;}
 return(
   <ul className="grperrors">
     {this.props.errors.group.map((error, i) => (

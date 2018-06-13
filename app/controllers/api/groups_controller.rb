@@ -39,6 +39,7 @@ class Api::GroupsController < ApplicationController
         # debugger
         render :show
       else
+        # debugger
         render json: @group.errors.full_messages, status: 422
       end
     end
