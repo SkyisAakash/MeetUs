@@ -8,7 +8,14 @@ class GroupIndexItem extends React.Component {
   }
 
   render() {
-
+    let faketitle = "" + this.props.group.title;
+    let finaltitle;
+    if (faketitle.length > 37) {
+        finaltitle = faketitle.slice(0,37) + "...";
+      }
+      else {
+          finaltitle = faketitle;
+      }
     return (
       <Link to={`/groups/${this.props.group.id}`} className="groupIndexLink">
       <li className="eachGroup">
@@ -20,7 +27,7 @@ class GroupIndexItem extends React.Component {
         </object>
         <div className="container">
           <div className="internalcontainer">
-          <p className="groupIndexTitle">{this.props.group.title}</p>
+          <p className="groupIndexTitle">{finaltitle}</p>
         </div>
         </div>
       </li>
