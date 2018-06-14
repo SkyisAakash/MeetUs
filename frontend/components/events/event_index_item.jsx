@@ -11,6 +11,13 @@ class EventIndexItem extends React.Component {
     if (!this.props.groups[this.props.event.group_id]) {
       return null;
     }
+    let printedtitle;
+    let actualtitle = this.props.event.title + "";
+    if (actualtitle.length > 50) {
+      printedtitle = actualtitle.slice(0, 50) + "...";
+    } else {
+      printedtitle = actualtitle;
+    }
     return(
       <li className="eachEvent">
         <div className="indexeventdate">
@@ -30,7 +37,7 @@ class EventIndexItem extends React.Component {
             </Link>
             <Link to={`/events/${this.props.event.id}`}
               className="eventIndexTitle">
-              {this.props.event.title}
+              {printedtitle}
             </Link>
             <p className="eventhostname">
               Hosted by: {this.props.users[this.props.event.organizer_id].username}
@@ -61,7 +68,7 @@ class EventIndexItem extends React.Component {
     let timestring = hr+ ':' +minutes+ ' ' + str;
     return <h5>{timestring}</h5>;
   }
-  
+
   datemethod(sdate) {
     let object = sdate + "T10:10:10Z";
     let date = new Date(object);

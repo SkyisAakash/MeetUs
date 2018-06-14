@@ -1225,7 +1225,7 @@ GroupMember.create!(group_id:amazon.id ,user_id: chetan.id)
 GroupMember.create!(group_id:wishly.id ,user_id: jao.id)
 GroupMember.create!(group_id:amazon.id ,user_id: jao.id)
 
-EventMember.create!(event_id:wineevent.id ,user_id: demo.id)
+# EventMember.create!(event_id:wineevent.id ,user_id: demo.id)
 EventMember.create!(event_id:wineevent.id ,user_id: sky.id)
 EventMember.create!(event_id:wineevent.id ,user_id: mark.id)
 EventMember.create!(event_id:wineevent.id ,user_id: kevin.id)
