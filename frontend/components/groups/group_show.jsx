@@ -75,6 +75,12 @@ class GroupShow extends React.Component {
     if (!this.props.group) {
       return null;
     }
+    let membersclassname;
+    if(this.props.members[0]) {
+      membersclassname = "showme";
+    } else {
+      membersclassname = "hideme";
+    }
     const cutebox =
       (this.props.laterEvents.length === 0)? "hidegroups" : "cuteblocks";
     const organizer = this.props.users[this.props.group.organizer_id];
@@ -127,7 +133,10 @@ class GroupShow extends React.Component {
           </div>
         </div>
         <div className="memberssection">
+          <p className={`${membersclassname}`}>Members</p>
+          <div className="memberlistsection">
         {this.props.members.map(member => <div className="eachmember">{this.membercard(member)}</div>)}
+        </div>
         </div>
       </div>
     );
@@ -135,7 +144,8 @@ class GroupShow extends React.Component {
 
 
   membercard(member) {
-    if (!member.username){return null;} 
+    if (!member){return null;}
+    if (!member.username){return null;}
     return (
       <div className="usercard">
         <i className="fas fa-user-circle" id="usericon"></i>

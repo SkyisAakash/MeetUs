@@ -4,6 +4,7 @@
   width: 1057px;
 display: flex;
 margin: 0 auto;
+flex-direction: column;
 margin-bottom: 20px;
 }
 .usercard {
@@ -20,4 +21,13 @@ margin-bottom: 20px;
 }
 .usercard:hover{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.memberlistsection{
+  display: flex;
+}
+.hideme{
+  display: none;
+}
+.showme {
+  display: inline-block;
 }
