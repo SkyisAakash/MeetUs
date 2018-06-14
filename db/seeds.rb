@@ -956,26 +956,11 @@ http://eurekarestaurantgroup.com/eat/",address:"Some place, San Jose, CA",start_
 htasevent1 =  Event.create!(title:"Hacker Night @ Silicon Valley Blockchain Developer Hackathon by SVDN",
    description:"Hacker Night @ Silicon Valley Blockchain Hackathon
 \nhttps://www.eventbrite.com/e/hacker-night-silicon-valley-blockchain-developer-hackathon-tickets-46673549844
-\n
-\nPresented by:
-\nSVDN - Silicon Valley Developer Network
-\nSilicon Valley Entrepreneurs & Startups
-\nSVE.io
-\nSponsor by:
-\nF50
-\nMore
-\n
+\n\nPresented by:\nSVDN - Silicon Valley Developer Network
+\nSilicon Valley Entrepreneurs & Startups\nSVE.io\nSponsor by:\nF50\nMore\n
 \nThe Hacker Night is the final demo session & award ceremony of the Blockchain Developer Hackathon
-\n
-\nFinal 4 demo & Q&A
-\nkeynote
-\nJudge Panel
-\nCelebration Party for the hackathon winner
-\nRaffle
-\nRecruiting
-\nTo RSVP:
-\nhttps://www.eventbrite.com/e/hacker-night-silicon-valley-blockchain-developer-hackathon-tickets-46673549844
-
+\n\nFinal 4 demo & Q&A\nkeynote\nJudge Panel\nCelebration Party for the hackathon winner
+\nRaffle\nRecruiting\nTo RSVP:\nhttps://www.eventbrite.com/e/hacker-night-silicon-valley-blockchain-developer-hackathon-tickets-46673549844
 ",
 address:"3560, Old Avenue, Cupertino, CA",
 organizer_id:htas.organizer_id,
@@ -984,42 +969,52 @@ image_url:"https://res.cloudinary.com/df4s95pqa/image/upload/v1529000418/hacker.
 start_date:"2019-07-30", start_time:"17:30",end_date:"2018-07-30",end_time:"18:40")
 #
  htasevent2 =  Event.create!(title:"Lifograph SV Networking",
-    description:"RSVP HERE: https://www.lifograph.com/events/46886931073
-
+    description:"RSVP HERE: https://www.lifograph.com/events/46886931073\n
 Join us for dinner and a fun evening of structured networking and business matching, plus many exciting surprises!
-\n
-
-This event has been voted \"most fun networking event\" by our network.
-
+\nThis event has been voted \"most fun networking event\" by our network.
 \nThe Emcee is no other than Dea Wilson, whose extensive network of startup founders, investors and other power players in tech earned her the moniker \"Ms. Silicon Valley\".
-\n
-Dea is the Founder of Lifograph - The Wiki of People - https://www.lifograph.com (https://www.lifograph.com/) - a free people search engine with 500K profiles and 1.2M connections that helps match people and companies based on their needs, skills, interests and real-life relationships.
-\n
-She is an angel investor at the Wharton Angels and Tech Angels, Managing Director at Silicon Valley Incubator and Executive Director at LifographTV. Dea is also in the Board of Directors of the Ferrari Club of America, Pacific Region.
-\n
-Dea has been featured and interviewed in many media publications including Entrepreneur Media, Silicon Valley Business Journal, Yahoo Finance, Investor Business Daily, Startups.co, Sociable, DobleClic, Soy Emprendedor, TheNextWeb, ProTV, NationalTV, etc.
-\n
-RSVP HERE: https://www.lifograph.com/events/46886931073
-\n
-______________________________
-\n
-WHY YOU SHOULD JOIN US
-\n
-______________________________
-\n
-At this event you can find:
-\n
-- cofounders
-\n
-- investors
-\n
-- software developers
-\n
-- designers
-",
+\nDea is the Founder of Lifograph - The Wiki of People - https://www.lifograph.com (https://www.lifograph.com/) - a free people search engine with 500K profiles and 1.2M connections that helps match people and companies based on their needs, skills, interests and real-life relationships.
+\nShe is an angel investor at the Wharton Angels and Tech Angels, Managing Director at Silicon Valley Incubator and Executive Director at LifographTV. Dea is also in the Board of Directors of the Ferrari Club of America, Pacific Region.
+\nDea has been featured and interviewed in many media publications including Entrepreneur Media, Silicon Valley Business Journal, Yahoo Finance, Investor Business Daily, Startups.co, Sociable, DobleClic, Soy Emprendedor, TheNextWeb, ProTV, NationalTV, etc.
+\nRSVP HERE: https://www.lifograph.com/events/46886931073
+\n______________________________\nWHY YOU SHOULD JOIN US\n______________________________
+\nAt this event you can find:\n- cofounders\n- investors\n- software developers\n
+- designers",
  address:"30, trevor Avenue, San Francisco, CA",
  organizer_id:htas.organizer_id,
  group_id:htas.id ,
+ image_url:"https://res.cloudinary.com/df4s95pqa/image/upload/v1529000343/networking.jpg",
+ start_date:"2018-06-27", start_time:"18:30",end_date:"2018-06-30",end_time:"20:40")
+haasevent1 =  Event.create!(title:"Computer Night",
+   description:"Hacker Night @ Silicon Valley Blockchain Hackathon
+\nhttps://www.eventbrite.com/e/hacker-night-silicon-valley-blockchain-developer-hackathon-tickets-46673549844
+\n\nPresented by:\nSVDN - Silicon Valley Developer Network
+\nSilicon Valley Entrepreneurs & Startups\nSVE.io\nSponsor by:\nF50\nMore\n
+\nThe Hacker Night is the final demo session & award ceremony of the Blockchain Developer Hackathon
+\n\nFinal 4 demo & Q&A\nkeynote\nJudge Panel\nCelebration Party for the hackathon winner
+\nRaffle\nRecruiting\nTo RSVP:\nhttps://www.eventbrite.com/e/hacker-night-silicon-valley-blockchain-developer-hackathon-tickets-46673549844
+",
+address:"3560, Old Avenue, Cupertino, CA",
+organizer_id:haas.organizer_id,
+group_id:haas.id ,
+image_url:"https://res.cloudinary.com/df4s95pqa/image/upload/v1529000418/hacker.jpg",
+start_date:"2019-07-30", start_time:"17:30",end_date:"2018-07-30",end_time:"18:40")
+#
+ haasevent2 =  Event.create!(title:" Networking",
+    description:"RSVP HERE: https://www.lifograph.com/events/46886931073\n
+Join us for dinner and a fun evening of structured networking and business matching, plus many exciting surprises!
+\nThis event has been voted \"most fun networking event\" by our network.
+\nThe Emcee is no other than Dea Wilson, whose extensive network of startup founders, investors and other power players in tech earned her the moniker \"Ms. Silicon Valley\".
+\nDea is the Founder of Lifograph - The Wiki of People - https://www.lifograph.com (https://www.lifograph.com/) - a free people search engine with 500K profiles and 1.2M connections that helps match people and companies based on their needs, skills, interests and real-life relationships.
+\nShe is an angel investor at the Wharton Angels and Tech Angels, Managing Director at Silicon Valley Incubator and Executive Director at LifographTV. Dea is also in the Board of Directors of the Ferrari Club of America, Pacific Region.
+\nDea has been featured and interviewed in many media publications including Entrepreneur Media, Silicon Valley Business Journal, Yahoo Finance, Investor Business Daily, Startups.co, Sociable, DobleClic, Soy Emprendedor, TheNextWeb, ProTV, NationalTV, etc.
+\nRSVP HERE: https://www.lifograph.com/events/46886931073
+\n______________________________\nWHY YOU SHOULD JOIN US\n______________________________
+\nAt this event you can find:\n- cofounders\n- investors\n- software developers\n
+- designers",
+ address:"30, trevor Avenue, San Francisco, CA",
+ organizer_id:haas.organizer_id,
+ group_id:haas.id ,
  image_url:"https://res.cloudinary.com/df4s95pqa/image/upload/v1529000343/networking.jpg",
  start_date:"2018-06-27", start_time:"18:30",end_date:"2018-06-30",end_time:"20:40")
 
