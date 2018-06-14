@@ -2,6 +2,8 @@
 MeetUs is a single page web-app clone of meetup.com as of June 2018. The site is a social meeting platform where users can create groups and
 events to share their interest with people with same interests.
 
+[MeetUs Live!](https://meetus-meetup.herokuapp.com/#/)
+
 ![DashBoard](https://res.cloudinary.com/df4s95pqa/image/upload/v1529011512/mainpage.png)
 
 ## Design:
