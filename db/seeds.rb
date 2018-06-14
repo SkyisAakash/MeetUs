@@ -13,7 +13,6 @@ GroupMember.delete_all
 User.delete_all
 Event.delete_all
 EventMember.delete_all
-
 demo = User.create!(username:"stephen",email:"stephen@gmail.com", password:"user123")
 sky = User.create!(username:"sky",email:"sky@gmail.com", password:"user123")
 mark = User.create!(username:"mark",email:"mark@gmail.com", password:"user123")
@@ -205,7 +204,7 @@ pone = Group.create!(title:"San Francisco Entrepreneurs Network", organizer_id: 
 S.F.E.N holds inexpensive, high-quality seminars and networking events on a regular basis. These events help small business owners, entrepreneurs and marketing professionals learn, network and grow. They learn new tactics, tools and techniques. They network with like-minded people. They grow their networks, their businesses and their characters. S.F.E.N\’s seminars address just about every business topic imaginable including traditional, online and mobile marketing, personal development, social media, sales, networking, raising capital, crowd sourcing, gamification, branding, search engine optimization, web design and much much more. Start growing your business or advancing your career today by checking us out. The best way to do this is to attend one of our meetings.
 
 S.F.E.N is a branch of Entrepreneurs International Network. Please email the organizer of this group to become an event host if you like to hold local events to for entrepreneurs.", image_url:"https://res.cloudinary.com/df4s95pqa/image/upload/v1528910593/enterpreneur.jpg")
-dillon = Group.create!(title:"'NorCal Hikers (20s & 30s)'", organizer_id: jack.id, description: "The Best Things in Life Are Free! So, Come hang out with us in nature:-)
+dillon = Group.create!(title:"'NorCal Hikers (20s & 30s)'", organizer_id: demo.id, description: "The Best Things in Life Are Free! So, Come hang out with us in nature:-)
 
 Are you an outdoor enthusiasts looking to Hike? Are you in San Francisco Bay Area? Or even in San Jose/Santa Cruz? Come be social. New in Town? Looking to Meet New People or Friendships? 20's or 30's Something? Here is a group designed for people with similar interests who enjoys Hiking, Climbing, Backpacking, Mountaineering, Skiing and Outdoor Adventures. However, we do include occasional social events such as Wine tasting, Beer tasting, Sporting, Concerts, Happy Hours, Salsa and whatever else that attracts interest. Or even anything that Sounds Fun in the open Fresh Air, far from Urban Civilization to be in good Company around Campfires.
 
@@ -400,7 +399,7 @@ This is a wonderful volunteering opportunity, and I hope you’ll be able to joi
 address:"3450, bakesto park, San Francisco, CA 95683",
 organizer_id:serena.id,
 group_id:help.id ,
-image_url:"",
+image_url:"https://res.cloudinary.com/df4s95pqa/image/upload/v1528940052/volunteer.jpg",
 start_date:"2018-10-23", start_time:"10:30",end_date:"2018-10-14",end_time:"23:40")
 basketballevent =  Event.create!(title:"Sunday Morning Pick Up Basketball",
    description:"Do you enjoy volunteering? We will be volunteering in Second Harvest Food Bank’s warehouse. Possible activities may include sorting food, breaking down boxes, etc. (*Adults only for this event, please! More info is below.) Ready…set….go! - Let’s give back to our community!
@@ -423,7 +422,7 @@ This is a wonderful volunteering opportunity, and I hope you’ll be able to joi
 address:"3450, bakesto park, San Francisco, CA 95683",
 organizer_id:serena.id,
 group_id:help.id ,
-image_url:"",
+image_url:"https://res.cloudinary.com/df4s95pqa/image/upload/v1528939841/basketball.jpg",
 start_date:"2018-11-10", start_time:"09:30",end_date:"2018-11-10",end_time:"13:40")
 tennisevent =  Event.create!(title:"Sunday Evening Tennis \(Father's Day\)",
    description:"Let's meet for tennis!! Just bring your rackets and any tennis balls you may have, preferably new ones. We'll rally or play a game or something. SC Tennis Center has 8 courts there but 4 courts available if Park & Rec or USTA has scheduled classes/events.
@@ -458,11 +457,11 @@ Now that you read the entire details....Let's have fun, running around and hitti
 address:"450, Sunshine middle school, San Francisco, CA",
 organizer_id:serena.id,
 group_id:help.id ,
-image_url:"",
+image_url:"https://res.cloudinary.com/df4s95pqa/image/upload/v1528939724/tennis.jpg",
 start_date:"2018-12-10", start_time:"13:30",end_date:"2018-12-10",end_time:"15:40")
 
 
-blackevent1 =  Event.create!(title:"Putlock fun",
+blackevent1 =  Event.create!(title:"Potluck fun",
    description:"Location: Marianne's House in Menlo Park for Potluck. Marianne will provide a main dish, please bring sides, dessert and wine. An email will be sent 1 week before with directions to Marianne's house.
 \n
 This months book selection: Varina by Charles Frazier
@@ -493,7 +492,7 @@ Rules of Civility by Amor Towles",
 address:"560, Menlo Park, San Francisco, CA",
 organizer_id:vee.id,
 group_id:black.id ,
-image_url:"",
+image_url:"https://res.cloudinary.com/df4s95pqa/image/upload/v1528940239/potluck.jpg",
 start_date:"2018-06-12", start_time:"14:30",end_date:"2018-06-13",end_time:"15:40")
 
 blackevent2 =  Event.create!(title:"Page-Turner's Book Club June 2018 Meeting",
@@ -513,7 +512,7 @@ RSVP guidelines: If you attend a meeting, you will be automatically RSVP'd Yes f
 address:"3560, Park Avenue, San Jose, CA",
 organizer_id:vee.id,
 group_id:black.id ,
-image_url:"",
+image_url:"http://res.cloudinary.com/df4s95pqa/image/upload/v1528940315/books.jpg",
 start_date:"2018-06-30", start_time:"15:30",end_date:"2018-06-30",end_time:"16:40")
 
 blackevent3 =  Event.create!(title:"Beach Party",
@@ -536,7 +535,7 @@ RSVP guidelines: If you attend a meeting, you will be automatically RSVP'd Yes f
 address:"3560, Folsom Avenue, Santa Clara, CA",
 organizer_id:vee.id,
 group_id:black.id ,
-image_url:"",
+image_url:"https://res.cloudinary.com/df4s95pqa/image/upload/v1528940407/beachaprty.jpg",
 start_date:"2018-06-30", start_time:"15:30",end_date:"2018-06-30",end_time:"16:40")
 blackevent4 =  Event.create!(title:"Bowling Monday Night After hiking",
    description:"Let's Bowl on Monday Night-- It's Super Fun-- Meet new people, win bowling games.
@@ -553,9 +552,30 @@ There is also Karaoke in the Bar which is free from 9pm - 11pm. You do both -- b
 
 ",
 address:"3560, bowling Avenue, Santa barbara, CA",
-organizer_id:jack.id,
+organizer_id:demo.id,
 group_id:dillon.id ,
-image_url:"",
+image_url:"https://res.cloudinary.com/df4s95pqa/image/upload/v1528939955/bowling.jpg",
+start_date:"2018-07-30", start_time:"18:30",end_date:"2018-07-30",end_time:"20:40")
+techevent1 =  Event.create!(title:"Crypto Investing 101 Monthly Meeting",
+   description:"Introduction What is Bitcoin?
+What is Blockchain?\n
+What is Cryptocurrency?\n
+Why Invest in Cryptocurrency?\n
+What to Invest?\n
+Where to Buy?\n
+Security and Scams\n
+Conclusion\n
+\n
+• What to bring\n
+Notebook, Laptop, etc.\n
+\n
+• Important to know\n
+No recording.\n
+",
+address:"3560, trevor Avenue, San Francisco, CA",
+organizer_id:sky.id,
+group_id:haas.id ,
+image_url:"https://res.cloudinary.com/df4s95pqa/image/upload/v1528939955/bowling.jpg",
 start_date:"2018-07-30", start_time:"18:30",end_date:"2018-07-30",end_time:"20:40")
 
 
@@ -567,3 +587,10 @@ Please join us and take advantage of this opportunity!", organizer_id: shahab.id
 image_url:"https://s26.postimg.cc/6y7juh0q1/lgbt.jpg")
 burgersandbeers = Event.create!(title:"Eureka! Burgers and Beer",description:"I\'ve never been here and have been meaning to check it out.
 http://eurekarestaurantgroup.com/eat/",address:"Some place, San Jose, CA",start_date:"2018-12-03", end_date:"2018-12-03", start_time:"12:34", end_time:"14:53",organizer_id:sky.id, group_id:food.id, image_url:"https://res.cloudinary.com/df4s95pqa/image/upload/v1528667262/events/burger.jpg")
+
+
+
+GroupMember.create!(user_id: demo.id, group_id: food.id)
+GroupMember.create!(user_id: demo.id, group_id: help.id)
+EventMember.create!(user_id: demo.id, event_id: tennisevent.id)
+EventMember.create!(user_id: demo.id, event_id: basketballevent.id)

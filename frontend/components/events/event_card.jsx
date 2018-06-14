@@ -17,7 +17,7 @@ import { Link } from 'react-router-dom';
       let actdesc = "" + this.props.event.description;
       if (actdesc.length > 1000) {
         // debugger
-        showdesc = actdesc.slice(0, 1000);
+        showdesc = actdesc.slice(0, 1000) + "...";
       } else {
         // debugger
         showdesc = actdesc;

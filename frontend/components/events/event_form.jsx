@@ -73,6 +73,8 @@ renderErrors() {
 }
 
 render () {
+  const todaysdate = new Date().toISOString().split("T")[0];
+  // debugger
     if (!this.props.event) {
       return null;
     }
@@ -102,6 +104,7 @@ render () {
               <p className="grplogininfo">Start Date:</p>
               <input type="date"  id="calen"
                      value={this.state.start_date}
+                     min={todaysdate}
                      onChange={this.handleInput('start_date')}/>
                <p className="grplogininfo">End Date:</p>
                <input type="date" id="calen"
