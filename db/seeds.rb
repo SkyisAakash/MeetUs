@@ -134,7 +134,7 @@ If the two current book groups become full with regular members, we encourage so
 \n
 RSVP Guidelines for the Page Turner group: If you attend a meeting, you will be automatically RSVP'd Yes for the following months meeting. If you will be unable to attend, please let us know by changing that RSVP to No so others can attend in your place.
 \n
-RSVP Guidelines for the Rambler Readers group: Regular attendees (i.e., core group member) will automatically be RSVP'd \"Yes\". If your RSVP is "Yes" please be sure to attend. If you are unable to attend, please change your RSVP to "No" so others can attend in your place. If a core group member misses three meetings in a row, she will no longer be automatically RSVP'd "Yes" and will need to add herself in if she wants to attend the meeting.", image_url:"https://res.cloudinary.com/df4s95pqa/image/upload/v1528910871/black_girls.jpg")
+RSVP Guidelines for the Rambler Readers group: Regular attendees (i.e., core group member) will automatically be RSVP'd \"Yes\". If your RSVP is \"Yes\" please be sure to attend. If you are unable to attend, please change your RSVP to \"No\" so others can attend in your place. If a core group member misses three meetings in a row, she will no longer be automatically RSVP'd \"Yes\" and will need to add herself in if she wants to attend the meeting.", image_url:"https://res.cloudinary.com/df4s95pqa/image/upload/v1528910871/black_girls.jpg")
 dc = Group.create!(title:"BlackChain", organizer_id: josh.id, description: "A group of blockchain enthusiasts across all Blockchain and DAG communities.", image_url:"https://s26.postimg.cc/kqrzdd2zt/jim-beaudoin-628555-unsplash.jpg")
 divide = Group.create!(title:"SF Cryptocurrency Devs", organizer_id: ram.id, description: "Every week, we host the best engineer and developer presentations to share their projects and papers on innovation occurring in the cryptocurrency ecosystem.
 
@@ -345,7 +345,7 @@ ABOUT\n
  end_date: "2019-06-04",
  start_time: "08:01",
  end_time: "17:00")
-pizza event = Event.create!(
+pizzaevent = Event.create!(
  title: "Pizza Party",
  description:
   "Your Bay Area Creative Cooking group cordially invites you to enjoy this year's annual \"Eat Real Festival,\" a street-food block party festival designed to celebrate good local food, that's held at Jack London Square, Oakland. As a naturally creative group made up of chefs/cooks/noobs-in-the-kitchen, our goal is to see how many food and beverage vendors we can collectively visit, while sharing up samples from one another's purchased dish. Bring your cash, camera, your smile, a positive sharing attitude, and a hearty appetite as we walk and learn what we can from chefs and vendors!\n
@@ -430,7 +430,7 @@ tennisevent =  Event.create!(title:"Sunday Evening Tennis \(Father's Day\)",
 \n
 Before you RSVP, please read: (description updated Nov 2017)
 \n
-The tennis center has a reservation and walk-in process. I will check in at the office for the courts under "Shirley". If you get there before me, check with the office the court numbers under my name. For those with smartphone app, please see the comment section for the court number(s) to find us. Now that Daylight Saving ended, I will collect money for the court reservation. (Most of the times, I can get the courts free of charge but be prepare to pay for the access of courts if they are full). Bring small bills. If we have to use the paid reservation option, I will split the reservation fee evenly among those who show up for tennis. Reservation is $9/hour for residents (e.g. worse case scenario: reserving 2 courts for 2 hours = $36. $36.00/8 attendees = $4.50). I use the Yes (RSVP) as headcount when I check in with the tennis center office when getting court(s). I can get max 2 courts from the tennis office (sorry, I have tried to get a 3rd court but it can't be under my name.).
+The tennis center has a reservation and walk-in process. I will check in at the office for the courts under \"Shirley\". If you get there before me, check with the office the court numbers under my name. For those with smartphone app, please see the comment section for the court number(s) to find us. Now that Daylight Saving ended, I will collect money for the court reservation. (Most of the times, I can get the courts free of charge but be prepare to pay for the access of courts if they are full). Bring small bills. If we have to use the paid reservation option, I will split the reservation fee evenly among those who show up for tennis. Reservation is $9/hour for residents (e.g. worse case scenario: reserving 2 courts for 2 hours = $36. $36.00/8 attendees = $4.50). I use the Yes (RSVP) as headcount when I check in with the tennis center office when getting court(s). I can get max 2 courts from the tennis office (sorry, I have tried to get a 3rd court but it can't be under my name.).
 \n
 If you are coming to watch the rally/cheer at our games or to use the backboard/wall for practice, just mention in comments section. No need to rsvp for backboard nor watching. I use the Yes for court reservation.
 \n
@@ -469,7 +469,7 @@ This months book selection: Varina by Charles Frazier
 \n
 About the Book: Her marriage prospects limited, teenage Varina Howell agrees to wed the much older widower Jefferson Davis, with whom she expects the secure life a Mississippi landowner. Davis instead pursues a career in politics and is eventually appointed president of the confederacy, placing Varina at the white-hot center of one of the darkest moments in American history - culpable regardless of her intentions.
 \n
-The Confederacy falling, her marriage in tatters, and the country divided, Varina and her children escape Richmond and travel south on their own, now fugitives with "bounties on their heads, and entire nation in pursuit".
+The Confederacy falling, her marriage in tatters, and the country divided, Varina and her children escape Richmond and travel south on their own, now fugitives with \"bounties on their heads, and entire nation in pursuit\".
 \n
 Intimate in it's detailed observations of one woman's tragic life and epic in its scope and power, Varina is a novel of an American war and its aftermath. Ultimately, the book is a portrait of a woman who comes to realize that complicity carries consequences.
 \n
@@ -494,7 +494,7 @@ address:"560, Menlo Park, San Francisco, CA",
 organizer_id:vee.id,
 group_id:black.id ,
 image_url:"",
-start_date:"2018-06-10", start_time:"14:30",end_date:"2018-06-11",end_time:"15:40")
+start_date:"2018-06-12", start_time:"14:30",end_date:"2018-06-13",end_time:"15:40")
 
 blackevent2 =  Event.create!(title:"Page-Turner's Book Club June 2018 Meeting",
    description:"Page-Turners book group usually meets the last Thursday of each month at the Coffee Factory (3787 Stevens Creek Blvd., Santa Clara).

@@ -4,7 +4,10 @@ import { requestGroups, deleteGroup } from '../../actions/group_actions.js';
 import { requestUsers } from '../../actions/user_actions.js';
 import { requestEventMembers } from '../../actions/event_member_actions.js';
 import EventIndex from './event_index.jsx';
-import { selectMemberEvents, findByDate, selectOtherEvents } from '../../reducers/event_selector';
+import { selectMemberEvents,
+  findByDate,
+  selectOtherEvents,
+  findMyByDate } from '../../reducers/event_selector';
 
 const msp = state => ({
   events: Object.values(state.entities.events),

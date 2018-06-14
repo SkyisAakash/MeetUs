@@ -3,13 +3,15 @@ class Api::EventsController < ApplicationController
     # debugger
     if params[:search_query]
       if params[:search_query] == ""
-        @events = Event.all
+        # @events = Event.all
+        @events = Event.order('start_date ASC')
       else
         query = "%" + params[:search_query].upcase + "%"
-        @events = Event.where("UPPER(title) LIKE ?", query)
+        @events = Event.where("UPPER(title) LIKE ? ORDER BY start_date ASC", query)
       end
     else
-      @events = Event.all
+      # @events = Event.all
+      @events = Event.order('start_date ASC')
     end
     render :index
   end

@@ -13,6 +13,15 @@ import { Link } from 'react-router-dom';
       if(!this.props.organizer){
         return null;
       }
+      let showdesc;
+      let actdesc = "" + this.props.event.description;
+      if (actdesc.length > 1000) {
+        // debugger
+        showdesc = actdesc.slice(0, 1000);
+      } else {
+        // debugger
+        showdesc = actdesc;
+      }
 
       if (this.props.cardid === "big") {
           return(
@@ -39,7 +48,7 @@ import { Link } from 'react-router-dom';
                                 </span>
                             </h3>
                         </div>
-                        <p id="carddata">{this.props.event.description}</p>
+                        <p id="carddata">{showdesc}</p>
                     </div>
                     <div className="cardaddressdiv">
                         <i className="fas fa-map-marker-alt"></i>
