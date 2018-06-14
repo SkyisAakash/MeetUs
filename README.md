@@ -45,23 +45,23 @@ The MeetUs app was designed and built from scratch in 10 days. The proposal was 
 
   * Groups:
   
-  - Create, Edit and Delete public groups.
-  - Appropriate validations and error rendering on create group and edit group forms.
-  - Groups show page displays most recent event of group in a card along with coming event in smaller cards which can take user to event show page.
-  - Group show page also shows the members of group and updates memberlist in realtime on joining or leaving group action from any user.
+   - Create, Edit and Delete public groups.
+   - Appropriate validations and error rendering on create group and edit group forms.
+   - Groups show page displays most recent event of group in a card along with coming event in smaller cards which can take user to event show page.
+   - Group show page also shows the members of group and updates memberlist in realtime on joining or leaving group action from any user.
 
   * Events:
 
-  - Create, Edit and Delete events from group show page.
-  - Appropriate validations and error rendering on create event and edit event forms.
-  - The event show page shows user all of his/her events along with more events that they can join.
-  - Event show page also contains link to the group it belongs to and updates attendees list in realtime on RSVP action from any user.
+   - Create, Edit and Delete events from group show page.
+   - Appropriate validations and error rendering on create event and edit event forms.
+   - The event show page shows user all of his/her events along with more events that they can join.
+   - Event show page also contains link to the group it belongs to and updates attendees list in realtime on RSVP action from any user.
 
   * Search:
 
-  - User can use the searchbar to search both groups and events by selecting one of the options Groups/Calander.
-  - The search updates the result in real-time as the user types. Event search results are sorted by date in fashion of most recent first.
-  - The search results of the event are sorted by the start_date of the event.
+   - User can use the searchbar to search both groups and events by selecting one of the options Groups/Calander.
+   - The search updates the result in real-time as the user types. Event search results are sorted by date in fashion of most recent first.
+   - The search results of the event are sorted by the start_date of the event.
 
 ## Current challenges and future implementations:
 
