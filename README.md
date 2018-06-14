@@ -6,11 +6,12 @@ events to share their interest with people with same interests.
 
 ## Design:
 
-The MeetUs app wasdesigned and built from scratch in 10 days. The proposal was prepared to implement MVPs to get site functional. More details about proposal can be viewed [here](https://github.com/SkyisAakash/MeetUs/wiki)
+The MeetUs app wasdesigned and built from scratch in 10 days. The proposal was prepared to implement MVPs to get site functional. More details about proposal can be viewed [here.](https://github.com/SkyisAakash/MeetUs/wiki)
 
 ## Technologies used:
 
 * Backend
+  
   This full stack project employs ruby on rails v 5.1.6 for implementing back-end. 
   Databases are managed by PostgreSQL.
   The backend is implemented to provide RESTful APIs and handle and respond with JSON data.
@@ -24,8 +25,9 @@ The MeetUs app wasdesigned and built from scratch in 10 days. The proposal was p
   Babel was used for transpiling JSX into JavaScript.
   
 * More Technologies used:
-  Jbuilder, NodeJs, AJAX, npm(Node package manager), webpack, React DOM, React Router, React History to manipulating the browser history
-  The site is hosted on heroku and can be viewed [here](https://meetus-meetup.herokuapp.com/#/)
+  Jbuilder, NodeJs, AJAX, npm(Node package manager), webpack, React DOM, React Router, React History to manipulating the browser history.
+  
+  The site is hosted on heroku and can be viewed [here.](https://meetus-meetup.herokuapp.com/#/)
 
 ## Functionalities:
 
