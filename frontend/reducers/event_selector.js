@@ -48,6 +48,16 @@ export const findByDate = (state, date) => {
   return result;
 };
 
+export const selectAttendees = (state, eve_id) => {
+  let result = [];
+  Object.values(state.entities.eventmembers).map(object => {
+    if (object.event_id === parseInt(eve_id)) {
+      result.push(state.entities.users[object.user_id]);
+    }
+  });
+  return result;
+};
+
 export const findMyByDate = (state, date) => {
   let result = [];
   let ans = [];

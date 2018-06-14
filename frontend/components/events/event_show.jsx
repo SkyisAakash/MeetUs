@@ -12,6 +12,7 @@ class EventShow extends React.Component {
   }
 
   componentDidMount() {
+    this.props.getUsers();
     const that = this;
     this.props.requestEvent().then(
       res => {
@@ -63,6 +64,12 @@ class EventShow extends React.Component {
   render() {
     if (!this.props.event || !this.props.groups[this.props.event.group_id]) {
       return null;
+    }
+    let membersclassname;
+    if(this.props.attendees[0]) {
+      membersclassname = "showme";
+    } else {
+      membersclassname = "hideme";
     }
     const organizer = this.props.users[this.props.event.organizer_id];
     if(!organizer){
@@ -156,6 +163,12 @@ class EventShow extends React.Component {
                 <p>Details</p>
                 {this.props.event.description}
             </div>
+        <div className="memberssection">
+          <p className={`${membersclassname}`}>Attendees</p>
+          <div className="memberlistsection">
+        {this.props.attendees.map(member => <div className="eachmember">{this.membercard(member)}</div>)}
+        </div>
+      </div>
         </div>
         <div className="eventbodyright">
           <div id={`${this.state.pos}`}>
@@ -178,6 +191,17 @@ class EventShow extends React.Component {
         </div>
       </div>
    </div>
+    );
+  }
+
+  membercard(member) {
+    if (!member){return null;}
+    if (!member.username){return null;}
+    return (
+      <div className="usercard">
+        <i className="fas fa-user-circle" id="usericon"></i>
+        <p>{member.username}</p>
+      </div>
     );
   }
 

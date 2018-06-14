@@ -8,6 +8,8 @@ import EventShow from './event_show';
 import { openModal, closeModal} from '../../actions/modal_actions';
 import { eventmembershipcheck } from '../../reducers/eventmembershipcheck';
 import { requestEventMembers } from '../../actions/event_member_actions.js';
+import { selectAttendees } from '../../reducers/event_selector';
+import { requestUsers } from '../../actions/user_actions.js';
 
 
 const msp = (state,ownProps) => ({
@@ -16,7 +18,9 @@ const msp = (state,ownProps) => ({
   groups: state.entities.groups,
   users: state.entities.users,
   eventmemberships: state.entities.eventmembers,
-  eventmembershipcheck: eventmembershipcheck(state, ownProps.match.params.eventId, state.session.currentUser)
+  eventmembershipcheck: eventmembershipcheck(state, ownProps.match.params.eventId, state.session.currentUser),
+  attendees: selectAttendees(state, ownProps.match.params.eventId)
+
 });
 
 const mdp = (dispatch, ownProps) => ({
@@ -26,7 +30,8 @@ const mdp = (dispatch, ownProps) => ({
   createEventMember:(event_id, user_id) => dispatch(createEventMember(event_id,user_id)),
   deleteEventMember:(eventId, id) => dispatch(deleteEventMember(eventId,id)),
   getUser:(id)=> dispatch(getUser(id)),
-  requestGroup:(id)=> dispatch(requestGroup(id))
+  requestGroup:(id)=> dispatch(requestGroup(id)),
+  getUsers: () => dispatch(requestUsers())
 });
 
 export default connect(msp, mdp)(EventShow);
