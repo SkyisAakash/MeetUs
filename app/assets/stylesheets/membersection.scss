@@ -1,0 +1,23 @@
+
+.memberssection {
+  display: flex;
+  width: 1057px;
+display: flex;
+margin: 0 auto;
+margin-bottom: 20px;
+}
+.usercard {
+  background-color: white;
+    width: 73px;
+    margin-right: 10px;
+    overflow: hidden;
+    text-align: center;
+    height: 114px;
+    border-radius: 20px;
+    border: 1px solid white;
+    padding: 10px;
+
+}
+.usercard:hover{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

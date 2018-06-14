@@ -59,7 +59,7 @@ upload(e) {
 }
 
 renderErrors() {
-    if (!this.props.errors.events){return null;}
+    if (!this.props.errors.events[0]){return null;}
     if (this.props.errors === {}){return null;}
     return(
       <ul className="grperrors">
@@ -75,6 +75,7 @@ renderErrors() {
 render () {
   const todaysdate = new Date().toISOString().split("T")[0];
   // debugger
+  // if(this.state.stae)
     if (!this.props.event) {
       return null;
     }

@@ -23,6 +23,8 @@ class GroupShow extends React.Component {
   }
 
   componentDidMount() {
+    this.props.getUsers();
+
     this.props.requestGroup().then((res) => {
       this.props.getUser(res.group.organizer_id);
     });
@@ -66,6 +68,7 @@ class GroupShow extends React.Component {
   }
 
   render(){
+    // debugger
     if (this.props.loading) {
      return <section className="loading-detail"><LoadingIcon /></section>;
    }
@@ -123,10 +126,23 @@ class GroupShow extends React.Component {
             </div>
           </div>
         </div>
+        <div className="memberssection">
+        {this.props.members.map(member => <div className="eachmember">{this.membercard(member)}</div>)}
+        </div>
       </div>
     );
   }
 
+
+  membercard(member) {
+    if (!member.username){return null;} 
+    return (
+      <div className="usercard">
+        <i className="fas fa-user-circle" id="usericon"></i>
+        <p>{member.username}</p>
+      </div>
+    );
+  }
 
   firsteventcard(organizer){
     if(!this.props.selectEvent){

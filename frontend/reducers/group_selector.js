@@ -48,3 +48,18 @@ export const selectOtherGroups = (state) => {
   // console.log(result);
   return Object.values(allGroups);
 };
+
+
+export const selectUsers = (state, grp_id) => {
+  // debugger
+  let result = [];
+  Object.values(state.entities.groupmembers).map(object => {
+    // debugger
+    if (object.group_id === parseInt(grp_id)) {
+      // debugger
+      result.push(state.entities.users[object.user_id]);
+    }
+  });
+  // debugger
+  return result;
+};

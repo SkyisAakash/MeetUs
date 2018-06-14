@@ -10,6 +10,8 @@ import { openModal, closeModal} from '../../actions/modal_actions';
 import { membershipcheck } from '../../reducers/membershipcheck';
 import { requestGroupMembers } from '../../actions/group_member_actions.js';
 import { selectEventId } from '../../reducers/firsteventselector.js';
+import { selectUsers } from '../../reducers/group_selector';
+import { requestUsers } from '../../actions/user_actions.js';
 
 
 const msp = (state,ownProps) => ({
@@ -25,7 +27,8 @@ const msp = (state,ownProps) => ({
                             parseInt(ownProps.match.params.groupId))[0],
   laterEvents: selectEventId(Object.values(state.entities.events),
                             parseInt(ownProps.match.params.groupId)).slice(1),
-  loading: state.ui.loading.detailLoading
+  loading: state.ui.loading.detailLoading,
+  members: selectUsers(state, ownProps.match.params.groupId)
 
 });
 
@@ -37,7 +40,8 @@ const mdp = (dispatch, ownProps) => ({
                     dispatch(createGroupMember(group_id,user_id)),
   deleteGroupMember:(groupId, id) => dispatch(deleteGroupMember(groupId,id)),
   getUser:(id )=> dispatch(getUser(id)),
-  requestEvents: ()=>dispatch(requestEvents())
+  requestEvents: ()=>dispatch(requestEvents()),
+  getUsers: () => dispatch(requestUsers())
 });
 
 export default connect(msp, mdp)(GroupShow);

@@ -17,7 +17,6 @@ const msp = state => ({
   memberEvents: selectMemberEvents(state),
   users: state.entities.users,
   groups: state.entities.groups,
-  dateEvents: findByDate(state, new Date("2018-07-10")),
   otherEvents: selectOtherEvents(state)
 });
 
