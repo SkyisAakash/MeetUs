@@ -9,18 +9,18 @@ export const selectMemberEvents = (state) => {
   let memberEvents = Object.values(state.entities.eventmembers).map(object => {
     // debugger
       if(object.user_id === userId && state.entities.events[object.event_id]){
-        debugger
+        // debugger
         result.push(state.entities.events[object.event_id]);
       }
   });
   Object.values(state.entities.events).map(event => {
     // debugger
     if  (event.organizer_id === userId) {
-      debugger
+      // debugger
       result.push(event);
     }
   });
-  debugger
+  // debugger
   return result;
 };
 
