@@ -91,7 +91,7 @@ import { Link } from 'react-router-dom';
         return <h5>{dayword}, {longmonth} {day}, {year}</h5>;
       }
       else {
-        return <div className="dayblock"><p>{day}</p><p>{shortmonth}</p></div>;
+        return <div className="dayblock" id="evecarddayblock"><p>{day}</p><p>{shortmonth}</p></div>;
       }
     }
 }

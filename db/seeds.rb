@@ -874,7 +874,7 @@ group_id:bar.id ,
 image_url:"https://res.cloudinary.com/df4s95pqa/image/upload/v1528939955/bowling.jpg",
 start_date:"2018-06-27", start_time:"18:30",end_date:"2018-06-30",end_time:"20:40")
 
-techevent13 =  Event.create!(title:"A.I. vs. Deep Learning",
+techevent13 =  Event.create!(title:"A.I. and  Deep Learning",
    description:"*** Purchase a ticket to attend. See below for more information. ***
 \n
 Join us for a presentation in Artificial Intelligence vs. Machine Learning vs. Deep Learning
@@ -940,7 +940,7 @@ address:"3560, mathilda Avenue, San bruno, CA",
 organizer_id:mark.id,
 group_id:bar.id ,
 image_url:"https://res.cloudinary.com/df4s95pqa/image/upload/v1528939955/bowling.jpg",
-start_date:"2018-10-28", start_time:"8:30",end_date:"2018-10-30",end_time:"20:40")
+start_date:"2018-12-5", start_time:"8:30",end_date:"2018-12-5",end_time:"20:40")
 
 
 
@@ -953,10 +953,79 @@ image_url:"https://s26.postimg.cc/6y7juh0q1/lgbt.jpg")
 burgersandbeers = Event.create!(title:"Eureka! Burgers and Beer",description:"I\'ve never been here and have been meaning to check it out.
 http://eurekarestaurantgroup.com/eat/",address:"Some place, San Jose, CA",start_date:"2018-12-03", end_date:"2018-12-03", start_time:"12:34", end_time:"14:53",organizer_id:demo.id, group_id:food.id, image_url:"https://res.cloudinary.com/df4s95pqa/image/upload/v1528667262/events/burger.jpg")
 
+htasevent1 =  Event.create!(title:"Hacker Night @ Silicon Valley Blockchain Developer Hackathon by SVDN",
+   description:"Hacker Night @ Silicon Valley Blockchain Hackathon
+\nhttps://www.eventbrite.com/e/hacker-night-silicon-valley-blockchain-developer-hackathon-tickets-46673549844
+\n
+\nPresented by:
+\nSVDN - Silicon Valley Developer Network
+\nSilicon Valley Entrepreneurs & Startups
+\nSVE.io
+\nSponsor by:
+\nF50
+\nMore
+\n
+\nThe Hacker Night is the final demo session & award ceremony of the Blockchain Developer Hackathon
+\n
+\nFinal 4 demo & Q&A
+\nkeynote
+\nJudge Panel
+\nCelebration Party for the hackathon winner
+\nRaffle
+\nRecruiting
+\nTo RSVP:
+\nhttps://www.eventbrite.com/e/hacker-night-silicon-valley-blockchain-developer-hackathon-tickets-46673549844
 
+",
+address:"3560, Old Avenue, Cupertino, CA",
+organizer_id:htas.organizer_id,
+group_id:htas.id ,
+image_url:"https://res.cloudinary.com/df4s95pqa/image/upload/v1529000418/hacker.jpg",
+start_date:"2019-07-30", start_time:"17:30",end_date:"2018-07-30",end_time:"18:40")
+#
+ htasevent2 =  Event.create!(title:"Lifograph SV Networking",
+    description:"RSVP HERE: https://www.lifograph.com/events/46886931073
 
-# GroupMember.create!(user_id: demo.id, group_id: food.id)
+Join us for dinner and a fun evening of structured networking and business matching, plus many exciting surprises!
+\n
+
+This event has been voted \"most fun networking event\" by our network.
+
+\nThe Emcee is no other than Dea Wilson, whose extensive network of startup founders, investors and other power players in tech earned her the moniker \"Ms. Silicon Valley\".
+\n
+Dea is the Founder of Lifograph - The Wiki of People - https://www.lifograph.com (https://www.lifograph.com/) - a free people search engine with 500K profiles and 1.2M connections that helps match people and companies based on their needs, skills, interests and real-life relationships.
+\n
+She is an angel investor at the Wharton Angels and Tech Angels, Managing Director at Silicon Valley Incubator and Executive Director at LifographTV. Dea is also in the Board of Directors of the Ferrari Club of America, Pacific Region.
+\n
+Dea has been featured and interviewed in many media publications including Entrepreneur Media, Silicon Valley Business Journal, Yahoo Finance, Investor Business Daily, Startups.co, Sociable, DobleClic, Soy Emprendedor, TheNextWeb, ProTV, NationalTV, etc.
+\n
+RSVP HERE: https://www.lifograph.com/events/46886931073
+\n
+______________________________
+\n
+WHY YOU SHOULD JOIN US
+\n
+______________________________
+\n
+At this event you can find:
+\n
+- cofounders
+\n
+- investors
+\n
+- software developers
+\n
+- designers
+",
+ address:"30, trevor Avenue, San Francisco, CA",
+ organizer_id:htas.organizer_id,
+ group_id:htas.id ,
+ image_url:"https://res.cloudinary.com/df4s95pqa/image/upload/v1529000343/networking.jpg",
+ start_date:"2018-06-27", start_time:"18:30",end_date:"2018-06-30",end_time:"20:40")
+
+GroupMember.create!(user_id: demo.id, group_id: women.id)
 GroupMember.create!(user_id: demo.id, group_id: help.id)
+GroupMember.create!(user_id: demo.id, group_id: black.id)
 GroupMember.create!(user_id: sky.id, group_id: help.id)
 GroupMember.create!(user_id: mark.id, group_id: help.id)
 GroupMember.create!(user_id: charlie.id, group_id: help.id)
@@ -971,7 +1040,7 @@ GroupMember.create!(user_id: jack.id, group_id: htas.id)
 GroupMember.create!(user_id: sam.id, group_id: htas.id)
 GroupMember.create!(user_id: sky.id, group_id: htas.id)
 GroupMember.create!(user_id: kyle.id, group_id: htas.id)
-GroupMember.create!(group_id:father.id ,user_id: demo.id)
+# GroupMember.create!(group_id:father.id ,user_id: demo.id)
 GroupMember.create!(group_id:father.id ,user_id: sky.id)
 GroupMember.create!(group_id:father.id ,user_id: mark.id)
 GroupMember.create!(group_id:father.id ,user_id: kevin.id)
@@ -1017,7 +1086,7 @@ GroupMember.create!(group_id:son.id ,user_id: robin.id)
 GroupMember.create!(group_id:son.id ,user_id: steve.id)
 GroupMember.create!(group_id:son.id ,user_id: chetan.id)
 GroupMember.create!(group_id:son.id ,user_id: jao.id)
-GroupMember.create!(group_id:fat.id ,user_id: demo.id)
+# GroupMember.create!(group_id:fat.id ,user_id: demo.id)
 GroupMember.create!(group_id:fat.id ,user_id: sky.id)
 GroupMember.create!(group_id:fat.id ,user_id: mark.id)
 GroupMember.create!(group_id:fat.id ,user_id: kevin.id)
@@ -1064,7 +1133,7 @@ GroupMember.create!(group_id:dc.id ,user_id: steve.id)
 GroupMember.create!(group_id:dc.id ,user_id: chetan.id)
 GroupMember.create!(group_id:dc.id ,user_id: jao.id)
 
-GroupMember.create!(group_id:divide.id ,user_id: demo.id)
+# GroupMember.create!(group_id:divide.id ,user_id: demo.id)
 GroupMember.create!(group_id:divide.id ,user_id: sky.id)
 GroupMember.create!(group_id:divide.id ,user_id: mark.id)
 GroupMember.create!(group_id:divide.id ,user_id: kevin.id)
@@ -1111,7 +1180,7 @@ GroupMember.create!(group_id:dron.id ,user_id: steve.id)
 GroupMember.create!(group_id:dron.id ,user_id: chetan.id)
 GroupMember.create!(group_id:dron.id ,user_id: jao.id)
 
-GroupMember.create!(group_id:finfet.id ,user_id: demo.id)
+# GroupMember.create!(group_id:finfet.id ,user_id: demo.id)
 GroupMember.create!(group_id:finfet.id ,user_id: sky.id)
 GroupMember.create!(group_id:finfet.id ,user_id: mark.id)
 GroupMember.create!(group_id:finfet.id ,user_id: kevin.id)

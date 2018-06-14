@@ -8,7 +8,7 @@ class HeadingBar extends React.Component {
     return (
       <div className="headingdiv">
     <a href="">
-      <h1>Find a Meetup</h1>
+      <h1>Let's Meetus</h1>
       <h2>1,071 Meetups nearby</h2>
     </a>
   </div>
