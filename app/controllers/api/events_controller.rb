@@ -5,9 +5,11 @@ class Api::EventsController < ApplicationController
       if params[:search_query] == ""
         # @events = Event.all
         @events = Event.order('start_date ASC')
+        # debugger
       else
         query = "%" + params[:search_query].upcase + "%"
-        @events = Event.where("UPPER(title) LIKE ? ORDER BY start_date ASC", query)
+        @events = Event.where("UPPER(title) LIKE ?", query).order("start_date")
+        # debugger
       end
     else
       # @events = Event.all
