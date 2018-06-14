@@ -6,7 +6,7 @@ events to share their interest with people with same interests.
 
 ## Design:
 
-The MeetUs app wasdesigned and built from scratch in 10 days. The proposal was prepared to implement MVPs to get site functional. More details about proposal can be viewed [here.](https://github.com/SkyisAakash/MeetUs/wiki)
+The MeetUs app was designed and built from scratch in 10 days. The proposal was prepared to implement MVPs to get site functional. More details about proposal can be viewed [here.](https://github.com/SkyisAakash/MeetUs/wiki)
 
 ## Technologies used:
 
@@ -65,3 +65,5 @@ The MeetUs app wasdesigned and built from scratch in 10 days. The proposal was p
   * Map on event page:
     - The current challenge is to get the coordinates for google maps API from the address of the events so they can be fed to the map element to show exact address
     of the event on map.
+
+* Your suggestions and feedback are always welcome.
