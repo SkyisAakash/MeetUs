@@ -29,6 +29,7 @@ if(events[i].group_id === grp_id){
   // debugger
   if (date1 < mindate){
     // debugger
+      if (result) { more.push(result); }
       mindate = date1;
       result = events[i];
       // debugger

@@ -159,11 +159,13 @@ class GroupShow extends React.Component {
     if(!this.props.selectEvent){
       return null;
     }
+    // debugger
     return <EventCard cardid="big" event={this.props.selectEvent}
             organizer={organizer} getUser={this.props.getUser}/>;
   }
 
   eventtemplates(organizer){
+    // debugger
     if(this.props.laterEvents.length === 0){
       return null;
     }

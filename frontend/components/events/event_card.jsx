@@ -59,6 +59,13 @@ import { Link } from 'react-router-dom';
           );
         }
         else if (this.props.cardid === "cute"){
+          let printedtitle;
+          let actualtitle = this.props.event.title+"";
+          if (actualtitle.length > 20) {
+            printedtitle = actualtitle.slice(0, 17) + "...";
+          }else {
+            printedtitle =actualtitle;
+          }
           return(
               <Link to={`/events/${this.props.event.id}`}
                     className="cardtemplate">
@@ -70,7 +77,7 @@ import { Link } from 'react-router-dom';
                         {this.datemethod(this.props.event.start_date, "line")}
                       </span>
                       <h1 className="eventcardShowcuteTitle">
-                        {this.props.event.title}
+                        {printedtitle}
                       </h1>
                   </div>
               </Link>
