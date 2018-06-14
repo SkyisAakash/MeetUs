@@ -126,18 +126,19 @@ class GroupShow extends React.Component {
             <div className="description">
               <p>What we're about</p>
               <span className="justtext">{this.props.group.description}</span>
+                <div className="memberssection">
+                  <p className={`${membersclassname}`}>Members</p>
+                  <div className="memberlistsection">
+                {this.props.members.map(member => <div className="eachmember">{this.membercard(member)}</div>)}
+                </div>
+                </div>
             </div>
             <div className={`${cutebox}`}>
               {this.eventtemplates(organizer)}
             </div>
           </div>
         </div>
-        <div className="memberssection">
-          <p className={`${membersclassname}`}>Members</p>
-          <div className="memberlistsection">
-        {this.props.members.map(member => <div className="eachmember">{this.membercard(member)}</div>)}
-        </div>
-        </div>
+
       </div>
     );
   }

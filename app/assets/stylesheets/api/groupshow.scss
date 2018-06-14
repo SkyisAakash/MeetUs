@@ -34,6 +34,8 @@ width: 168px;
   // margin: 0px 380px;
 }
 .description{
+  display: flex;
+  flex-direction: column;
   width: 75%;
 padding-right: 20px;
 p {

@@ -5,18 +5,26 @@
 display: flex;
 margin: 0 auto;
 flex-direction: column;
-margin-bottom: 20px;
+padding-top: 20px;
+width: 100%;
 }
 .usercard {
   background-color: white;
     width: 73px;
-    margin-right: 10px;
+    margin-right: 40px;
     overflow: hidden;
     text-align: center;
     height: 114px;
     border-radius: 20px;
     border: 1px solid white;
     padding: 10px;
+    margin-bottom: 15px;
+    p { font-size: 21px;
+      word-wrap: break-word;
+      overflow: hidden;
+      height: 54%;
+        margin-top: 10px;}
+    i { font-size: 24px; }
 
 }
 .usercard:hover{
@@ -29,5 +37,10 @@ margin-bottom: 20px;
   display: none;
 }
 .showme {
+  font-size: 24px;
   display: inline-block;
+}
+.memberlistsection{
+display: flex;
+flex-wrap: wrap;
 }
