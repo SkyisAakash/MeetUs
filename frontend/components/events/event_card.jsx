@@ -80,6 +80,7 @@ import { Link } from 'react-router-dom';
 
 
   datemethod(sdate, method) {
+    // debugger
       let object = sdate + "T10:10:10Z";
       let date = new Date(object);
       let day = date.getDay();

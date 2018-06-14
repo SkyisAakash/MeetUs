@@ -966,7 +966,7 @@ address:"3560, Old Avenue, Cupertino, CA",
 organizer_id:htas.organizer_id,
 group_id:htas.id ,
 image_url:"https://res.cloudinary.com/df4s95pqa/image/upload/v1529000418/hacker.jpg",
-start_date:"2019-07-30", start_time:"17:30",end_date:"2018-07-30",end_time:"18:40")
+start_date:"2018-07-30", start_time:"17:30",end_date:"2018-07-30",end_time:"18:40")
 #
  htasevent2 =  Event.create!(title:"Lifograph SV Networking",
     description:"RSVP HERE: https://www.lifograph.com/events/46886931073\n
