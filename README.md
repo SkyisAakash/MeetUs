@@ -13,8 +13,8 @@ The MeetUs app was designed and built from scratch in 10 days. The proposal was 
 ## Technologies used:
 
 * Backend
-  
-   - This full stack project employs ruby on rails v 5.1.6 for implementing back-end. 
+
+   - This full stack project employs ruby on rails v 5.1.6 for implementing back-end.
    - Databases are managed by PostgreSQL.
    - The backend is implemented to provide RESTful APIs and handle and respond with JSON data.
 
@@ -25,17 +25,17 @@ The MeetUs app was designed and built from scratch in 10 days. The proposal was 
    - The back-end uses SQL queries for filtering data and front end uses VanillaDOM manipulation.
    - The webpage designing was done using css and scss and icons were used from awesomefonts.com.
    - Babel was used for transpiling JSX into JavaScript.
-  
+
 * More Technologies used:
-   - Jbuilder 
-   - NodeJs 
+   - Jbuilder
+   - NodeJs
    - AJAX
-   - npm(Node package manager) 
+   - npm(Node package manager)
    - webpack
    - React DOM
    - React Router
    - React History to manipulate the browser history.
-  
+
 * The site is hosted on heroku and can be viewed [here.](https://meetus-meetup.herokuapp.com/#/)
 
 ## Functionalities:
@@ -44,9 +44,10 @@ The MeetUs app was designed and built from scratch in 10 days. The proposal was 
 
    - Create user accounts with secure authentication.
    - View their user profile in the profile option in dropdown menu.
+   ![Userprofilegif](https://res.cloudinary.com/df4s95pqa/image/upload/v1529022955/Peek_2018-06-14_17-34.gif)
 
  * Groups:
-  
+
    - Create, Edit and Delete public groups.
    - Appropriate validations and error rendering on create group and edit group forms.
    - Groups show page displays most recent event of group in a card along with coming event in smaller cards which can take user to event show page.
