@@ -65,13 +65,13 @@ sep = User.create!(username:"sep",email:"sep@gmail.com", password:"user123")
 jo = User.create!(username:"jo",email:"jo@gmail.com", password:"user123")
 
 
-htas = Group.create!(title:"SF Ethereum Developers", organizer_id: demo.id,description: "Welcome! This is a group for developers in and near San Francisco to learn about Ethereum and to aid in developing decentralized applications (Dapps).
-  We have meetings on development tools for Ethereum, example contracts, in-depth look at various companies, and on technical details of the protocol.
+htas = Group.create!(title:"SF Ethereum Developers", organizer_id: demo.id,description: "Welcome! This is a group for developers in and near San Francisco to learn about Ethereum and to aid in developing decentralized applications (Dapps).\n
+  We have meetings on development tools for Ethereum, example contracts, in-depth look at various companies, and on technical details of the protocol.\n
   See also our sister community, the Silicon Valley Ethereum meetup ",image_url:"https://s26.postimg.cc/fj2av3cfd/braden-jarvis-625463-unsplash.jpg")
 
 haas = Group.create!(title:"NodeSchool SF", organizer_id: sky.id,
-  description: "NodeSchool San Francisco is a monthly meetup dedicated to helping people learn JavaScript.
-  We help people of all skill levels–from beginners to experts–discover what\'s possible with JavaScript.
+  description: "NodeSchool San Francisco is a monthly meetup dedicated to helping people learn JavaScript.\n
+  We help people of all skill levels–from beginners to experts–discover what\'s possible with JavaScript.\n
   Bring yourself, your computer, and the desire to learn to our next event!", image_url:"https://s26.postimg.cc/8av9jp9op/rawpixel-649916-unsplash.jpg")
 
 black = Group.create!(title:"Girls in the Marina", organizer_id: vee.id, description: "We\’re a group of black females in their 20s and 30\’s looking to hang out, make friends, explore the Bay, and build community. Ugly sweater parties, the opera, brunch, Lands End, First Fridays – you name it, we\’ve done it. All black and african american women welcome. Come kick it with us.
@@ -83,30 +83,35 @@ RSVP Guidelines for the Page Turner group: If you attend a meeting, you will be 
 \n
 RSVP Guidelines for the Rambler Readers group: Regular attendees (i.e., core group member) will automatically be RSVP'd \"Yes\". If your RSVP is \"Yes\" please be sure to attend. If you are unable to attend, please change your RSVP to \"No\" so others can attend in your place. If a core group member misses three meetings in a row, she will no longer be automatically RSVP'd \"Yes\" and will need to add herself in if she wants to attend the meeting.", image_url:"https://res.cloudinary.com/df4s95pqa/image/upload/v1528910871/black_girls.jpg")
 
-bar = Group.create!(title:"Bar & Bitcoin – Hosted by bitFlyer", organizer_id: mark.id, description: "Grab drinks and network with fellow Bitcoin community members in San Francisco\’s Financial District!
+bar = Group.create!(title:"Bar & Bitcoin – Hosted by bitFlyer", organizer_id: mark.id, description: "Grab drinks and network with fellow Bitcoin community members in San Francisco\’s Financial District!\n
 
 Hosted by bitFlyer ( https://bitflyer.com/en-us/ ), Japan\’s largest Bitcoin and Blockchain company that recently touched down in the states, this Meetup is for anyone interested the applications of
 Bitcoin, Blockchain, and the direction of cryptocurrency moving forward.
-
+\n
 Each gathering consists of casual networking time to meet and get to know others in the industry, with drinks provided by bitFlyer. Discuss current projects you're working on, troubleshoot problems you might be facing, review interesting articles and applications, and connect with others in the space. We hope to bring in guest speakers for engaging discussion opportunities in the future. Join us every other Thursday at Harrington\’s Bar & Grill!", image_url:"https://s26.postimg.cc/l29fq7yw9/brooke-lark-194252-unsplash.jpg")
 
 brue = Group.create!(title:"Neo4j Online Meetup", organizer_id: kevin.id, description: "In this Meetup we want to reach across borders and run online sessions for everyone around the world to join. Topics will range from data modeling and import to data science and data journalism.
-  Sessions are hosted using YouTube Live on the Neo4j YouTube Channel \(https://youtube.com/neo4j\)\.
+  \nSessions are hosted using YouTube Live on the Neo4j YouTube Channel \(https://youtube.com/neo4j\)\.
+\n
+We will also run hands-on workshops for developing your own applications and training sessions. \nFeel free to propose other topics you're interested in.", image_url:"https://s26.postimg.cc/er489kd0p/neonbrand-356967-unsplash.jpg")
 
-We will also run hands-on workshops for developing your own applications and training sessions. Feel free to propose other topics you're interested in.", image_url:"https://s26.postimg.cc/er489kd0p/neonbrand-356967-unsplash.jpg")
-
-women = Group.create!(title:"ARVR Women and Allies", organizer_id: jose.id, description: "ARVR Women is dedicated to supporting inclusion for under-represented groups as creators for the next computing platform: Virtual and Augmented Reality. Our goal is 50/50 in 5, or a gender balanced industry in five years. Right now, coders in the primary gaming engine around the globe, and the most important tool for creating AR/VR, are made up of roughly 97% men and 3% women. When systems are small and young, they are much more susceptable to change and responsive to new trajectories, however, as systems become more entrenched they become much more rigid and harder to shift. So we at ARVR Women are focusing our efforts now on the birth of this new system, incorporating all the wisdom of the new century, inclusion, clear communication, and respect for difference (different perspectives, challenges and experiences). This is a new dawn. Join us in ensuring the future will be brighter for everyone. We want everybody on this rocket-ship.
+women = Group.create!(title:"ARVR Women and Allies", organizer_id: jose.id, description: "ARVR Women is dedicated to supporting inclusion for under-represented groups as creators for the next computing platform:
+  \nVirtual and Augmented Reality. \nOur goal is 50/50 in 5, or a gender balanced industry in five years.
+  \nRight now, coders in the primary gaming engine around the globe, and the most important tool for creating AR/VR, are made up of roughly 97% men and 3% women.
+  \nWhen systems are small and young, they are much more susceptable to change and responsive to new trajectories, however, as systems become more entrenched they become much more rigid and harder to shift.
+  \nSo we at ARVR Women are focusing our efforts now on the birth of this new system, incorporating all the wisdom of the new century, inclusion, clear communication, and respect for difference (different perspectives, challenges and experiences).
+  \n This is a new dawn.\n Join us in ensuring the future will be brighter for everyone.\n We want everybody on this rocket-ship.
 
 \"ARVR women fills a need in an industry where women felt unheard and overlooked and managed to pull together the largest group of women ARVR developers and enthusiasts in the country. As a former student of their academy, I can say I learned the most about this awe-inspiring technology from this group. It was truly a gift in my life to work with such talented women with decades of industry experience. The founder created a rose from concrete to where hundreds of ARVR professionals are now within a few degrees of separation from each other", image_url:"https://res.cloudinary.com/df4s95pqa/image/upload/v1528910750/Womens_group.jpg")
 
 men = Group.create!(title:"SF Data Meetup", organizer_id: mike.id, description: "This is a new meetup group for data science and data engineering practitioners from companies in the SF bay area.
-  We\’ve seen that across many companies, data teams are solving very similar problems with similar tools. In this meetup we aim to share best practices that our teams have learned from their experiences working with large-scale distributed systems in production environments.
-
+  \nWe\’ve seen that across many companies, data teams are solving very similar problems with similar tools. \nIn this meetup we aim to share best practices that our teams have learned from their experiences working with large-scale distributed systems in production environments.
+\n
 Talks will focus on a holistic systems view of theory & practice for production data use cases, including:
-
-• Data engineering, and building ETL pipelines across batch and streaming
-• Experiments / A/B testing theory and practice, including infrastructure, randomization/assignment, and analysis
-• Machine learning, bridging from theory to production systems, including deep learning, offline training, online inference, production model serving, and metrics/monitoring", image_url:"https://s26.postimg.cc/5w3dz2j3d/rawpixel-649910-unsplash.jpg")
+\n
+\n• Data engineering, and building ETL pipelines across batch and streaming
+\n• Experiments / A/B testing theory and practice, including infrastructure, randomization/assignment, and analysis
+\n• Machine learning, bridging from theory to production systems, including deep learning, offline training, online inference, production model serving, and metrics/monitoring", image_url:"https://s26.postimg.cc/5w3dz2j3d/rawpixel-649910-unsplash.jpg")
 
 son = Group.create!(title:"Deep Learning Textbook Study Group", organizer_id: gui.id, description: "Hello there!! This study group will be centered around the \"Deep Learning\" (quite literally its name at the moment) textbook being written by Ian Goodfellow, Yoshua Bengio and Aaron Courville. This study group is intended for those that are serious about ML. The textbook is dense and math intensive, so expect to put in at least a couple of hours a week.", image_url:"https://s26.postimg.cc/lhkpj1i6x/walter-walraven-628474-unsplash.jpg")
 
