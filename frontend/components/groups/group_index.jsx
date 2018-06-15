@@ -49,6 +49,7 @@ class GroupIndex extends React.Component {
       (this.state.otherGroups.length > 0) ? "showgroups" : "hidegroups";
     const yourgroups =
       (this.state.myGroups.length > 0) ? "showgroups" : "hidegroups";
+      // debugger
     return (
       <div id="myHeader">
         <SearchBox requestItems={this.props.requestGroups} searchtype="group"/>

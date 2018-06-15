@@ -40,11 +40,18 @@ The MeetUs app was designed and built from scratch in 10 days. The proposal was 
 
 ## Functionalities:
 
+* Search:
+
+- User can use the searchbar to search both groups and events by selecting one of the options Groups/Calander.
+- The search updates the result in real-time as the user types. Event search results are sorted by date in fashion of most recent first.
+- Search results shows the groups/events of the user on top of more public groups/events
+- The search results of the event are sorted by the start_date of the event.
+
  * Users:
 
    - Create user accounts with secure authentication.
    - View their user profile in the profile option in dropdown menu.
-   
+
    ![Userprofilegif](https://res.cloudinary.com/df4s95pqa/image/upload/v1529022955/Peek_2018-06-14_17-34.gif)
 
  * Groups:
@@ -60,12 +67,6 @@ The MeetUs app was designed and built from scratch in 10 days. The proposal was 
    - Appropriate validations and error rendering on create event and edit event forms.
    - The event show page shows user all of his/her events along with more events that they can join.
    - Event show page also contains link to the group it belongs to and updates attendees list in realtime on RSVP action from any user.
-
- * Search:
-
-   - User can use the searchbar to search both groups and events by selecting one of the options Groups/Calander.
-   - The search updates the result in real-time as the user types. Event search results are sorted by date in fashion of most recent first.
-   - The search results of the event are sorted by the start_date of the event.
 
 ## Current challenges and future implementations:
 
