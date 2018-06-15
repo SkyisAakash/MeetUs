@@ -16,7 +16,8 @@
     "webpack": "^4.10.2"
   },
   "devDependencies": {
-    "redux-logger": "^3.0.6"
+    "serviceworker-webpack-plugin": "^1.0.0-alpha02",
+    "webpack-cli": "^3.0.2"
   },
   "description": "This README would normally document whatever steps are necessary to get the application up and running.",
   "version": "1.0.0",
@@ -27,7 +28,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "webpack",
+    "postinstall": "webpack --optimize-minimize",
     "start": "webpack --watch -d"
   },
   "engines": {
@@ -36,8 +37,5 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "webpack-cli": "^3.0.2"
-  }
+  "license": "ISC"
 }
