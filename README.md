@@ -1,4 +1,4 @@
-# Welcome to <img src="https://s26.postimg.cc/eur407edl/meetus_logo.png" width = "130">
+# Welcome to <a href="https://meetus-meetup.herokuapp.com/#/"><img src="https://s26.postimg.cc/eur407edl/meetus_logo.png" width = "130" display="inline-block"></a>
 MeetUs is a single page web-app clone of meetup.com as of June 2018. The site is a social meeting platform where users can create groups and
 events to share their interest with people with same interests.
 
