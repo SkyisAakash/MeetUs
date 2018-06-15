@@ -35,6 +35,7 @@ The MeetUs app was designed and built from scratch in 10 days. The proposal was 
    - React DOM
    - React Router
    - React History to manipulate the browser history.
+   - Cloudinary API for uploading/storing images (Trials also performed with AWS and paperclip)
 
 * The site is hosted on heroku and can be viewed [here.](https://meetus-meetup.herokuapp.com/#/)
 
