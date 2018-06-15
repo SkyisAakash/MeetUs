@@ -47,7 +47,7 @@ The MeetUs app was designed and built from scratch in 10 days. The proposal was 
     - Search results shows the groups/events of the user on top of more public groups/events
     - The search results of the event are sorted by the start_date of the event.
 
-    ![searchdemo](https://res.cloudinary.com/df4s95pqa/image/upload/v1529092268/searchdemofinal.gif)
+    ![Search-Demo](https://res.cloudinary.com/df4s95pqa/image/upload/v1529092268/searchdemofinal.gif)
 
 
  * Users:
@@ -55,13 +55,13 @@ The MeetUs app was designed and built from scratch in 10 days. The proposal was 
    - Create user accounts with secure authentication.
    - View their user profile in the profile option in dropdown menu.
 
-   ![Userprofilegif](https://res.cloudinary.com/df4s95pqa/image/upload/v1529022955/Peek_2018-06-14_17-34.gif)
+   ![User-Profile-Dropdown-Demo](https://res.cloudinary.com/df4s95pqa/image/upload/v1529022955/Peek_2018-06-14_17-34.gif)
 
  * Groups:
 
    - Create, Edit and Delete public groups.
 
-   ![CreateGroup](https://res.cloudinary.com/df4s95pqa/image/upload/v1529093101/create_group.gif)
+   ![Create-Group-Demo](https://res.cloudinary.com/df4s95pqa/image/upload/v1529093101/create_group.gif)
 
    - Appropriate validations and error rendering on create group and edit group forms.
       Redux history property was used to redirect user to the group show page on successful creation of group.
