@@ -13,7 +13,7 @@ GroupMember.delete_all
 User.delete_all
 Event.delete_all
 EventMember.delete_all
-demo = User.create!(username:"stephen",email:"stephen@gmail.com", password:"user123")
+demo = User.create!(username:"steve",email:"stephen@gmail.com", password:"user123")
 sky = User.create!(username:"sky",email:"sky@gmail.com", password:"user123")
 mark = User.create!(username:"mark",email:"mark@gmail.com", password:"user123")
 kevin = User.create!(username:"kevin",email:"kwvin@gmail.com", password:"user123")
@@ -58,7 +58,7 @@ mil = User.create!(username:"mil",email:"mil@gmail.com", password:"user123")
 david = User.create!(username:"david",email:"david@gmail.com", password:"user123")
 rob = User.create!(username:"rob",email:"rob@gmail.com", password:"user123")
 robin = User.create!(username:"robin",email:"robin@gmail.com", password:"user123")
-steve = User.create!(username:"steve",email:"steve@gmail.com", password:"user123")
+steve = User.create!(username:"stephen",email:"steve@gmail.com", password:"user123")
 chetan = User.create!(username:"chetan",email:"chetan@gmail.com", password:"user123")
 jao = User.create!(username:"jao",email:"jao@gmail.com", password:"user123")
 sep = User.create!(username:"sep",email:"sep@gmail.com", password:"user123")

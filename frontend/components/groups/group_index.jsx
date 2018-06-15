@@ -18,6 +18,10 @@ class GroupIndex extends React.Component {
     this.props.requestGroups();
     this.props.requestgroupmembers();
     this.props.requestEvents();
+    this.setState({
+      myGroups:this.props.memberGroups,
+      otherGroups:this.props.otherGroups
+    });
   }
 
   componentWillReceiveProps(nextProps){
