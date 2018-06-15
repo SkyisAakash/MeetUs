@@ -165,7 +165,7 @@ class EventShow extends React.Component {
                 <div className="memberssection">
                   <p className={`${membersclassname}`}>Attendees</p>
                   <div className="memberlistsection">
-                {this.props.attendees.map(member => <div className="eachmember">{this.membercard(member)}</div>)}
+                {this.props.attendees.map(member => <div className="eachmember" key={`${member.username}`}>{this.membercard(member)}</div>)}
                 </div>
               </div>
             </div>

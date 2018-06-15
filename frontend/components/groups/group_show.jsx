@@ -129,7 +129,7 @@ class GroupShow extends React.Component {
                 <div className="memberssection">
                   <p className={`${membersclassname}`}>Members</p>
                   <div className="memberlistsection">
-                {this.props.members.map(member => <div className="eachmember">{this.membercard(member)}</div>)}
+                {this.props.members.map(member => <div className="eachmember" key={`${member.id}`}>{this.membercard(member)}</div>)}
                 </div>
                 </div>
             </div>
@@ -161,7 +161,7 @@ class GroupShow extends React.Component {
     }
     // debugger
     return <EventCard cardid="big" event={this.props.selectEvent}
-            organizer={organizer} getUser={this.props.getUser}/>;
+            organizer={organizer} getUser={this.props.getUser} key={`${event.id}`}/>;
   }
 
   eventtemplates(organizer){
@@ -171,7 +171,7 @@ class GroupShow extends React.Component {
     }
     return this.props.laterEvents.map((laterevent) => (
     <EventCard cardid="cute" event={laterevent} organizer={organizer}
-            getUser={this.props.getUser}/>
+            getUser={this.props.getUser} key={`${laterevent.id}`}/>
     )
   );
 }
