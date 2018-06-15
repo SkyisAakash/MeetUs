@@ -5,22 +5,16 @@ import values from 'lodash/values';
 export const selectMemberEvents = (state) => {
   let result = [];
   let userId = state.session.currentUser.id;
-  // debugger
   let memberEvents = Object.values(state.entities.eventmembers).map(object => {
-    // debugger
       if(object.user_id === userId && state.entities.events[object.event_id]){
-        // debugger
         result.push(state.entities.events[object.event_id]);
       }
   });
   Object.values(state.entities.events).map(event => {
-    // debugger
     if  (event.organizer_id === userId) {
-      // debugger
       result.push(event);
     }
   });
-  // debugger
   return result;
 };
 
