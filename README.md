@@ -61,7 +61,7 @@ The MeetUs app was designed and built from scratch in 10 days. The proposal was 
 
    - Create, Edit and Delete public groups.
 
-   ![Create-Group-Demo](https://res.cloudinary.com/df4s95pqa/image/upload/v1529093101/create_group.gif)
+   Check out the create group demo [here.](https://res.cloudinary.com/df4s95pqa/image/upload/v1529093101/create_group.gif)
 
    - Appropriate validations and error rendering on create group and edit group forms.
       Redux history property was used to redirect user to the group show page on successful creation of group.
