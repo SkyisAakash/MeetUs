@@ -11,7 +11,7 @@ class UploadButton extends React.Component {
     e.preventDefault();
     window.cloudinary.openUploadWidget(window.CLOUDINARY_OPTIONS, (errors, images) => {
       if (errors === null) {
-        console.log("--------------------------------");
+        // console.log("--------------------------------");
       }
     });
   }

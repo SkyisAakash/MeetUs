@@ -10,7 +10,7 @@ const mapDispatchToProps = dispatch => ({
 });
 
 const mapStateToProps = ({errors}) => {
-  console.log(errors);
+  // console.log(errors);
   return {
     errors: errors.session
   };
