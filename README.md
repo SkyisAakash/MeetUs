@@ -44,6 +44,7 @@ The MeetUs app was designed and built from scratch in 10 days. The proposal was 
 
    - Create user accounts with secure authentication.
    - View their user profile in the profile option in dropdown menu.
+   
    ![Userprofilegif](https://res.cloudinary.com/df4s95pqa/image/upload/v1529022955/Peek_2018-06-14_17-34.gif)
 
  * Groups:
