@@ -16,6 +16,7 @@ componentDidMount() {
   this.props.removeEveErrors();
 }
 componentWillReceiveProps(newProps){
+  if (this.props.formType == "Edit") {
   this.setState({
     address:newProps.event.address,
     description:newProps.event.description,
@@ -29,6 +30,7 @@ componentWillReceiveProps(newProps){
     image_url:newProps.event.image_url,
     id:newProps.event.id
   });
+  }
 }
 
 handleInput(field) {
