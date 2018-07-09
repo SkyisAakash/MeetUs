@@ -72,9 +72,9 @@ class EventIndexItem extends React.Component {
   datemethod(sdate) {
     let object = sdate + "T10:10:10Z";
     let date = new Date(object);
-    let day = date.getDay();
+    let day = date.getDate();
     let dayword = date.toLocaleString('en-us', {weekday: "long"});
-    let shortmonth = date.toLocaleString('en-us', {month: "short"});
+    // let shortmonth = date.toLocaleString('en-us', {month: "short"});
     let longmonth = date.toLocaleString('en-us', {month: "long"});
     return <h5>{dayword}, {longmonth} {day}</h5>;
   }
