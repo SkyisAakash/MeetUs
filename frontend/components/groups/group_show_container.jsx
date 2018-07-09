@@ -6,7 +6,7 @@ import { getUser } from '../../actions/user_actions';
 import { createGroupMember, deleteGroupMember } from '../../actions/group_member_actions';
 // import {getUser} from '../../actions/user_actions';
 import GroupShow from './group_show';
-import { openModal, closeModal} from '../../actions/modal_actions';
+// import { openModal, closeModal} from '../../actions/modal_actions';
 import { membershipcheck } from '../../reducers/membershipcheck';
 import { requestGroupMembers } from '../../actions/group_member_actions.js';
 import { selectEventId } from '../../reducers/firsteventselector.js';

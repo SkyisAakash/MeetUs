@@ -19,12 +19,14 @@ componentDidMount() {
 }
 
 componentWillReceiveProps(newProps){
-  this.setState({
-    organizer_id:newProps.group.organizer_id,
-    title:newProps.group.title,
-    description:newProps.group.description,
-    image_url:newProps.group.image_url
-  });
+  if (this.props.formType == "Edit") {
+    this.setState({
+      organizer_id:newProps.group.organizer_id,
+      title:newProps.group.title,
+      description:newProps.group.description,
+      image_url:newProps.group.image_url
+    });
+  }
 }
 handleInput(field) {
   return (e) => (
