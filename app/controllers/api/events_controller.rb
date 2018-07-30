@@ -1,4 +1,5 @@
 class Api::EventsController < ApplicationController
+  before_action :require_logged_in
   def index
     # debugger
     if params[:search_query]
