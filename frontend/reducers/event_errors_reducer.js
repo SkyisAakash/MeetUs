@@ -8,6 +8,7 @@ import {
 import merge from 'lodash/merge';
 
 const eventerrorsReducer = (state = {}, action) => {
+  Object.freeze(state);
   switch (action.type) {
     case RECEIVE_EVENTS:
       return [];

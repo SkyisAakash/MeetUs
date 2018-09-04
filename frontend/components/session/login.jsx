@@ -40,7 +40,7 @@ componentDidMount() {
   handleDemo(e) {
     e.preventDefault();
     this.setState({email:'stephen@gmail.com', password:'user123'}, () => this.props.login(this.state)
-      .then(() => this.props.history.push('/groups')));
+      .then(() => this.props.history.push('/groups')))
   }
 
   handleSubmit(e) {

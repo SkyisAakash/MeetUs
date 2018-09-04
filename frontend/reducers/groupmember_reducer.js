@@ -6,6 +6,7 @@ import {
 import merge from 'lodash/merge';
 
 const groupmemberReducer = (state = {}, action) => {
+  Object.freeze(state);
   switch (action.type) {
     case RECEIVE_GROUPMEMBERS:
       let object = merge({}, action.groupmembers);
